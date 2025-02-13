@@ -12,8 +12,8 @@ import 'package:built_collection/built_collection.dart';
 import 'package:built_value/json_object.dart';
 import 'package:schemaless_openapi/src/api_util.dart';
 import 'package:schemaless_openapi/src/model/app_key.dart';
+import 'package:schemaless_openapi/src/model/create_app_key_request.dart';
 import 'package:schemaless_openapi/src/model/list_app_keys_response.dart';
-import 'package:schemaless_openapi/src/model/pick_app_key_project_id.dart';
 
 class AppkeysApi {
 
@@ -108,7 +108,7 @@ class AppkeysApi {
   /// 
   ///
   /// Parameters:
-  /// * [body] - project_id against which the appkey is generated
+  /// * [createAppKeyRequest] - project_id against which the appkey is generated
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -119,7 +119,7 @@ class AppkeysApi {
   /// Returns a [Future] containing a [Response] with a [JsonObject] as data
   /// Throws [DioException] if API call or serialization fails
   Future<Response<JsonObject>> generateAppKey({ 
-    required PickAppKeyProjectId body,
+    required CreateAppKeyRequest createAppKeyRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -150,7 +150,8 @@ class AppkeysApi {
     dynamic _bodyData;
 
     try {
-      _bodyData = body;
+      const _type = FullType(CreateAppKeyRequest);
+      _bodyData = _serializers.serialize(createAppKeyRequest, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioException(

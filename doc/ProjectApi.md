@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 
 # **createProjects**
-> Project createProjects(body)
+> Project createProjects(createProjectRequest)
 
 
 
@@ -25,10 +25,10 @@ Method | HTTP request | Description
 import 'package:schemaless_openapi/api.dart';
 
 final api = SchemalessOpenapi().getProjectApi();
-final PickProjectName body = ; // PickProjectName | 
+final CreateProjectRequest createProjectRequest = ; // CreateProjectRequest | 
 
 try {
-    final response = api.createProjects(body);
+    final response = api.createProjects(createProjectRequest);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling ProjectApi->createProjects: $e\n');
@@ -39,7 +39,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | **PickProjectName**|  | 
+ **createProjectRequest** | [**CreateProjectRequest**](CreateProjectRequest.md)|  | 
 
 ### Return type
 
@@ -98,7 +98,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **editProject**
-> Project editProject(projectid, body)
+> Project editProject(projectid, editProjectRequest)
 
 
 
@@ -108,10 +108,10 @@ import 'package:schemaless_openapi/api.dart';
 
 final api = SchemalessOpenapi().getProjectApi();
 final String projectid = projectid_example; // String | 
-final PickProjectName body = ; // PickProjectName | 
+final EditProjectRequest editProjectRequest = ; // EditProjectRequest | 
 
 try {
-    final response = api.editProject(projectid, body);
+    final response = api.editProject(projectid, editProjectRequest);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling ProjectApi->editProject: $e\n');
@@ -123,7 +123,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **projectid** | **String**|  | 
- **body** | **PickProjectName**|  | 
+ **editProjectRequest** | [**EditProjectRequest**](EditProjectRequest.md)|  | 
 
 ### Return type
 

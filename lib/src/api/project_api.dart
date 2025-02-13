@@ -10,7 +10,8 @@ import 'package:dio/dio.dart';
 
 import 'package:built_collection/built_collection.dart';
 import 'package:schemaless_openapi/src/api_util.dart';
-import 'package:schemaless_openapi/src/model/pick_project_name.dart';
+import 'package:schemaless_openapi/src/model/create_project_request.dart';
+import 'package:schemaless_openapi/src/model/edit_project_request.dart';
 import 'package:schemaless_openapi/src/model/project.dart';
 
 class ProjectApi {
@@ -25,7 +26,7 @@ class ProjectApi {
   /// 
   ///
   /// Parameters:
-  /// * [body] 
+  /// * [createProjectRequest] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -36,7 +37,7 @@ class ProjectApi {
   /// Returns a [Future] containing a [Response] with a [Project] as data
   /// Throws [DioException] if API call or serialization fails
   Future<Response<Project>> createProjects({ 
-    required PickProjectName body,
+    required CreateProjectRequest createProjectRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -67,7 +68,8 @@ class ProjectApi {
     dynamic _bodyData;
 
     try {
-      _bodyData = body;
+      const _type = FullType(CreateProjectRequest);
+      _bodyData = _serializers.serialize(createProjectRequest, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioException(
@@ -207,7 +209,7 @@ class ProjectApi {
   ///
   /// Parameters:
   /// * [projectid] 
-  /// * [body] 
+  /// * [editProjectRequest] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -219,7 +221,7 @@ class ProjectApi {
   /// Throws [DioException] if API call or serialization fails
   Future<Response<Project>> editProject({ 
     required String projectid,
-    required PickProjectName body,
+    required EditProjectRequest editProjectRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -250,7 +252,8 @@ class ProjectApi {
     dynamic _bodyData;
 
     try {
-      _bodyData = body;
+      const _type = FullType(EditProjectRequest);
+      _bodyData = _serializers.serialize(editProjectRequest, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioException(

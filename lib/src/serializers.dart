@@ -16,7 +16,10 @@ import 'package:schemaless_openapi/src/model/date.dart';
 
 import 'package:schemaless_openapi/src/model/app_key.dart';
 import 'package:schemaless_openapi/src/model/app_key_verify_response.dart';
+import 'package:schemaless_openapi/src/model/create_app_key_request.dart';
+import 'package:schemaless_openapi/src/model/create_project_request.dart';
 import 'package:schemaless_openapi/src/model/date_params.dart';
+import 'package:schemaless_openapi/src/model/edit_project_request.dart';
 import 'package:schemaless_openapi/src/model/entity_action.dart';
 import 'package:schemaless_openapi/src/model/entity_action_base.dart';
 import 'package:schemaless_openapi/src/model/entity_action_create.dart';
@@ -39,20 +42,21 @@ import 'package:schemaless_openapi/src/model/get_cumulative_health_response_os.d
 import 'package:schemaless_openapi/src/model/get_health_response.dart';
 import 'package:schemaless_openapi/src/model/list_app_keys_response.dart';
 import 'package:schemaless_openapi/src/model/list_users_response.dart';
-import 'package:schemaless_openapi/src/model/pick_app_key_project_id.dart';
-import 'package:schemaless_openapi/src/model/pick_project_name.dart';
-import 'package:schemaless_openapi/src/model/pick_user_username_or_created_at_or_status_or_is_admin.dart';
 import 'package:schemaless_openapi/src/model/project.dart';
 import 'package:schemaless_openapi/src/model/user_approval_request_body.dart';
 import 'package:schemaless_openapi/src/model/user_login_request.dart';
 import 'package:schemaless_openapi/src/model/user_status.dart';
+import 'package:schemaless_openapi/src/model/user_verify_response.dart';
 
 part 'serializers.g.dart';
 
 @SerializersFor([
   AppKey,
   AppKeyVerifyResponse,
+  CreateAppKeyRequest,
+  CreateProjectRequest,
   DateParams,
+  EditProjectRequest,
   EntityAction,
   EntityActionBase,$EntityActionBase,
   EntityActionCreate,
@@ -75,13 +79,11 @@ part 'serializers.g.dart';
   GetHealthResponse,
   ListAppKeysResponse,
   ListUsersResponse,
-  PickAppKeyProjectId,
-  PickProjectName,
-  PickUserUsernameOrCreatedAtOrStatusOrIsAdmin,
   Project,
   UserApprovalRequestBody,
   UserLoginRequest,
   UserStatus,
+  UserVerifyResponse,
 ])
 Serializers serializers = (_$serializers.toBuilder()
       ..addBuilderFactory(

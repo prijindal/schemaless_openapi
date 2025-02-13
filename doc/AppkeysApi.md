@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **generateAppKey**
-> JsonObject generateAppKey(body)
+> JsonObject generateAppKey(createAppKeyRequest)
 
 
 
@@ -65,10 +65,10 @@ Name | Type | Description  | Notes
 import 'package:schemaless_openapi/api.dart';
 
 final api = SchemalessOpenapi().getAppkeysApi();
-final PickAppKeyProjectId body = ; // PickAppKeyProjectId | project_id against which the appkey is generated
+final CreateAppKeyRequest createAppKeyRequest = ; // CreateAppKeyRequest | project_id against which the appkey is generated
 
 try {
-    final response = api.generateAppKey(body);
+    final response = api.generateAppKey(createAppKeyRequest);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling AppkeysApi->generateAppKey: $e\n');
@@ -79,7 +79,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | **PickAppKeyProjectId**| project_id against which the appkey is generated | 
+ **createAppKeyRequest** | [**CreateAppKeyRequest**](CreateAppKeyRequest.md)| project_id against which the appkey is generated | 
 
 ### Return type
 

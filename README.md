@@ -91,7 +91,10 @@ Class | Method | HTTP request | Description
 
  - [AppKey](doc/AppKey.md)
  - [AppKeyVerifyResponse](doc/AppKeyVerifyResponse.md)
+ - [CreateAppKeyRequest](doc/CreateAppKeyRequest.md)
+ - [CreateProjectRequest](doc/CreateProjectRequest.md)
  - [DateParams](doc/DateParams.md)
+ - [EditProjectRequest](doc/EditProjectRequest.md)
  - [EntityAction](doc/EntityAction.md)
  - [EntityActionBase](doc/EntityActionBase.md)
  - [EntityActionCreate](doc/EntityActionCreate.md)
@@ -114,13 +117,11 @@ Class | Method | HTTP request | Description
  - [GetHealthResponse](doc/GetHealthResponse.md)
  - [ListAppKeysResponse](doc/ListAppKeysResponse.md)
  - [ListUsersResponse](doc/ListUsersResponse.md)
- - [PickAppKeyProjectId](doc/PickAppKeyProjectId.md)
- - [PickProjectName](doc/PickProjectName.md)
- - [PickUserUsernameOrCreatedAtOrStatusOrIsAdmin](doc/PickUserUsernameOrCreatedAtOrStatusOrIsAdmin.md)
  - [Project](doc/Project.md)
  - [UserApprovalRequestBody](doc/UserApprovalRequestBody.md)
  - [UserLoginRequest](doc/UserLoginRequest.md)
  - [UserStatus](doc/UserStatus.md)
+ - [UserVerifyResponse](doc/UserVerifyResponse.md)
 
 
 ## Documentation For Authorization

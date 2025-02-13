@@ -6,52 +6,43 @@
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
-part 'app_key_verify_response.g.dart';
+part 'create_app_key_request.g.dart';
 
-/// AppKeyVerifyResponse
+/// CreateAppKeyRequest
 ///
 /// Properties:
-/// * [id] 
-/// * [projectName] 
+/// * [projectId] 
 @BuiltValue()
-abstract class AppKeyVerifyResponse implements Built<AppKeyVerifyResponse, AppKeyVerifyResponseBuilder> {
-  @BuiltValueField(wireName: r'id')
-  String get id;
+abstract class CreateAppKeyRequest implements Built<CreateAppKeyRequest, CreateAppKeyRequestBuilder> {
+  @BuiltValueField(wireName: r'project_id')
+  String get projectId;
 
-  @BuiltValueField(wireName: r'project_name')
-  String get projectName;
+  CreateAppKeyRequest._();
 
-  AppKeyVerifyResponse._();
-
-  factory AppKeyVerifyResponse([void updates(AppKeyVerifyResponseBuilder b)]) = _$AppKeyVerifyResponse;
+  factory CreateAppKeyRequest([void updates(CreateAppKeyRequestBuilder b)]) = _$CreateAppKeyRequest;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(AppKeyVerifyResponseBuilder b) => b;
+  static void _defaults(CreateAppKeyRequestBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<AppKeyVerifyResponse> get serializer => _$AppKeyVerifyResponseSerializer();
+  static Serializer<CreateAppKeyRequest> get serializer => _$CreateAppKeyRequestSerializer();
 }
 
-class _$AppKeyVerifyResponseSerializer implements PrimitiveSerializer<AppKeyVerifyResponse> {
+class _$CreateAppKeyRequestSerializer implements PrimitiveSerializer<CreateAppKeyRequest> {
   @override
-  final Iterable<Type> types = const [AppKeyVerifyResponse, _$AppKeyVerifyResponse];
+  final Iterable<Type> types = const [CreateAppKeyRequest, _$CreateAppKeyRequest];
 
   @override
-  final String wireName = r'AppKeyVerifyResponse';
+  final String wireName = r'CreateAppKeyRequest';
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    AppKeyVerifyResponse object, {
+    CreateAppKeyRequest object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    yield r'id';
+    yield r'project_id';
     yield serializers.serialize(
-      object.id,
-      specifiedType: const FullType(String),
-    );
-    yield r'project_name';
-    yield serializers.serialize(
-      object.projectName,
+      object.projectId,
       specifiedType: const FullType(String),
     );
   }
@@ -59,7 +50,7 @@ class _$AppKeyVerifyResponseSerializer implements PrimitiveSerializer<AppKeyVeri
   @override
   Object serialize(
     Serializers serializers,
-    AppKeyVerifyResponse object, {
+    CreateAppKeyRequest object, {
     FullType specifiedType = FullType.unspecified,
   }) {
     return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
@@ -70,26 +61,19 @@ class _$AppKeyVerifyResponseSerializer implements PrimitiveSerializer<AppKeyVeri
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
     required List<Object?> serializedList,
-    required AppKeyVerifyResponseBuilder result,
+    required CreateAppKeyRequestBuilder result,
     required List<Object?> unhandled,
   }) {
     for (var i = 0; i < serializedList.length; i += 2) {
       final key = serializedList[i] as String;
       final value = serializedList[i + 1];
       switch (key) {
-        case r'id':
+        case r'project_id':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.id = valueDes;
-          break;
-        case r'project_name':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.projectName = valueDes;
+          result.projectId = valueDes;
           break;
         default:
           unhandled.add(key);
@@ -100,12 +84,12 @@ class _$AppKeyVerifyResponseSerializer implements PrimitiveSerializer<AppKeyVeri
   }
 
   @override
-  AppKeyVerifyResponse deserialize(
+  CreateAppKeyRequest deserialize(
     Serializers serializers,
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    final result = AppKeyVerifyResponseBuilder();
+    final result = CreateAppKeyRequestBuilder();
     final serializedList = (serialized as Iterable<Object?>).toList();
     final unhandled = <Object?>[];
     _deserializeProperties(

@@ -9,7 +9,7 @@ import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
 import 'package:schemaless_openapi/src/model/app_key_verify_response.dart';
-import 'package:schemaless_openapi/src/model/pick_user_username_or_created_at_or_status_or_is_admin.dart';
+import 'package:schemaless_openapi/src/model/user_verify_response.dart';
 
 class AuthApi {
 
@@ -109,9 +109,9 @@ class AuthApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [PickUserUsernameOrCreatedAtOrStatusOrIsAdmin] as data
+  /// Returns a [Future] containing a [Response] with a [UserVerifyResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<PickUserUsernameOrCreatedAtOrStatusOrIsAdmin>> verifyUserAuth({ 
+  Future<Response<UserVerifyResponse>> verifyUserAuth({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -146,14 +146,14 @@ class AuthApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    PickUserUsernameOrCreatedAtOrStatusOrIsAdmin? _responseData;
+    UserVerifyResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(PickUserUsernameOrCreatedAtOrStatusOrIsAdmin),
-      ) as PickUserUsernameOrCreatedAtOrStatusOrIsAdmin;
+        specifiedType: const FullType(UserVerifyResponse),
+      ) as UserVerifyResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -165,7 +165,7 @@ class AuthApi {
       );
     }
 
-    return Response<PickUserUsernameOrCreatedAtOrStatusOrIsAdmin>(
+    return Response<UserVerifyResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
