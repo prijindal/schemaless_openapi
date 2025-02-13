@@ -18,7 +18,7 @@ void main() {
     });
 
     // Construct a type with a set of properties K of type T
-    // BuiltMap<String, String> order
+    // BuiltMap<String, EntitySearchRequestOrderEnum> order
     test('to test the property `order`', () async {
       // TODO
     });

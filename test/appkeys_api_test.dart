@@ -12,7 +12,7 @@ void main() {
       // TODO
     });
 
-    //Future<JsonObject> generateAppKey(PickAppKeyProjectId body) async
+    //Future<JsonObject> generateAppKey(CreateAppKeyRequest createAppKeyRequest) async
     test('test generateAppKey', () async {
       // TODO
     });

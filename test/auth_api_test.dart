@@ -12,7 +12,7 @@ void main() {
       // TODO
     });
 
-    //Future<PickUserUsernameOrCreatedAtOrStatusOrIsAdmin> verifyUserAuth() async
+    //Future<UserVerifyResponse> verifyUserAuth() async
     test('test verifyUserAuth', () async {
       // TODO
     });

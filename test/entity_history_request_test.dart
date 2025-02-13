@@ -8,7 +8,7 @@ void main() {
 
   group(EntityHistoryRequest, () {
     // Construct a type with a set of properties K of type T
-    // BuiltMap<String, String> order
+    // BuiltMap<String, EntityHistoryRequestOrderEnum> order
     test('to test the property `order`', () async {
       // TODO
     });

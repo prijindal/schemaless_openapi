@@ -7,7 +7,8 @@ void main() {
   // TODO add properties to the builder and call build()
 
   group(GetCumulativeHealthResponse, () {
-    // GetCumulativeHealthResponseEnv env
+    // Construct a type with a set of properties K of type T
+    // JsonObject env
     test('to test the property `env`', () async {
       // TODO
     });

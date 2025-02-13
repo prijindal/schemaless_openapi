@@ -7,7 +7,7 @@ void main() {
   final instance = SchemalessOpenapi().getProjectApi();
 
   group(ProjectApi, () {
-    //Future<Project> createProjects(PickProjectName body) async
+    //Future<Project> createProjects(CreateProjectRequest createProjectRequest) async
     test('test createProjects', () async {
       // TODO
     });
@@ -17,7 +17,7 @@ void main() {
       // TODO
     });
 
-    //Future<Project> editProject(String projectid, PickProjectName body) async
+    //Future<Project> editProject(String projectid, EditProjectRequest editProjectRequest) async
     test('test editProject', () async {
       // TODO
     });
