@@ -35,7 +35,6 @@ import 'package:schemaless_openapi/src/model/entity_search_request_order_enum.da
 import 'package:schemaless_openapi/src/model/entity_search_request_params.dart';
 import 'package:schemaless_openapi/src/model/entity_search_response.dart';
 import 'package:schemaless_openapi/src/model/get_cumulative_health_response.dart';
-import 'package:schemaless_openapi/src/model/get_cumulative_health_response_env.dart';
 import 'package:schemaless_openapi/src/model/get_cumulative_health_response_os.dart';
 import 'package:schemaless_openapi/src/model/get_health_response.dart';
 import 'package:schemaless_openapi/src/model/list_app_keys_response.dart';
@@ -72,7 +71,6 @@ part 'serializers.g.dart';
   EntitySearchRequestParams,
   EntitySearchResponse,
   GetCumulativeHealthResponse,
-  GetCumulativeHealthResponseEnv,
   GetCumulativeHealthResponseOs,
   GetHealthResponse,
   ListAppKeysResponse,

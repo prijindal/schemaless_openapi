@@ -8,7 +8,7 @@ part of 'get_cumulative_health_response.dart';
 
 class _$GetCumulativeHealthResponse extends GetCumulativeHealthResponse {
   @override
-  final GetCumulativeHealthResponseEnv env;
+  final JsonObject env;
   @override
   final GetCumulativeHealthResponseOs os;
   @override
@@ -91,10 +91,9 @@ class GetCumulativeHealthResponseBuilder
             GetCumulativeHealthResponseBuilder> {
   _$GetCumulativeHealthResponse? _$v;
 
-  GetCumulativeHealthResponseEnvBuilder? _env;
-  GetCumulativeHealthResponseEnvBuilder get env =>
-      _$this._env ??= new GetCumulativeHealthResponseEnvBuilder();
-  set env(GetCumulativeHealthResponseEnvBuilder? env) => _$this._env = env;
+  JsonObject? _env;
+  JsonObject? get env => _$this._env;
+  set env(JsonObject? env) => _$this._env = env;
 
   GetCumulativeHealthResponseOsBuilder? _os;
   GetCumulativeHealthResponseOsBuilder get os =>
@@ -120,7 +119,7 @@ class GetCumulativeHealthResponseBuilder
   GetCumulativeHealthResponseBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
-      _env = $v.env.toBuilder();
+      _env = $v.env;
       _os = $v.os.toBuilder();
       _cache = $v.cache;
       _db = $v.db;
@@ -149,7 +148,8 @@ class GetCumulativeHealthResponseBuilder
     try {
       _$result = _$v ??
           new _$GetCumulativeHealthResponse._(
-            env: env.build(),
+            env: BuiltValueNullFieldError.checkNotNull(
+                env, r'GetCumulativeHealthResponse', 'env'),
             os: os.build(),
             cache: BuiltValueNullFieldError.checkNotNull(
                 cache, r'GetCumulativeHealthResponse', 'cache'),
@@ -161,8 +161,6 @@ class GetCumulativeHealthResponseBuilder
     } catch (_) {
       late String _$failedField;
       try {
-        _$failedField = 'env';
-        env.build();
         _$failedField = 'os';
         os.build();
       } catch (e) {

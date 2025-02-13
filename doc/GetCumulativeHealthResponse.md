@@ -8,7 +8,7 @@ import 'package:schemaless_openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**env** | [**GetCumulativeHealthResponseEnv**](GetCumulativeHealthResponseEnv.md) |  | 
+**env** | [**JsonObject**](.md) | Construct a type with a set of properties K of type T | 
 **os** | [**GetCumulativeHealthResponseOs**](GetCumulativeHealthResponseOs.md) |  | 
 **cache** | **bool** |  | 
 **db** | **bool** |  | 

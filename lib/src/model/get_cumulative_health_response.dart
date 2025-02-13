@@ -3,8 +3,8 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:schemaless_openapi/src/model/get_cumulative_health_response_env.dart';
 import 'package:schemaless_openapi/src/model/get_cumulative_health_response_os.dart';
+import 'package:built_value/json_object.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -13,15 +13,16 @@ part 'get_cumulative_health_response.g.dart';
 /// GetCumulativeHealthResponse
 ///
 /// Properties:
-/// * [env] 
+/// * [env] - Construct a type with a set of properties K of type T
 /// * [os] 
 /// * [cache] 
 /// * [db] 
 /// * [healthy] 
 @BuiltValue()
 abstract class GetCumulativeHealthResponse implements Built<GetCumulativeHealthResponse, GetCumulativeHealthResponseBuilder> {
+  /// Construct a type with a set of properties K of type T
   @BuiltValueField(wireName: r'env')
-  GetCumulativeHealthResponseEnv get env;
+  JsonObject get env;
 
   @BuiltValueField(wireName: r'os')
   GetCumulativeHealthResponseOs get os;
@@ -61,7 +62,7 @@ class _$GetCumulativeHealthResponseSerializer implements PrimitiveSerializer<Get
     yield r'env';
     yield serializers.serialize(
       object.env,
-      specifiedType: const FullType(GetCumulativeHealthResponseEnv),
+      specifiedType: const FullType(JsonObject),
     );
     yield r'os';
     yield serializers.serialize(
@@ -109,9 +110,9 @@ class _$GetCumulativeHealthResponseSerializer implements PrimitiveSerializer<Get
         case r'env':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(GetCumulativeHealthResponseEnv),
-          ) as GetCumulativeHealthResponseEnv;
-          result.env.replace(valueDes);
+            specifiedType: const FullType(JsonObject),
+          ) as JsonObject;
+          result.env = valueDes;
           break;
         case r'os':
           final valueDes = serializers.deserialize(

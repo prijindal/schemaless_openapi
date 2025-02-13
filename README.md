@@ -110,7 +110,6 @@ Class | Method | HTTP request | Description
  - [EntitySearchRequestParams](doc/EntitySearchRequestParams.md)
  - [EntitySearchResponse](doc/EntitySearchResponse.md)
  - [GetCumulativeHealthResponse](doc/GetCumulativeHealthResponse.md)
- - [GetCumulativeHealthResponseEnv](doc/GetCumulativeHealthResponseEnv.md)
  - [GetCumulativeHealthResponseOs](doc/GetCumulativeHealthResponseOs.md)
  - [GetHealthResponse](doc/GetHealthResponse.md)
  - [ListAppKeysResponse](doc/ListAppKeysResponse.md)

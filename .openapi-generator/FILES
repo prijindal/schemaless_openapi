@@ -26,7 +26,6 @@ doc/EntitySearchRequestOrderEnum.md
 doc/EntitySearchRequestParams.md
 doc/EntitySearchResponse.md
 doc/GetCumulativeHealthResponse.md
-doc/GetCumulativeHealthResponseEnv.md
 doc/GetCumulativeHealthResponseOs.md
 doc/GetHealthResponse.md
 doc/HealthApi.md
@@ -79,7 +78,6 @@ lib/src/model/entity_search_request_order_enum.dart
 lib/src/model/entity_search_request_params.dart
 lib/src/model/entity_search_response.dart
 lib/src/model/get_cumulative_health_response.dart
-lib/src/model/get_cumulative_health_response_env.dart
 lib/src/model/get_cumulative_health_response_os.dart
 lib/src/model/get_health_response.dart
 lib/src/model/list_app_keys_response.dart
