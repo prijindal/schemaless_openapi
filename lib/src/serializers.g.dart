@@ -23,11 +23,11 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(EntityHistory.serializer)
       ..add(EntityHistoryRequest.serializer)
       ..add(EntityHistoryRequestOrderEnum.serializer)
-      ..add(EntityHistoryRequestOrderEnum.serializer)
       ..add(EntityHistoryRequestParams.serializer)
       ..add(EntityHistoryRequestParamsHostId.serializer)
       ..add(EntityHistoryResponse.serializer)
       ..add(EntitySearchRequest.serializer)
+      ..add(EntitySearchRequestOrderEnum.serializer)
       ..add(EntitySearchRequestParams.serializer)
       ..add(EntitySearchResponse.serializer)
       ..add(GetCumulativeHealthResponse.serializer)
@@ -61,9 +61,9 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..addBuilderFactory(
           const FullType(BuiltMap, const [
             const FullType(String),
-            const FullType(EntityHistoryRequestOrderEnum)
+            const FullType(EntitySearchRequestOrderEnum)
           ]),
-          () => new MapBuilder<String, EntityHistoryRequestOrderEnum>()))
+          () => new MapBuilder<String, EntitySearchRequestOrderEnum>()))
     .build();
 
 // ignore_for_file: deprecated_member_use_from_same_package,type=lint

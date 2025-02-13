@@ -4,6 +4,7 @@
 
 // ignore_for_file: unused_element
 import 'package:built_collection/built_collection.dart';
+import 'package:schemaless_openapi/src/model/entity_search_request_order_enum.dart';
 import 'package:schemaless_openapi/src/model/entity_search_request_params.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
@@ -26,8 +27,7 @@ abstract class EntitySearchRequest implements Built<EntitySearchRequest, EntityS
 
   /// Construct a type with a set of properties K of type T
   @BuiltValueField(wireName: r'order')
-  BuiltMap<String, EntityHistoryRequestOrderEnum> get order;
-  // enum orderEnum {  asc,  desc,  };
+  BuiltMap<String, EntitySearchRequestOrderEnum> get order;
 
   EntitySearchRequest._();
 
@@ -65,7 +65,7 @@ class _$EntitySearchRequestSerializer implements PrimitiveSerializer<EntitySearc
     yield r'order';
     yield serializers.serialize(
       object.order,
-      specifiedType: const FullType(BuiltMap, [FullType(String), FullType(EntityHistoryRequestOrderEnum)]),
+      specifiedType: const FullType(BuiltMap, [FullType(String), FullType(EntitySearchRequestOrderEnum)]),
     );
   }
 
@@ -107,8 +107,8 @@ class _$EntitySearchRequestSerializer implements PrimitiveSerializer<EntitySearc
         case r'order':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(BuiltMap, [FullType(String), FullType(EntityHistoryRequestOrderEnum)]),
-          ) as BuiltMap<String, EntityHistoryRequestOrderEnum>;
+            specifiedType: const FullType(BuiltMap, [FullType(String), FullType(EntitySearchRequestOrderEnum)]),
+          ) as BuiltMap<String, EntitySearchRequestOrderEnum>;
           result.order.replace(valueDes);
           break;
         default:
@@ -138,20 +138,5 @@ class _$EntitySearchRequestSerializer implements PrimitiveSerializer<EntitySearc
     );
     return result.build();
   }
-}
-
-class EntityHistoryRequestOrderEnum extends EnumClass {
-
-  @BuiltValueEnumConst(wireName: r'asc')
-  static const EntityHistoryRequestOrderEnum asc = _$entityHistoryRequestOrderEnum_asc;
-  @BuiltValueEnumConst(wireName: r'desc')
-  static const EntityHistoryRequestOrderEnum desc = _$entityHistoryRequestOrderEnum_desc;
-
-  static Serializer<EntityHistoryRequestOrderEnum> get serializer => _$entityHistoryRequestOrderEnumSerializer;
-
-  const EntityHistoryRequestOrderEnum._(String name): super(name);
-
-  static BuiltSet<EntityHistoryRequestOrderEnum> get values => _$entityHistoryRequestOrderEnumValues;
-  static EntityHistoryRequestOrderEnum valueOf(String name) => _$entityHistoryRequestOrderEnumValueOf(name);
 }
 

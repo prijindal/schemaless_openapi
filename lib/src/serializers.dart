@@ -26,10 +26,12 @@ import 'package:schemaless_openapi/src/model/entity_action_update.dart';
 import 'package:schemaless_openapi/src/model/entity_data.dart';
 import 'package:schemaless_openapi/src/model/entity_history.dart';
 import 'package:schemaless_openapi/src/model/entity_history_request.dart';
+import 'package:schemaless_openapi/src/model/entity_history_request_order_enum.dart';
 import 'package:schemaless_openapi/src/model/entity_history_request_params.dart';
 import 'package:schemaless_openapi/src/model/entity_history_request_params_host_id.dart';
 import 'package:schemaless_openapi/src/model/entity_history_response.dart';
 import 'package:schemaless_openapi/src/model/entity_search_request.dart';
+import 'package:schemaless_openapi/src/model/entity_search_request_order_enum.dart';
 import 'package:schemaless_openapi/src/model/entity_search_request_params.dart';
 import 'package:schemaless_openapi/src/model/entity_search_response.dart';
 import 'package:schemaless_openapi/src/model/get_cumulative_health_response.dart';
@@ -61,10 +63,12 @@ part 'serializers.g.dart';
   EntityData,
   EntityHistory,
   EntityHistoryRequest,
+  EntityHistoryRequestOrderEnum,
   EntityHistoryRequestParams,
   EntityHistoryRequestParamsHostId,
   EntityHistoryResponse,
   EntitySearchRequest,
+  EntitySearchRequestOrderEnum,
   EntitySearchRequestParams,
   EntitySearchResponse,
   GetCumulativeHealthResponse,

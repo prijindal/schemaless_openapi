@@ -6,71 +6,13 @@ part of 'entity_search_request.dart';
 // BuiltValueGenerator
 // **************************************************************************
 
-const EntityHistoryRequestOrderEnum _$entityHistoryRequestOrderEnum_asc =
-    const EntityHistoryRequestOrderEnum._('asc');
-const EntityHistoryRequestOrderEnum _$entityHistoryRequestOrderEnum_desc =
-    const EntityHistoryRequestOrderEnum._('desc');
-
-EntityHistoryRequestOrderEnum _$entityHistoryRequestOrderEnumValueOf(
-    String name) {
-  switch (name) {
-    case 'asc':
-      return _$entityHistoryRequestOrderEnum_asc;
-    case 'desc':
-      return _$entityHistoryRequestOrderEnum_desc;
-    default:
-      throw new ArgumentError(name);
-  }
-}
-
-final BuiltSet<EntityHistoryRequestOrderEnum>
-    _$entityHistoryRequestOrderEnumValues = new BuiltSet<
-        EntityHistoryRequestOrderEnum>(const <EntityHistoryRequestOrderEnum>[
-  _$entityHistoryRequestOrderEnum_asc,
-  _$entityHistoryRequestOrderEnum_desc,
-]);
-
-Serializer<EntityHistoryRequestOrderEnum>
-    _$entityHistoryRequestOrderEnumSerializer =
-    new _$EntityHistoryRequestOrderEnumSerializer();
-
-class _$EntityHistoryRequestOrderEnumSerializer
-    implements PrimitiveSerializer<EntityHistoryRequestOrderEnum> {
-  static const Map<String, Object> _toWire = const <String, Object>{
-    'asc': 'asc',
-    'desc': 'desc',
-  };
-  static const Map<Object, String> _fromWire = const <Object, String>{
-    'asc': 'asc',
-    'desc': 'desc',
-  };
-
-  @override
-  final Iterable<Type> types = const <Type>[EntityHistoryRequestOrderEnum];
-  @override
-  final String wireName = 'EntityHistoryRequestOrderEnum';
-
-  @override
-  Object serialize(
-          Serializers serializers, EntityHistoryRequestOrderEnum object,
-          {FullType specifiedType = FullType.unspecified}) =>
-      _toWire[object.name] ?? object.name;
-
-  @override
-  EntityHistoryRequestOrderEnum deserialize(
-          Serializers serializers, Object serialized,
-          {FullType specifiedType = FullType.unspecified}) =>
-      EntityHistoryRequestOrderEnum.valueOf(
-          _fromWire[serialized] ?? (serialized is String ? serialized : ''));
-}
-
 class _$EntitySearchRequest extends EntitySearchRequest {
   @override
   final String entityName;
   @override
   final EntitySearchRequestParams params;
   @override
-  final BuiltMap<String, EntityHistoryRequestOrderEnum> order;
+  final BuiltMap<String, EntitySearchRequestOrderEnum> order;
 
   factory _$EntitySearchRequest(
           [void Function(EntitySearchRequestBuilder)? updates]) =>
@@ -139,10 +81,10 @@ class EntitySearchRequestBuilder
   set params(EntitySearchRequestParamsBuilder? params) =>
       _$this._params = params;
 
-  MapBuilder<String, EntityHistoryRequestOrderEnum>? _order;
-  MapBuilder<String, EntityHistoryRequestOrderEnum> get order =>
-      _$this._order ??= new MapBuilder<String, EntityHistoryRequestOrderEnum>();
-  set order(MapBuilder<String, EntityHistoryRequestOrderEnum>? order) =>
+  MapBuilder<String, EntitySearchRequestOrderEnum>? _order;
+  MapBuilder<String, EntitySearchRequestOrderEnum> get order =>
+      _$this._order ??= new MapBuilder<String, EntitySearchRequestOrderEnum>();
+  set order(MapBuilder<String, EntitySearchRequestOrderEnum>? order) =>
       _$this._order = order;
 
   EntitySearchRequestBuilder() {

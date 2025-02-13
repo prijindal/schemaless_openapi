@@ -17,10 +17,12 @@ doc/EntityApi.md
 doc/EntityData.md
 doc/EntityHistory.md
 doc/EntityHistoryRequest.md
+doc/EntityHistoryRequestOrderEnum.md
 doc/EntityHistoryRequestParams.md
 doc/EntityHistoryRequestParamsHostId.md
 doc/EntityHistoryResponse.md
 doc/EntitySearchRequest.md
+doc/EntitySearchRequestOrderEnum.md
 doc/EntitySearchRequestParams.md
 doc/EntitySearchResponse.md
 doc/GetCumulativeHealthResponse.md
@@ -68,10 +70,12 @@ lib/src/model/entity_action_update.dart
 lib/src/model/entity_data.dart
 lib/src/model/entity_history.dart
 lib/src/model/entity_history_request.dart
+lib/src/model/entity_history_request_order_enum.dart
 lib/src/model/entity_history_request_params.dart
 lib/src/model/entity_history_request_params_host_id.dart
 lib/src/model/entity_history_response.dart
 lib/src/model/entity_search_request.dart
+lib/src/model/entity_search_request_order_enum.dart
 lib/src/model/entity_search_request_params.dart
 lib/src/model/entity_search_response.dart
 lib/src/model/get_cumulative_health_response.dart
