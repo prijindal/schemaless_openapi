@@ -44,5 +44,6 @@ export 'package:schemaless_openapi/src/model/project.dart';
 export 'package:schemaless_openapi/src/model/user_approval_request_body.dart';
 export 'package:schemaless_openapi/src/model/user_login_request.dart';
 export 'package:schemaless_openapi/src/model/user_status.dart';
+export 'package:schemaless_openapi/src/model/user_unauthorized_error.dart';
 export 'package:schemaless_openapi/src/model/user_verify_response.dart';
 

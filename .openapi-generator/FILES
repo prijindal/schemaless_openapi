@@ -34,6 +34,7 @@ doc/ProjectApi.md
 doc/UserApprovalRequestBody.md
 doc/UserLoginRequest.md
 doc/UserStatus.md
+doc/UserUnauthorizedError.md
 doc/UserVerifyResponse.md
 lib/schemaless_openapi.dart
 lib/src/api.dart
@@ -78,6 +79,7 @@ lib/src/model/project.dart
 lib/src/model/user_approval_request_body.dart
 lib/src/model/user_login_request.dart
 lib/src/model/user_status.dart
+lib/src/model/user_unauthorized_error.dart
 lib/src/model/user_verify_response.dart
 lib/src/serializers.dart
 pubspec.yaml
@@ -114,4 +116,5 @@ test/project_test.dart
 test/user_approval_request_body_test.dart
 test/user_login_request_test.dart
 test/user_status_test.dart
+test/user_unauthorized_error_test.dart
 test/user_verify_response_test.dart

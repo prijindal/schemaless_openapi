@@ -14,6 +14,8 @@ void main() {
       // TODO
     });
 
+    // Checks username and password and generate a jwt token
+    //
     //Future<JsonObject> loginUser(UserLoginRequest userLoginRequest) async
     test('test loginUser', () async {
       // TODO

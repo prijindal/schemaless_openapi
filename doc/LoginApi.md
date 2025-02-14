@@ -62,6 +62,8 @@ No authorization required
 
 
 
+Checks username and password and generate a jwt token
+
 ### Example
 ```dart
 import 'package:schemaless_openapi/api.dart';

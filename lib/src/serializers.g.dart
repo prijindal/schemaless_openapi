@@ -37,6 +37,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(UserApprovalRequestBody.serializer)
       ..add(UserLoginRequest.serializer)
       ..add(UserStatus.serializer)
+      ..add(UserUnauthorizedError.serializer)
       ..add(UserVerifyResponse.serializer)
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(EntityHistory)]),

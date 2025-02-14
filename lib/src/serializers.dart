@@ -41,6 +41,7 @@ import 'package:schemaless_openapi/src/model/project.dart';
 import 'package:schemaless_openapi/src/model/user_approval_request_body.dart';
 import 'package:schemaless_openapi/src/model/user_login_request.dart';
 import 'package:schemaless_openapi/src/model/user_status.dart';
+import 'package:schemaless_openapi/src/model/user_unauthorized_error.dart';
 import 'package:schemaless_openapi/src/model/user_verify_response.dart';
 
 part 'serializers.g.dart';
@@ -73,6 +74,7 @@ part 'serializers.g.dart';
   UserApprovalRequestBody,
   UserLoginRequest,
   UserStatus,
+  UserUnauthorizedError,
   UserVerifyResponse,
 ])
 Serializers serializers = (_$serializers.toBuilder()

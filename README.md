@@ -116,6 +116,7 @@ Class | Method | HTTP request | Description
  - [UserApprovalRequestBody](doc/UserApprovalRequestBody.md)
  - [UserLoginRequest](doc/UserLoginRequest.md)
  - [UserStatus](doc/UserStatus.md)
+ - [UserUnauthorizedError](doc/UserUnauthorizedError.md)
  - [UserVerifyResponse](doc/UserVerifyResponse.md)
 
 

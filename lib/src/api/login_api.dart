@@ -11,6 +11,7 @@ import 'package:dio/dio.dart';
 import 'package:built_value/json_object.dart';
 import 'package:schemaless_openapi/src/model/invalid_credentials_error.dart';
 import 'package:schemaless_openapi/src/model/user_login_request.dart';
+import 'package:schemaless_openapi/src/model/user_unauthorized_error.dart';
 
 class LoginApi {
 
@@ -113,7 +114,7 @@ class LoginApi {
   }
 
   /// loginUser
-  /// 
+  /// Checks username and password and generate a jwt token
   ///
   /// Parameters:
   /// * [userLoginRequest] - username and password
