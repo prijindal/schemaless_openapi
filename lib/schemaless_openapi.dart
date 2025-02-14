@@ -17,6 +17,7 @@ export 'package:schemaless_openapi/src/api/health_api.dart';
 export 'package:schemaless_openapi/src/api/login_api.dart';
 export 'package:schemaless_openapi/src/api/project_api.dart';
 
+export 'package:schemaless_openapi/src/model/already_exists_error.dart';
 export 'package:schemaless_openapi/src/model/app_key_verify_response.dart';
 export 'package:schemaless_openapi/src/model/create_project_request.dart';
 export 'package:schemaless_openapi/src/model/date_params.dart';
@@ -36,7 +37,9 @@ export 'package:schemaless_openapi/src/model/entity_history_response.dart';
 export 'package:schemaless_openapi/src/model/get_cumulative_health_response.dart';
 export 'package:schemaless_openapi/src/model/get_cumulative_health_response_os.dart';
 export 'package:schemaless_openapi/src/model/get_health_response.dart';
+export 'package:schemaless_openapi/src/model/invalid_credentials_error.dart';
 export 'package:schemaless_openapi/src/model/list_users_response.dart';
+export 'package:schemaless_openapi/src/model/not_exists_error.dart';
 export 'package:schemaless_openapi/src/model/project.dart';
 export 'package:schemaless_openapi/src/model/user_approval_request_body.dart';
 export 'package:schemaless_openapi/src/model/user_login_request.dart';

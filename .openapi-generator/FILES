@@ -2,6 +2,7 @@
 README.md
 analysis_options.yaml
 doc/AdminApi.md
+doc/AlreadyExistsError.md
 doc/AppKeyVerifyResponse.md
 doc/AuthApi.md
 doc/CreateProjectRequest.md
@@ -24,8 +25,10 @@ doc/GetCumulativeHealthResponse.md
 doc/GetCumulativeHealthResponseOs.md
 doc/GetHealthResponse.md
 doc/HealthApi.md
+doc/InvalidCredentialsError.md
 doc/ListUsersResponse.md
 doc/LoginApi.md
+doc/NotExistsError.md
 doc/Project.md
 doc/ProjectApi.md
 doc/UserApprovalRequestBody.md
@@ -47,6 +50,7 @@ lib/src/auth/basic_auth.dart
 lib/src/auth/bearer_auth.dart
 lib/src/auth/oauth.dart
 lib/src/date_serializer.dart
+lib/src/model/already_exists_error.dart
 lib/src/model/app_key_verify_response.dart
 lib/src/model/create_project_request.dart
 lib/src/model/date.dart
@@ -67,7 +71,9 @@ lib/src/model/entity_history_response.dart
 lib/src/model/get_cumulative_health_response.dart
 lib/src/model/get_cumulative_health_response_os.dart
 lib/src/model/get_health_response.dart
+lib/src/model/invalid_credentials_error.dart
 lib/src/model/list_users_response.dart
+lib/src/model/not_exists_error.dart
 lib/src/model/project.dart
 lib/src/model/user_approval_request_body.dart
 lib/src/model/user_login_request.dart
@@ -76,6 +82,7 @@ lib/src/model/user_verify_response.dart
 lib/src/serializers.dart
 pubspec.yaml
 test/admin_api_test.dart
+test/already_exists_error_test.dart
 test/app_key_verify_response_test.dart
 test/auth_api_test.dart
 test/create_project_request_test.dart
@@ -98,8 +105,10 @@ test/get_cumulative_health_response_os_test.dart
 test/get_cumulative_health_response_test.dart
 test/get_health_response_test.dart
 test/health_api_test.dart
+test/invalid_credentials_error_test.dart
 test/list_users_response_test.dart
 test/login_api_test.dart
+test/not_exists_error_test.dart
 test/project_api_test.dart
 test/project_test.dart
 test/user_approval_request_body_test.dart

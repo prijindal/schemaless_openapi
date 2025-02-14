@@ -87,6 +87,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
+ - [AlreadyExistsError](doc/AlreadyExistsError.md)
  - [AppKeyVerifyResponse](doc/AppKeyVerifyResponse.md)
  - [CreateProjectRequest](doc/CreateProjectRequest.md)
  - [DateParams](doc/DateParams.md)
@@ -106,7 +107,9 @@ Class | Method | HTTP request | Description
  - [GetCumulativeHealthResponse](doc/GetCumulativeHealthResponse.md)
  - [GetCumulativeHealthResponseOs](doc/GetCumulativeHealthResponseOs.md)
  - [GetHealthResponse](doc/GetHealthResponse.md)
+ - [InvalidCredentialsError](doc/InvalidCredentialsError.md)
  - [ListUsersResponse](doc/ListUsersResponse.md)
+ - [NotExistsError](doc/NotExistsError.md)
  - [Project](doc/Project.md)
  - [UserApprovalRequestBody](doc/UserApprovalRequestBody.md)
  - [UserLoginRequest](doc/UserLoginRequest.md)

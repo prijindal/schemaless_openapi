@@ -11,8 +11,10 @@ import 'package:dio/dio.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:built_value/json_object.dart';
 import 'package:schemaless_openapi/src/api_util.dart';
+import 'package:schemaless_openapi/src/model/already_exists_error.dart';
 import 'package:schemaless_openapi/src/model/create_project_request.dart';
 import 'package:schemaless_openapi/src/model/edit_project_request.dart';
+import 'package:schemaless_openapi/src/model/not_exists_error.dart';
 import 'package:schemaless_openapi/src/model/project.dart';
 
 class ProjectApi {

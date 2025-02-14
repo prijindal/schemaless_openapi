@@ -11,6 +11,7 @@ import 'package:dio/dio.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:schemaless_openapi/src/api_util.dart';
 import 'package:schemaless_openapi/src/model/list_users_response.dart';
+import 'package:schemaless_openapi/src/model/not_exists_error.dart';
 import 'package:schemaless_openapi/src/model/user_approval_request_body.dart';
 
 class AdminApi {
