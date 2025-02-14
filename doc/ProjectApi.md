@@ -15,6 +15,7 @@ Method | HTTP request | Description
 [**generateKey**](ProjectApi.md#generatekey) | **POST** /projects/{projectid}/generatekey | 
 [**listProjects**](ProjectApi.md#listprojects) | **GET** /projects | 
 [**revokeKeys**](ProjectApi.md#revokekeys) | **POST** /projects/{projectid}/revokekeys | 
+[**searchProjectEntitiesHistory**](ProjectApi.md#searchprojectentitieshistory) | **POST** /projects/{projectid}/history/search | 
 
 
 # **createProjects**
@@ -257,6 +258,49 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **searchProjectEntitiesHistory**
+> BuiltList<EntityHistoryResponse> searchProjectEntitiesHistory(projectid, entityHistoryRequest)
+
+
+
+### Example
+```dart
+import 'package:schemaless_openapi/api.dart';
+
+final api = SchemalessOpenapi().getProjectApi();
+final String projectid = projectid_example; // String | 
+final BuiltList<EntityHistoryRequest> entityHistoryRequest = ; // BuiltList<EntityHistoryRequest> | 
+
+try {
+    final response = api.searchProjectEntitiesHistory(projectid, entityHistoryRequest);
+    print(response);
+} catch on DioException (e) {
+    print('Exception when calling ProjectApi->searchProjectEntitiesHistory: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **projectid** | **String**|  | 
+ **entityHistoryRequest** | [**BuiltList&lt;EntityHistoryRequest&gt;**](EntityHistoryRequest.md)|  | 
+
+### Return type
+
+[**BuiltList&lt;EntityHistoryResponse&gt;**](EntityHistoryResponse.md)
+
+### Authorization
+
+[bearer_auth](../README.md#bearer_auth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

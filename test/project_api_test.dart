@@ -37,5 +37,10 @@ void main() {
       // TODO
     });
 
+    //Future<BuiltList<EntityHistoryResponse>> searchProjectEntitiesHistory(String projectid, BuiltList<EntityHistoryRequest> entityHistoryRequest) async
+    test('test searchProjectEntitiesHistory', () async {
+      // TODO
+    });
+
   });
 }
