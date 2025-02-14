@@ -13,6 +13,7 @@ Method | HTTP request | Description
 [**deleteProject**](ProjectApi.md#deleteproject) | **DELETE** /projects/{projectid} | 
 [**editProject**](ProjectApi.md#editproject) | **POST** /projects/{projectid} | 
 [**generateKey**](ProjectApi.md#generatekey) | **POST** /projects/{projectid}/generatekey | 
+[**getProjectEntities**](ProjectApi.md#getprojectentities) | **GET** /projects/{projectid}/history/entities | 
 [**listProjects**](ProjectApi.md#listprojects) | **GET** /projects | 
 [**revokeKeys**](ProjectApi.md#revokekeys) | **POST** /projects/{projectid}/revokekeys | 
 [**searchProjectEntitiesHistory**](ProjectApi.md#searchprojectentitieshistory) | **POST** /projects/{projectid}/history/search | 
@@ -172,6 +173,47 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**JsonObject**](JsonObject.md)
+
+### Authorization
+
+[bearer_auth](../README.md#bearer_auth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **getProjectEntities**
+> BuiltList<String> getProjectEntities(projectid)
+
+
+
+### Example
+```dart
+import 'package:schemaless_openapi/api.dart';
+
+final api = SchemalessOpenapi().getProjectApi();
+final String projectid = projectid_example; // String | 
+
+try {
+    final response = api.getProjectEntities(projectid);
+    print(response);
+} catch on DioException (e) {
+    print('Exception when calling ProjectApi->getProjectEntities: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **projectid** | **String**|  | 
+
+### Return type
+
+**BuiltList&lt;String&gt;**
 
 ### Authorization
 

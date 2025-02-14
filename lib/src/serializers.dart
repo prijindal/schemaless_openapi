@@ -89,6 +89,10 @@ Serializers serializers = (_$serializers.toBuilder()
         () => ListBuilder<EntityActionResponse>(),
       )
       ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(String)]),
+        () => ListBuilder<String>(),
+      )
+      ..addBuilderFactory(
         const FullType(BuiltList, [FullType(EntityHistoryRequest)]),
         () => ListBuilder<EntityHistoryRequest>(),
       )

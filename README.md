@@ -81,6 +81,7 @@ Class | Method | HTTP request | Description
 [*ProjectApi*](doc/ProjectApi.md) | [**deleteProject**](doc/ProjectApi.md#deleteproject) | **DELETE** /projects/{projectid} | 
 [*ProjectApi*](doc/ProjectApi.md) | [**editProject**](doc/ProjectApi.md#editproject) | **POST** /projects/{projectid} | 
 [*ProjectApi*](doc/ProjectApi.md) | [**generateKey**](doc/ProjectApi.md#generatekey) | **POST** /projects/{projectid}/generatekey | 
+[*ProjectApi*](doc/ProjectApi.md) | [**getProjectEntities**](doc/ProjectApi.md#getprojectentities) | **GET** /projects/{projectid}/history/entities | 
 [*ProjectApi*](doc/ProjectApi.md) | [**listProjects**](doc/ProjectApi.md#listprojects) | **GET** /projects | 
 [*ProjectApi*](doc/ProjectApi.md) | [**revokeKeys**](doc/ProjectApi.md#revokekeys) | **POST** /projects/{projectid}/revokekeys | 
 [*ProjectApi*](doc/ProjectApi.md) | [**searchProjectEntitiesHistory**](doc/ProjectApi.md#searchprojectentitieshistory) | **POST** /projects/{projectid}/history/search | 

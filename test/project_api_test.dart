@@ -27,6 +27,11 @@ void main() {
       // TODO
     });
 
+    //Future<BuiltList<String>> getProjectEntities(String projectid) async
+    test('test getProjectEntities', () async {
+      // TODO
+    });
+
     //Future<BuiltList<Project>> listProjects() async
     test('test listProjects', () async {
       // TODO
