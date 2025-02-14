@@ -22,8 +22,18 @@ void main() {
       // TODO
     });
 
+    //Future<JsonObject> generateKey(String projectid) async
+    test('test generateKey', () async {
+      // TODO
+    });
+
     //Future<BuiltList<Project>> listProjects() async
     test('test listProjects', () async {
+      // TODO
+    });
+
+    //Future<Project> revokeKeys(String projectid) async
+    test('test revokeKeys', () async {
       // TODO
     });
 

@@ -7,8 +7,8 @@ void main() {
   // TODO add properties to the builder and call build()
 
   group(AppKeyVerifyResponse, () {
-    // String id
-    test('to test the property `id`', () async {
+    // String projectId
+    test('to test the property `projectId`', () async {
       // TODO
     });
 

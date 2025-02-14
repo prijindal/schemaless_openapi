@@ -12,8 +12,6 @@ class _$GetCumulativeHealthResponse extends GetCumulativeHealthResponse {
   @override
   final GetCumulativeHealthResponseOs os;
   @override
-  final bool cache;
-  @override
   final bool db;
   @override
   final bool healthy;
@@ -25,7 +23,6 @@ class _$GetCumulativeHealthResponse extends GetCumulativeHealthResponse {
   _$GetCumulativeHealthResponse._(
       {required this.env,
       required this.os,
-      required this.cache,
       required this.db,
       required this.healthy})
       : super._() {
@@ -33,8 +30,6 @@ class _$GetCumulativeHealthResponse extends GetCumulativeHealthResponse {
         env, r'GetCumulativeHealthResponse', 'env');
     BuiltValueNullFieldError.checkNotNull(
         os, r'GetCumulativeHealthResponse', 'os');
-    BuiltValueNullFieldError.checkNotNull(
-        cache, r'GetCumulativeHealthResponse', 'cache');
     BuiltValueNullFieldError.checkNotNull(
         db, r'GetCumulativeHealthResponse', 'db');
     BuiltValueNullFieldError.checkNotNull(
@@ -56,7 +51,6 @@ class _$GetCumulativeHealthResponse extends GetCumulativeHealthResponse {
     return other is GetCumulativeHealthResponse &&
         env == other.env &&
         os == other.os &&
-        cache == other.cache &&
         db == other.db &&
         healthy == other.healthy;
   }
@@ -66,7 +60,6 @@ class _$GetCumulativeHealthResponse extends GetCumulativeHealthResponse {
     var _$hash = 0;
     _$hash = $jc(_$hash, env.hashCode);
     _$hash = $jc(_$hash, os.hashCode);
-    _$hash = $jc(_$hash, cache.hashCode);
     _$hash = $jc(_$hash, db.hashCode);
     _$hash = $jc(_$hash, healthy.hashCode);
     _$hash = $jf(_$hash);
@@ -78,7 +71,6 @@ class _$GetCumulativeHealthResponse extends GetCumulativeHealthResponse {
     return (newBuiltValueToStringHelper(r'GetCumulativeHealthResponse')
           ..add('env', env)
           ..add('os', os)
-          ..add('cache', cache)
           ..add('db', db)
           ..add('healthy', healthy))
         .toString();
@@ -100,10 +92,6 @@ class GetCumulativeHealthResponseBuilder
       _$this._os ??= new GetCumulativeHealthResponseOsBuilder();
   set os(GetCumulativeHealthResponseOsBuilder? os) => _$this._os = os;
 
-  bool? _cache;
-  bool? get cache => _$this._cache;
-  set cache(bool? cache) => _$this._cache = cache;
-
   bool? _db;
   bool? get db => _$this._db;
   set db(bool? db) => _$this._db = db;
@@ -121,7 +109,6 @@ class GetCumulativeHealthResponseBuilder
     if ($v != null) {
       _env = $v.env;
       _os = $v.os.toBuilder();
-      _cache = $v.cache;
       _db = $v.db;
       _healthy = $v.healthy;
       _$v = null;
@@ -151,8 +138,6 @@ class GetCumulativeHealthResponseBuilder
             env: BuiltValueNullFieldError.checkNotNull(
                 env, r'GetCumulativeHealthResponse', 'env'),
             os: os.build(),
-            cache: BuiltValueNullFieldError.checkNotNull(
-                cache, r'GetCumulativeHealthResponse', 'cache'),
             db: BuiltValueNullFieldError.checkNotNull(
                 db, r'GetCumulativeHealthResponse', 'db'),
             healthy: BuiltValueNullFieldError.checkNotNull(

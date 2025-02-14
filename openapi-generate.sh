@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# rm -rf echoback_openapi &&
+rm -rf lib test doc &&
 
 openapi-generator-cli generate -i ../schemaless-backend/src/build/swagger.json -g dart-dio -o . -c openapi-config.json &&
 

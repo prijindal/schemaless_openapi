@@ -6,17 +6,17 @@ part of 'entity_history_request_order_enum.dart';
 // BuiltValueGenerator
 // **************************************************************************
 
-const EntityHistoryRequestOrderEnum _$n0 =
-    const EntityHistoryRequestOrderEnum._('n0');
-const EntityHistoryRequestOrderEnum _$n1 =
-    const EntityHistoryRequestOrderEnum._('n1');
+const EntityHistoryRequestOrderEnum _$asc =
+    const EntityHistoryRequestOrderEnum._('asc');
+const EntityHistoryRequestOrderEnum _$desc =
+    const EntityHistoryRequestOrderEnum._('desc');
 
 EntityHistoryRequestOrderEnum _$valueOf(String name) {
   switch (name) {
-    case 'n0':
-      return _$n0;
-    case 'n1':
-      return _$n1;
+    case 'asc':
+      return _$asc;
+    case 'desc':
+      return _$desc;
     default:
       throw new ArgumentError(name);
   }
@@ -24,14 +24,14 @@ EntityHistoryRequestOrderEnum _$valueOf(String name) {
 
 final BuiltSet<EntityHistoryRequestOrderEnum> _$values = new BuiltSet<
     EntityHistoryRequestOrderEnum>(const <EntityHistoryRequestOrderEnum>[
-  _$n0,
-  _$n1,
+  _$asc,
+  _$desc,
 ]);
 
 class _$EntityHistoryRequestOrderEnumMeta {
   const _$EntityHistoryRequestOrderEnumMeta();
-  EntityHistoryRequestOrderEnum get n0 => _$n0;
-  EntityHistoryRequestOrderEnum get n1 => _$n1;
+  EntityHistoryRequestOrderEnum get asc => _$asc;
+  EntityHistoryRequestOrderEnum get desc => _$desc;
   EntityHistoryRequestOrderEnum valueOf(String name) => _$valueOf(name);
   BuiltSet<EntityHistoryRequestOrderEnum> get values => _$values;
 }
@@ -49,12 +49,12 @@ Serializer<EntityHistoryRequestOrderEnum>
 class _$EntityHistoryRequestOrderEnumSerializer
     implements PrimitiveSerializer<EntityHistoryRequestOrderEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
-    'n0': '0',
-    'n1': '1',
+    'asc': 'asc',
+    'desc': 'desc',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
-    '0': 'n0',
-    '1': 'n1',
+    'asc': 'asc',
+    'desc': 'desc',
   };
 
   @override

@@ -10,7 +10,6 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **env** | [**JsonObject**](.md) | Construct a type with a set of properties K of type T | 
 **os** | [**GetCumulativeHealthResponseOs**](GetCumulativeHealthResponseOs.md) |  | 
-**cache** | **bool** |  | 
 **db** | **bool** |  | 
 **healthy** | **bool** |  | 
 

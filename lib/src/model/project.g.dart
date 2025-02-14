@@ -12,6 +12,8 @@ class _$Project extends Project {
   @override
   final String name;
   @override
+  final String token;
+  @override
   final String userId;
   @override
   final DateTime updatedAt;
@@ -24,12 +26,14 @@ class _$Project extends Project {
   _$Project._(
       {required this.id,
       required this.name,
+      required this.token,
       required this.userId,
       required this.updatedAt,
       required this.createdAt})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(id, r'Project', 'id');
     BuiltValueNullFieldError.checkNotNull(name, r'Project', 'name');
+    BuiltValueNullFieldError.checkNotNull(token, r'Project', 'token');
     BuiltValueNullFieldError.checkNotNull(userId, r'Project', 'userId');
     BuiltValueNullFieldError.checkNotNull(updatedAt, r'Project', 'updatedAt');
     BuiltValueNullFieldError.checkNotNull(createdAt, r'Project', 'createdAt');
@@ -48,6 +52,7 @@ class _$Project extends Project {
     return other is Project &&
         id == other.id &&
         name == other.name &&
+        token == other.token &&
         userId == other.userId &&
         updatedAt == other.updatedAt &&
         createdAt == other.createdAt;
@@ -58,6 +63,7 @@ class _$Project extends Project {
     var _$hash = 0;
     _$hash = $jc(_$hash, id.hashCode);
     _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, token.hashCode);
     _$hash = $jc(_$hash, userId.hashCode);
     _$hash = $jc(_$hash, updatedAt.hashCode);
     _$hash = $jc(_$hash, createdAt.hashCode);
@@ -70,6 +76,7 @@ class _$Project extends Project {
     return (newBuiltValueToStringHelper(r'Project')
           ..add('id', id)
           ..add('name', name)
+          ..add('token', token)
           ..add('userId', userId)
           ..add('updatedAt', updatedAt)
           ..add('createdAt', createdAt))
@@ -87,6 +94,10 @@ class ProjectBuilder implements Builder<Project, ProjectBuilder> {
   String? _name;
   String? get name => _$this._name;
   set name(String? name) => _$this._name = name;
+
+  String? _token;
+  String? get token => _$this._token;
+  set token(String? token) => _$this._token = token;
 
   String? _userId;
   String? get userId => _$this._userId;
@@ -109,6 +120,7 @@ class ProjectBuilder implements Builder<Project, ProjectBuilder> {
     if ($v != null) {
       _id = $v.id;
       _name = $v.name;
+      _token = $v.token;
       _userId = $v.userId;
       _updatedAt = $v.updatedAt;
       _createdAt = $v.createdAt;
@@ -136,6 +148,8 @@ class ProjectBuilder implements Builder<Project, ProjectBuilder> {
         new _$Project._(
           id: BuiltValueNullFieldError.checkNotNull(id, r'Project', 'id'),
           name: BuiltValueNullFieldError.checkNotNull(name, r'Project', 'name'),
+          token:
+              BuiltValueNullFieldError.checkNotNull(token, r'Project', 'token'),
           userId: BuiltValueNullFieldError.checkNotNull(
               userId, r'Project', 'userId'),
           updatedAt: BuiltValueNullFieldError.checkNotNull(

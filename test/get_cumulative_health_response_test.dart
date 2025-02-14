@@ -18,11 +18,6 @@ void main() {
       // TODO
     });
 
-    // bool cache
-    test('to test the property `cache`', () async {
-      // TODO
-    });
-
     // bool db
     test('to test the property `db`', () async {
       // TODO

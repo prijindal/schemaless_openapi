@@ -8,7 +8,7 @@ part of 'app_key_verify_response.dart';
 
 class _$AppKeyVerifyResponse extends AppKeyVerifyResponse {
   @override
-  final String id;
+  final String projectId;
   @override
   final String projectName;
 
@@ -16,9 +16,10 @@ class _$AppKeyVerifyResponse extends AppKeyVerifyResponse {
           [void Function(AppKeyVerifyResponseBuilder)? updates]) =>
       (new AppKeyVerifyResponseBuilder()..update(updates))._build();
 
-  _$AppKeyVerifyResponse._({required this.id, required this.projectName})
+  _$AppKeyVerifyResponse._({required this.projectId, required this.projectName})
       : super._() {
-    BuiltValueNullFieldError.checkNotNull(id, r'AppKeyVerifyResponse', 'id');
+    BuiltValueNullFieldError.checkNotNull(
+        projectId, r'AppKeyVerifyResponse', 'projectId');
     BuiltValueNullFieldError.checkNotNull(
         projectName, r'AppKeyVerifyResponse', 'projectName');
   }
@@ -36,14 +37,14 @@ class _$AppKeyVerifyResponse extends AppKeyVerifyResponse {
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is AppKeyVerifyResponse &&
-        id == other.id &&
+        projectId == other.projectId &&
         projectName == other.projectName;
   }
 
   @override
   int get hashCode {
     var _$hash = 0;
-    _$hash = $jc(_$hash, id.hashCode);
+    _$hash = $jc(_$hash, projectId.hashCode);
     _$hash = $jc(_$hash, projectName.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
@@ -52,7 +53,7 @@ class _$AppKeyVerifyResponse extends AppKeyVerifyResponse {
   @override
   String toString() {
     return (newBuiltValueToStringHelper(r'AppKeyVerifyResponse')
-          ..add('id', id)
+          ..add('projectId', projectId)
           ..add('projectName', projectName))
         .toString();
   }
@@ -62,9 +63,9 @@ class AppKeyVerifyResponseBuilder
     implements Builder<AppKeyVerifyResponse, AppKeyVerifyResponseBuilder> {
   _$AppKeyVerifyResponse? _$v;
 
-  String? _id;
-  String? get id => _$this._id;
-  set id(String? id) => _$this._id = id;
+  String? _projectId;
+  String? get projectId => _$this._projectId;
+  set projectId(String? projectId) => _$this._projectId = projectId;
 
   String? _projectName;
   String? get projectName => _$this._projectName;
@@ -77,7 +78,7 @@ class AppKeyVerifyResponseBuilder
   AppKeyVerifyResponseBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
-      _id = $v.id;
+      _projectId = $v.projectId;
       _projectName = $v.projectName;
       _$v = null;
     }
@@ -101,8 +102,8 @@ class AppKeyVerifyResponseBuilder
   _$AppKeyVerifyResponse _build() {
     final _$result = _$v ??
         new _$AppKeyVerifyResponse._(
-          id: BuiltValueNullFieldError.checkNotNull(
-              id, r'AppKeyVerifyResponse', 'id'),
+          projectId: BuiltValueNullFieldError.checkNotNull(
+              projectId, r'AppKeyVerifyResponse', 'projectId'),
           projectName: BuiltValueNullFieldError.checkNotNull(
               projectName, r'AppKeyVerifyResponse', 'projectName'),
         );

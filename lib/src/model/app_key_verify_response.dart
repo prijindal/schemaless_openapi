@@ -11,12 +11,12 @@ part 'app_key_verify_response.g.dart';
 /// AppKeyVerifyResponse
 ///
 /// Properties:
-/// * [id] 
+/// * [projectId] 
 /// * [projectName] 
 @BuiltValue()
 abstract class AppKeyVerifyResponse implements Built<AppKeyVerifyResponse, AppKeyVerifyResponseBuilder> {
-  @BuiltValueField(wireName: r'id')
-  String get id;
+  @BuiltValueField(wireName: r'project_id')
+  String get projectId;
 
   @BuiltValueField(wireName: r'project_name')
   String get projectName;
@@ -44,9 +44,9 @@ class _$AppKeyVerifyResponseSerializer implements PrimitiveSerializer<AppKeyVeri
     AppKeyVerifyResponse object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    yield r'id';
+    yield r'project_id';
     yield serializers.serialize(
-      object.id,
+      object.projectId,
       specifiedType: const FullType(String),
     );
     yield r'project_name';
@@ -77,12 +77,12 @@ class _$AppKeyVerifyResponseSerializer implements PrimitiveSerializer<AppKeyVeri
       final key = serializedList[i] as String;
       final value = serializedList[i + 1];
       switch (key) {
-        case r'id':
+        case r'project_id':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.id = valueDes;
+          result.projectId = valueDes;
           break;
         case r'project_name':
           final valueDes = serializers.deserialize(

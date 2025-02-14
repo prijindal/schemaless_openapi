@@ -11,10 +11,10 @@ part 'entity_history_request_order_enum.g.dart';
 
 class EntityHistoryRequestOrderEnum extends EnumClass {
 
-  @BuiltValueEnumConst(wireName: r'0')
-  static const EntityHistoryRequestOrderEnum n0 = _$n0;
-  @BuiltValueEnumConst(wireName: r'1')
-  static const EntityHistoryRequestOrderEnum n1 = _$n1;
+  @BuiltValueEnumConst(wireName: r'asc')
+  static const EntityHistoryRequestOrderEnum asc = _$asc;
+  @BuiltValueEnumConst(wireName: r'desc')
+  static const EntityHistoryRequestOrderEnum desc = _$desc;
 
   static Serializer<EntityHistoryRequestOrderEnum> get serializer => _$entityHistoryRequestOrderEnumSerializer;
 

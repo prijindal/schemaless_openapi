@@ -17,6 +17,11 @@ void main() {
       // TODO
     });
 
+    // String token
+    test('to test the property `token`', () async {
+      // TODO
+    });
+
     // String userId
     test('to test the property `userId`', () async {
       // TODO

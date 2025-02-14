@@ -10,7 +10,6 @@ import 'package:schemaless_openapi/src/auth/basic_auth.dart';
 import 'package:schemaless_openapi/src/auth/bearer_auth.dart';
 import 'package:schemaless_openapi/src/auth/oauth.dart';
 import 'package:schemaless_openapi/src/api/admin_api.dart';
-import 'package:schemaless_openapi/src/api/appkeys_api.dart';
 import 'package:schemaless_openapi/src/api/auth_api.dart';
 import 'package:schemaless_openapi/src/api/entity_api.dart';
 import 'package:schemaless_openapi/src/api/health_api.dart';
@@ -75,12 +74,6 @@ class SchemalessOpenapi {
   /// by doing that all interceptors will not be executed
   AdminApi getAdminApi() {
     return AdminApi(dio, serializers);
-  }
-
-  /// Get AppkeysApi instance, base route and serializer can be overridden by a given but be careful,
-  /// by doing that all interceptors will not be executed
-  AppkeysApi getAppkeysApi() {
-    return AppkeysApi(dio, serializers);
   }
 
   /// Get AuthApi instance, base route and serializer can be overridden by a given but be careful,

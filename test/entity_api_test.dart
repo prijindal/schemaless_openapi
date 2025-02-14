@@ -12,11 +12,6 @@ void main() {
       // TODO
     });
 
-    //Future<BuiltList<EntitySearchResponse>> searchEntitiesData(BuiltList<EntitySearchRequest> entitySearchRequest) async
-    test('test searchEntitiesData', () async {
-      // TODO
-    });
-
     //Future<BuiltList<EntityHistoryResponse>> searchEntitiesHistory(BuiltList<EntityHistoryRequest> entityHistoryRequest) async
     test('test searchEntitiesHistory', () async {
       // TODO

@@ -12,7 +12,9 @@ Method | HTTP request | Description
 [**createProjects**](ProjectApi.md#createprojects) | **POST** /projects | 
 [**deleteProject**](ProjectApi.md#deleteproject) | **DELETE** /projects/{projectid} | 
 [**editProject**](ProjectApi.md#editproject) | **POST** /projects/{projectid} | 
+[**generateKey**](ProjectApi.md#generatekey) | **POST** /projects/{projectid}/generatekey | 
 [**listProjects**](ProjectApi.md#listprojects) | **GET** /projects | 
+[**revokeKeys**](ProjectApi.md#revokekeys) | **POST** /projects/{projectid}/revokekeys | 
 
 
 # **createProjects**
@@ -140,6 +142,47 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **generateKey**
+> JsonObject generateKey(projectid)
+
+
+
+### Example
+```dart
+import 'package:schemaless_openapi/api.dart';
+
+final api = SchemalessOpenapi().getProjectApi();
+final String projectid = projectid_example; // String | 
+
+try {
+    final response = api.generateKey(projectid);
+    print(response);
+} catch on DioException (e) {
+    print('Exception when calling ProjectApi->generateKey: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **projectid** | **String**|  | 
+
+### Return type
+
+[**JsonObject**](JsonObject.md)
+
+### Authorization
+
+[bearer_auth](../README.md#bearer_auth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **listProjects**
 > BuiltList<Project> listProjects()
 
@@ -165,6 +208,47 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**BuiltList&lt;Project&gt;**](Project.md)
+
+### Authorization
+
+[bearer_auth](../README.md#bearer_auth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **revokeKeys**
+> Project revokeKeys(projectid)
+
+
+
+### Example
+```dart
+import 'package:schemaless_openapi/api.dart';
+
+final api = SchemalessOpenapi().getProjectApi();
+final String projectid = projectid_example; // String | 
+
+try {
+    final response = api.revokeKeys(projectid);
+    print(response);
+} catch on DioException (e) {
+    print('Exception when calling ProjectApi->revokeKeys: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **projectid** | **String**|  | 
+
+### Return type
+
+[**Project**](Project.md)
 
 ### Authorization
 

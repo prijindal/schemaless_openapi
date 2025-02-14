@@ -15,7 +15,6 @@ part 'get_cumulative_health_response.g.dart';
 /// Properties:
 /// * [env] - Construct a type with a set of properties K of type T
 /// * [os] 
-/// * [cache] 
 /// * [db] 
 /// * [healthy] 
 @BuiltValue()
@@ -26,9 +25,6 @@ abstract class GetCumulativeHealthResponse implements Built<GetCumulativeHealthR
 
   @BuiltValueField(wireName: r'os')
   GetCumulativeHealthResponseOs get os;
-
-  @BuiltValueField(wireName: r'cache')
-  bool get cache;
 
   @BuiltValueField(wireName: r'db')
   bool get db;
@@ -68,11 +64,6 @@ class _$GetCumulativeHealthResponseSerializer implements PrimitiveSerializer<Get
     yield serializers.serialize(
       object.os,
       specifiedType: const FullType(GetCumulativeHealthResponseOs),
-    );
-    yield r'cache';
-    yield serializers.serialize(
-      object.cache,
-      specifiedType: const FullType(bool),
     );
     yield r'db';
     yield serializers.serialize(
@@ -120,13 +111,6 @@ class _$GetCumulativeHealthResponseSerializer implements PrimitiveSerializer<Get
             specifiedType: const FullType(GetCumulativeHealthResponseOs),
           ) as GetCumulativeHealthResponseOs;
           result.os.replace(valueDes);
-          break;
-        case r'cache':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(bool),
-          ) as bool;
-          result.cache = valueDes;
           break;
         case r'db':
           final valueDes = serializers.deserialize(

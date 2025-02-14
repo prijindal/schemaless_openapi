@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** |  | 
 **name** | **String** |  | 
+**token** | **String** |  | 
 **userId** | **String** |  | 
 **updatedAt** | [**DateTime**](DateTime.md) |  | 
 **createdAt** | [**DateTime**](DateTime.md) |  | 

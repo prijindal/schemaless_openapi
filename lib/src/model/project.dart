@@ -13,6 +13,7 @@ part 'project.g.dart';
 /// Properties:
 /// * [id] 
 /// * [name] 
+/// * [token] 
 /// * [userId] 
 /// * [updatedAt] 
 /// * [createdAt] 
@@ -23,6 +24,9 @@ abstract class Project implements Built<Project, ProjectBuilder> {
 
   @BuiltValueField(wireName: r'name')
   String get name;
+
+  @BuiltValueField(wireName: r'token')
+  String get token;
 
   @BuiltValueField(wireName: r'user_id')
   String get userId;
@@ -64,6 +68,11 @@ class _$ProjectSerializer implements PrimitiveSerializer<Project> {
     yield r'name';
     yield serializers.serialize(
       object.name,
+      specifiedType: const FullType(String),
+    );
+    yield r'token';
+    yield serializers.serialize(
+      object.token,
       specifiedType: const FullType(String),
     );
     yield r'user_id';
@@ -117,6 +126,13 @@ class _$ProjectSerializer implements PrimitiveSerializer<Project> {
             specifiedType: const FullType(String),
           ) as String;
           result.name = valueDes;
+          break;
+        case r'token':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.token = valueDes;
           break;
         case r'user_id':
           final valueDes = serializers.deserialize(

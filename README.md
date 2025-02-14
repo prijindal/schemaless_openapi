@@ -68,13 +68,9 @@ Class | Method | HTTP request | Description
 [*AdminApi*](doc/AdminApi.md) | [**deleteUser**](doc/AdminApi.md#deleteuser) | **DELETE** /user/admin/{userid} | 
 [*AdminApi*](doc/AdminApi.md) | [**listUsers**](doc/AdminApi.md#listusers) | **GET** /user/admin | 
 [*AdminApi*](doc/AdminApi.md) | [**userApproval**](doc/AdminApi.md#userapproval) | **POST** /user/admin/{userid}/approval | 
-[*AppkeysApi*](doc/AppkeysApi.md) | [**deleteAppKey**](doc/AppkeysApi.md#deleteappkey) | **DELETE** /appkeys/{appkeyid} | 
-[*AppkeysApi*](doc/AppkeysApi.md) | [**generateAppKey**](doc/AppkeysApi.md#generateappkey) | **POST** /appkeys | 
-[*AppkeysApi*](doc/AppkeysApi.md) | [**listAppKeys**](doc/AppkeysApi.md#listappkeys) | **GET** /appkeys | 
 [*AuthApi*](doc/AuthApi.md) | [**verifyAppKey**](doc/AuthApi.md#verifyappkey) | **GET** /auth/appkey | 
 [*AuthApi*](doc/AuthApi.md) | [**verifyUserAuth**](doc/AuthApi.md#verifyuserauth) | **GET** /auth/user | 
 [*EntityApi*](doc/EntityApi.md) | [**entityAction**](doc/EntityApi.md#entityaction) | **POST** /entity/action | 
-[*EntityApi*](doc/EntityApi.md) | [**searchEntitiesData**](doc/EntityApi.md#searchentitiesdata) | **POST** /entity/data/search | 
 [*EntityApi*](doc/EntityApi.md) | [**searchEntitiesHistory**](doc/EntityApi.md#searchentitieshistory) | **POST** /entity/history/search | 
 [*HealthApi*](doc/HealthApi.md) | [**getCumulativeHealth**](doc/HealthApi.md#getcumulativehealth) | **GET** /cumulative/health | 
 [*HealthApi*](doc/HealthApi.md) | [**getHealth**](doc/HealthApi.md#gethealth) | **GET** /health | 
@@ -84,14 +80,14 @@ Class | Method | HTTP request | Description
 [*ProjectApi*](doc/ProjectApi.md) | [**createProjects**](doc/ProjectApi.md#createprojects) | **POST** /projects | 
 [*ProjectApi*](doc/ProjectApi.md) | [**deleteProject**](doc/ProjectApi.md#deleteproject) | **DELETE** /projects/{projectid} | 
 [*ProjectApi*](doc/ProjectApi.md) | [**editProject**](doc/ProjectApi.md#editproject) | **POST** /projects/{projectid} | 
+[*ProjectApi*](doc/ProjectApi.md) | [**generateKey**](doc/ProjectApi.md#generatekey) | **POST** /projects/{projectid}/generatekey | 
 [*ProjectApi*](doc/ProjectApi.md) | [**listProjects**](doc/ProjectApi.md#listprojects) | **GET** /projects | 
+[*ProjectApi*](doc/ProjectApi.md) | [**revokeKeys**](doc/ProjectApi.md#revokekeys) | **POST** /projects/{projectid}/revokekeys | 
 
 
 ## Documentation For Models
 
- - [AppKey](doc/AppKey.md)
  - [AppKeyVerifyResponse](doc/AppKeyVerifyResponse.md)
- - [CreateAppKeyRequest](doc/CreateAppKeyRequest.md)
  - [CreateProjectRequest](doc/CreateProjectRequest.md)
  - [DateParams](doc/DateParams.md)
  - [EditProjectRequest](doc/EditProjectRequest.md)
@@ -101,21 +97,15 @@ Class | Method | HTTP request | Description
  - [EntityActionDelete](doc/EntityActionDelete.md)
  - [EntityActionResponse](doc/EntityActionResponse.md)
  - [EntityActionUpdate](doc/EntityActionUpdate.md)
- - [EntityData](doc/EntityData.md)
  - [EntityHistory](doc/EntityHistory.md)
  - [EntityHistoryRequest](doc/EntityHistoryRequest.md)
  - [EntityHistoryRequestOrderEnum](doc/EntityHistoryRequestOrderEnum.md)
  - [EntityHistoryRequestParams](doc/EntityHistoryRequestParams.md)
  - [EntityHistoryRequestParamsHostId](doc/EntityHistoryRequestParamsHostId.md)
  - [EntityHistoryResponse](doc/EntityHistoryResponse.md)
- - [EntitySearchRequest](doc/EntitySearchRequest.md)
- - [EntitySearchRequestOrderEnum](doc/EntitySearchRequestOrderEnum.md)
- - [EntitySearchRequestParams](doc/EntitySearchRequestParams.md)
- - [EntitySearchResponse](doc/EntitySearchResponse.md)
  - [GetCumulativeHealthResponse](doc/GetCumulativeHealthResponse.md)
  - [GetCumulativeHealthResponseOs](doc/GetCumulativeHealthResponseOs.md)
  - [GetHealthResponse](doc/GetHealthResponse.md)
- - [ListAppKeysResponse](doc/ListAppKeysResponse.md)
  - [ListUsersResponse](doc/ListUsersResponse.md)
  - [Project](doc/Project.md)
  - [UserApprovalRequestBody](doc/UserApprovalRequestBody.md)
