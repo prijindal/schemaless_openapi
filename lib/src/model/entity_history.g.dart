@@ -8,7 +8,7 @@ part of 'entity_history.dart';
 
 class _$EntityHistory extends EntityHistory {
   @override
-  final String projectId;
+  final String userId;
   @override
   final String entityName;
   @override
@@ -30,7 +30,7 @@ class _$EntityHistory extends EntityHistory {
       (new EntityHistoryBuilder()..update(updates))._build();
 
   _$EntityHistory._(
-      {required this.projectId,
+      {required this.userId,
       required this.entityName,
       required this.id,
       required this.hostId,
@@ -40,8 +40,7 @@ class _$EntityHistory extends EntityHistory {
       required this.timestamp,
       required this.createdAt})
       : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        projectId, r'EntityHistory', 'projectId');
+    BuiltValueNullFieldError.checkNotNull(userId, r'EntityHistory', 'userId');
     BuiltValueNullFieldError.checkNotNull(
         entityName, r'EntityHistory', 'entityName');
     BuiltValueNullFieldError.checkNotNull(id, r'EntityHistory', 'id');
@@ -67,7 +66,7 @@ class _$EntityHistory extends EntityHistory {
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is EntityHistory &&
-        projectId == other.projectId &&
+        userId == other.userId &&
         entityName == other.entityName &&
         id == other.id &&
         hostId == other.hostId &&
@@ -81,7 +80,7 @@ class _$EntityHistory extends EntityHistory {
   @override
   int get hashCode {
     var _$hash = 0;
-    _$hash = $jc(_$hash, projectId.hashCode);
+    _$hash = $jc(_$hash, userId.hashCode);
     _$hash = $jc(_$hash, entityName.hashCode);
     _$hash = $jc(_$hash, id.hashCode);
     _$hash = $jc(_$hash, hostId.hashCode);
@@ -97,7 +96,7 @@ class _$EntityHistory extends EntityHistory {
   @override
   String toString() {
     return (newBuiltValueToStringHelper(r'EntityHistory')
-          ..add('projectId', projectId)
+          ..add('userId', userId)
           ..add('entityName', entityName)
           ..add('id', id)
           ..add('hostId', hostId)
@@ -114,9 +113,9 @@ class EntityHistoryBuilder
     implements Builder<EntityHistory, EntityHistoryBuilder> {
   _$EntityHistory? _$v;
 
-  String? _projectId;
-  String? get projectId => _$this._projectId;
-  set projectId(String? projectId) => _$this._projectId = projectId;
+  String? _userId;
+  String? get userId => _$this._userId;
+  set userId(String? userId) => _$this._userId = userId;
 
   String? _entityName;
   String? get entityName => _$this._entityName;
@@ -157,7 +156,7 @@ class EntityHistoryBuilder
   EntityHistoryBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
-      _projectId = $v.projectId;
+      _userId = $v.userId;
       _entityName = $v.entityName;
       _id = $v.id;
       _hostId = $v.hostId;
@@ -188,8 +187,8 @@ class EntityHistoryBuilder
   _$EntityHistory _build() {
     final _$result = _$v ??
         new _$EntityHistory._(
-          projectId: BuiltValueNullFieldError.checkNotNull(
-              projectId, r'EntityHistory', 'projectId'),
+          userId: BuiltValueNullFieldError.checkNotNull(
+              userId, r'EntityHistory', 'userId'),
           entityName: BuiltValueNullFieldError.checkNotNull(
               entityName, r'EntityHistory', 'entityName'),
           id: BuiltValueNullFieldError.checkNotNull(id, r'EntityHistory', 'id'),

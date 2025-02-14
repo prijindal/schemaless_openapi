@@ -8,7 +8,7 @@ import 'package:schemaless_openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**projectId** | **String** |  | 
+**userId** | **String** |  | 
 **entityName** | **String** |  | 
 **id** | **String** |  | 
 **hostId** | **String** |  | 

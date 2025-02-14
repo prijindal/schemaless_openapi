@@ -68,32 +68,22 @@ Class | Method | HTTP request | Description
 [*AdminApi*](doc/AdminApi.md) | [**deleteUser**](doc/AdminApi.md#deleteuser) | **DELETE** /user/admin/{userid} | 
 [*AdminApi*](doc/AdminApi.md) | [**listUsers**](doc/AdminApi.md#listusers) | **GET** /user/admin | 
 [*AdminApi*](doc/AdminApi.md) | [**userApproval**](doc/AdminApi.md#userapproval) | **POST** /user/admin/{userid}/approval | 
-[*AuthApi*](doc/AuthApi.md) | [**verifyAppKey**](doc/AuthApi.md#verifyappkey) | **GET** /auth/appkey | 
+[*AuthApi*](doc/AuthApi.md) | [**generateKey**](doc/AuthApi.md#generatekey) | **POST** /auth/generatekey | 
+[*AuthApi*](doc/AuthApi.md) | [**revokeKeys**](doc/AuthApi.md#revokekeys) | **POST** /auth/revokekeys | 
 [*AuthApi*](doc/AuthApi.md) | [**verifyUserAuth**](doc/AuthApi.md#verifyuserauth) | **GET** /auth/user | 
 [*EntityApi*](doc/EntityApi.md) | [**entityAction**](doc/EntityApi.md#entityaction) | **POST** /entity/action | 
+[*EntityApi*](doc/EntityApi.md) | [**getEntities**](doc/EntityApi.md#getentities) | **GET** /entity/history/entities | 
 [*EntityApi*](doc/EntityApi.md) | [**searchEntitiesHistory**](doc/EntityApi.md#searchentitieshistory) | **POST** /entity/history/search | 
 [*HealthApi*](doc/HealthApi.md) | [**getCumulativeHealth**](doc/HealthApi.md#getcumulativehealth) | **GET** /cumulative/health | 
 [*HealthApi*](doc/HealthApi.md) | [**getHealth**](doc/HealthApi.md#gethealth) | **GET** /health | 
 [*LoginApi*](doc/LoginApi.md) | [**initializeServer**](doc/LoginApi.md#initializeserver) | **POST** /user/login/initialize | 
 [*LoginApi*](doc/LoginApi.md) | [**loginUser**](doc/LoginApi.md#loginuser) | **POST** /user/login/login | 
 [*LoginApi*](doc/LoginApi.md) | [**registerUser**](doc/LoginApi.md#registeruser) | **POST** /user/login/register | 
-[*ProjectApi*](doc/ProjectApi.md) | [**createProjects**](doc/ProjectApi.md#createprojects) | **POST** /projects | 
-[*ProjectApi*](doc/ProjectApi.md) | [**deleteProject**](doc/ProjectApi.md#deleteproject) | **DELETE** /projects/{projectid} | 
-[*ProjectApi*](doc/ProjectApi.md) | [**editProject**](doc/ProjectApi.md#editproject) | **POST** /projects/{projectid} | 
-[*ProjectApi*](doc/ProjectApi.md) | [**generateKey**](doc/ProjectApi.md#generatekey) | **POST** /projects/{projectid}/generatekey | 
-[*ProjectApi*](doc/ProjectApi.md) | [**getProjectEntities**](doc/ProjectApi.md#getprojectentities) | **GET** /projects/{projectid}/history/entities | 
-[*ProjectApi*](doc/ProjectApi.md) | [**listProjects**](doc/ProjectApi.md#listprojects) | **GET** /projects | 
-[*ProjectApi*](doc/ProjectApi.md) | [**revokeKeys**](doc/ProjectApi.md#revokekeys) | **POST** /projects/{projectid}/revokekeys | 
-[*ProjectApi*](doc/ProjectApi.md) | [**searchProjectEntitiesHistory**](doc/ProjectApi.md#searchprojectentitieshistory) | **POST** /projects/{projectid}/history/search | 
 
 
 ## Documentation For Models
 
- - [AlreadyExistsError](doc/AlreadyExistsError.md)
- - [AppKeyVerifyResponse](doc/AppKeyVerifyResponse.md)
- - [CreateProjectRequest](doc/CreateProjectRequest.md)
  - [DateParams](doc/DateParams.md)
- - [EditProjectRequest](doc/EditProjectRequest.md)
  - [EntityAction](doc/EntityAction.md)
  - [EntityActionBase](doc/EntityActionBase.md)
  - [EntityActionCreate](doc/EntityActionCreate.md)
@@ -112,7 +102,7 @@ Class | Method | HTTP request | Description
  - [InvalidCredentialsError](doc/InvalidCredentialsError.md)
  - [ListUsersResponse](doc/ListUsersResponse.md)
  - [NotExistsError](doc/NotExistsError.md)
- - [Project](doc/Project.md)
+ - [User](doc/User.md)
  - [UserApprovalRequestBody](doc/UserApprovalRequestBody.md)
  - [UserLoginRequest](doc/UserLoginRequest.md)
  - [UserStatus](doc/UserStatus.md)
@@ -124,10 +114,6 @@ Class | Method | HTTP request | Description
 
 
 Authentication schemes defined for the API:
-### bearer_appkey
-
-- **Type**: HTTP Bearer Token authentication (JWT)
-
 ### bearer_auth
 
 - **Type**: HTTP Bearer Token authentication (JWT)

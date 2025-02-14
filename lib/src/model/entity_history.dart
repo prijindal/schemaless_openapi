@@ -12,7 +12,7 @@ part 'entity_history.g.dart';
 /// EntityHistory
 ///
 /// Properties:
-/// * [projectId] 
+/// * [userId] 
 /// * [entityName] 
 /// * [id] 
 /// * [hostId] 
@@ -23,8 +23,8 @@ part 'entity_history.g.dart';
 /// * [createdAt] 
 @BuiltValue()
 abstract class EntityHistory implements Built<EntityHistory, EntityHistoryBuilder> {
-  @BuiltValueField(wireName: r'project_id')
-  String get projectId;
+  @BuiltValueField(wireName: r'user_id')
+  String get userId;
 
   @BuiltValueField(wireName: r'entity_name')
   String get entityName;
@@ -73,9 +73,9 @@ class _$EntityHistorySerializer implements PrimitiveSerializer<EntityHistory> {
     EntityHistory object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    yield r'project_id';
+    yield r'user_id';
     yield serializers.serialize(
-      object.projectId,
+      object.userId,
       specifiedType: const FullType(String),
     );
     yield r'entity_name';
@@ -141,12 +141,12 @@ class _$EntityHistorySerializer implements PrimitiveSerializer<EntityHistory> {
       final key = serializedList[i] as String;
       final value = serializedList[i + 1];
       switch (key) {
-        case r'project_id':
+        case r'user_id':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.projectId = valueDes;
+          result.userId = valueDes;
           break;
         case r'entity_name':
           final valueDes = serializers.deserialize(

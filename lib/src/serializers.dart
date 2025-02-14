@@ -14,11 +14,7 @@ import 'package:built_value/iso_8601_date_time_serializer.dart';
 import 'package:schemaless_openapi/src/date_serializer.dart';
 import 'package:schemaless_openapi/src/model/date.dart';
 
-import 'package:schemaless_openapi/src/model/already_exists_error.dart';
-import 'package:schemaless_openapi/src/model/app_key_verify_response.dart';
-import 'package:schemaless_openapi/src/model/create_project_request.dart';
 import 'package:schemaless_openapi/src/model/date_params.dart';
-import 'package:schemaless_openapi/src/model/edit_project_request.dart';
 import 'package:schemaless_openapi/src/model/entity_action.dart';
 import 'package:schemaless_openapi/src/model/entity_action_base.dart';
 import 'package:schemaless_openapi/src/model/entity_action_create.dart';
@@ -37,7 +33,7 @@ import 'package:schemaless_openapi/src/model/get_health_response.dart';
 import 'package:schemaless_openapi/src/model/invalid_credentials_error.dart';
 import 'package:schemaless_openapi/src/model/list_users_response.dart';
 import 'package:schemaless_openapi/src/model/not_exists_error.dart';
-import 'package:schemaless_openapi/src/model/project.dart';
+import 'package:schemaless_openapi/src/model/user.dart';
 import 'package:schemaless_openapi/src/model/user_approval_request_body.dart';
 import 'package:schemaless_openapi/src/model/user_login_request.dart';
 import 'package:schemaless_openapi/src/model/user_status.dart';
@@ -47,11 +43,7 @@ import 'package:schemaless_openapi/src/model/user_verify_response.dart';
 part 'serializers.g.dart';
 
 @SerializersFor([
-  AlreadyExistsError,
-  AppKeyVerifyResponse,
-  CreateProjectRequest,
   DateParams,
-  EditProjectRequest,
   EntityAction,
   EntityActionBase,$EntityActionBase,
   EntityActionCreate,
@@ -70,7 +62,7 @@ part 'serializers.g.dart';
   InvalidCredentialsError,
   ListUsersResponse,
   NotExistsError,
-  Project,
+  User,
   UserApprovalRequestBody,
   UserLoginRequest,
   UserStatus,
@@ -78,10 +70,6 @@ part 'serializers.g.dart';
   UserVerifyResponse,
 ])
 Serializers serializers = (_$serializers.toBuilder()
-      ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(Project)]),
-        () => ListBuilder<Project>(),
-      )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(EntityAction)]),
         () => ListBuilder<EntityAction>(),

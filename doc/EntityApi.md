@@ -10,6 +10,7 @@ All URIs are relative to *http://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**entityAction**](EntityApi.md#entityaction) | **POST** /entity/action | 
+[**getEntities**](EntityApi.md#getentities) | **GET** /entity/history/entities | 
 [**searchEntitiesHistory**](EntityApi.md#searchentitieshistory) | **POST** /entity/history/search | 
 
 
@@ -45,11 +46,48 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearer_appkey](../README.md#bearer_appkey)
+[bearer_auth](../README.md#bearer_auth)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **getEntities**
+> BuiltList<String> getEntities()
+
+
+
+### Example
+```dart
+import 'package:schemaless_openapi/api.dart';
+
+final api = SchemalessOpenapi().getEntityApi();
+
+try {
+    final response = api.getEntities();
+    print(response);
+} catch on DioException (e) {
+    print('Exception when calling EntityApi->getEntities: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+**BuiltList&lt;String&gt;**
+
+### Authorization
+
+[bearer_auth](../README.md#bearer_auth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -86,7 +124,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearer_appkey](../README.md#bearer_appkey)
+[bearer_auth](../README.md#bearer_auth)
 
 ### HTTP request headers
 

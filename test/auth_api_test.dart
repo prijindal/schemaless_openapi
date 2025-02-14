@@ -7,8 +7,13 @@ void main() {
   final instance = SchemalessOpenapi().getAuthApi();
 
   group(AuthApi, () {
-    //Future<AppKeyVerifyResponse> verifyAppKey() async
-    test('test verifyAppKey', () async {
+    //Future<JsonObject> generateKey() async
+    test('test generateKey', () async {
+      // TODO
+    });
+
+    //Future<User> revokeKeys() async
+    test('test revokeKeys', () async {
       // TODO
     });
 

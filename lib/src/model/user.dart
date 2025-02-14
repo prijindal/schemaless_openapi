@@ -3,33 +3,43 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:schemaless_openapi/src/model/user_status.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
-part 'project.g.dart';
+part 'user.g.dart';
 
-/// Project
+/// User
 ///
 /// Properties:
 /// * [id] 
-/// * [name] 
+/// * [username] 
+/// * [bcryptHash] 
 /// * [token] 
-/// * [userId] 
+/// * [status] 
+/// * [isAdmin] 
 /// * [updatedAt] 
 /// * [createdAt] 
 @BuiltValue()
-abstract class Project implements Built<Project, ProjectBuilder> {
+abstract class User implements Built<User, UserBuilder> {
   @BuiltValueField(wireName: r'id')
   String get id;
 
-  @BuiltValueField(wireName: r'name')
-  String get name;
+  @BuiltValueField(wireName: r'username')
+  String get username;
+
+  @BuiltValueField(wireName: r'bcrypt_hash')
+  String get bcryptHash;
 
   @BuiltValueField(wireName: r'token')
   String get token;
 
-  @BuiltValueField(wireName: r'user_id')
-  String get userId;
+  @BuiltValueField(wireName: r'status')
+  UserStatus get status;
+  // enum statusEnum {  ACTIVATED,  DEACTIVATED,  PENDING_VERIFICATION,  };
+
+  @BuiltValueField(wireName: r'is_admin')
+  bool get isAdmin;
 
   @BuiltValueField(wireName: r'updated_at')
   DateTime get updatedAt;
@@ -37,27 +47,27 @@ abstract class Project implements Built<Project, ProjectBuilder> {
   @BuiltValueField(wireName: r'created_at')
   DateTime get createdAt;
 
-  Project._();
+  User._();
 
-  factory Project([void updates(ProjectBuilder b)]) = _$Project;
+  factory User([void updates(UserBuilder b)]) = _$User;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(ProjectBuilder b) => b;
+  static void _defaults(UserBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<Project> get serializer => _$ProjectSerializer();
+  static Serializer<User> get serializer => _$UserSerializer();
 }
 
-class _$ProjectSerializer implements PrimitiveSerializer<Project> {
+class _$UserSerializer implements PrimitiveSerializer<User> {
   @override
-  final Iterable<Type> types = const [Project, _$Project];
+  final Iterable<Type> types = const [User, _$User];
 
   @override
-  final String wireName = r'Project';
+  final String wireName = r'User';
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    Project object, {
+    User object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
     yield r'id';
@@ -65,9 +75,14 @@ class _$ProjectSerializer implements PrimitiveSerializer<Project> {
       object.id,
       specifiedType: const FullType(String),
     );
-    yield r'name';
+    yield r'username';
     yield serializers.serialize(
-      object.name,
+      object.username,
+      specifiedType: const FullType(String),
+    );
+    yield r'bcrypt_hash';
+    yield serializers.serialize(
+      object.bcryptHash,
       specifiedType: const FullType(String),
     );
     yield r'token';
@@ -75,10 +90,15 @@ class _$ProjectSerializer implements PrimitiveSerializer<Project> {
       object.token,
       specifiedType: const FullType(String),
     );
-    yield r'user_id';
+    yield r'status';
     yield serializers.serialize(
-      object.userId,
-      specifiedType: const FullType(String),
+      object.status,
+      specifiedType: const FullType(UserStatus),
+    );
+    yield r'is_admin';
+    yield serializers.serialize(
+      object.isAdmin,
+      specifiedType: const FullType(bool),
     );
     yield r'updated_at';
     yield serializers.serialize(
@@ -95,7 +115,7 @@ class _$ProjectSerializer implements PrimitiveSerializer<Project> {
   @override
   Object serialize(
     Serializers serializers,
-    Project object, {
+    User object, {
     FullType specifiedType = FullType.unspecified,
   }) {
     return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
@@ -106,7 +126,7 @@ class _$ProjectSerializer implements PrimitiveSerializer<Project> {
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
     required List<Object?> serializedList,
-    required ProjectBuilder result,
+    required UserBuilder result,
     required List<Object?> unhandled,
   }) {
     for (var i = 0; i < serializedList.length; i += 2) {
@@ -120,12 +140,19 @@ class _$ProjectSerializer implements PrimitiveSerializer<Project> {
           ) as String;
           result.id = valueDes;
           break;
-        case r'name':
+        case r'username':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.username = valueDes;
+          break;
+        case r'bcrypt_hash':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.bcryptHash = valueDes;
           break;
         case r'token':
           final valueDes = serializers.deserialize(
@@ -134,12 +161,19 @@ class _$ProjectSerializer implements PrimitiveSerializer<Project> {
           ) as String;
           result.token = valueDes;
           break;
-        case r'user_id':
+        case r'status':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.userId = valueDes;
+            specifiedType: const FullType(UserStatus),
+          ) as UserStatus;
+          result.status = valueDes;
+          break;
+        case r'is_admin':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(bool),
+          ) as bool;
+          result.isAdmin = valueDes;
           break;
         case r'updated_at':
           final valueDes = serializers.deserialize(
@@ -164,12 +198,12 @@ class _$ProjectSerializer implements PrimitiveSerializer<Project> {
   }
 
   @override
-  Project deserialize(
+  User deserialize(
     Serializers serializers,
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    final result = ProjectBuilder();
+    final result = UserBuilder();
     final serializedList = (serialized as Iterable<Object?>).toList();
     final unhandled = <Object?>[];
     _deserializeProperties(

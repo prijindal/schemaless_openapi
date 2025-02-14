@@ -14,7 +14,6 @@ import 'package:schemaless_openapi/src/api/auth_api.dart';
 import 'package:schemaless_openapi/src/api/entity_api.dart';
 import 'package:schemaless_openapi/src/api/health_api.dart';
 import 'package:schemaless_openapi/src/api/login_api.dart';
-import 'package:schemaless_openapi/src/api/project_api.dart';
 
 class SchemalessOpenapi {
   static const String basePath = r'http://localhost';
@@ -98,11 +97,5 @@ class SchemalessOpenapi {
   /// by doing that all interceptors will not be executed
   LoginApi getLoginApi() {
     return LoginApi(dio, serializers);
-  }
-
-  /// Get ProjectApi instance, base route and serializer can be overridden by a given but be careful,
-  /// by doing that all interceptors will not be executed
-  ProjectApi getProjectApi() {
-    return ProjectApi(dio, serializers);
   }
 }

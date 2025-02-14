@@ -7,8 +7,8 @@ void main() {
   // TODO add properties to the builder and call build()
 
   group(EntityHistory, () {
-    // String projectId
-    test('to test the property `projectId`', () async {
+    // String userId
+    test('to test the property `userId`', () async {
       // TODO
     });
 

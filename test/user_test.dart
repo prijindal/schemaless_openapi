@@ -1,19 +1,24 @@
 import 'package:test/test.dart';
 import 'package:schemaless_openapi/schemaless_openapi.dart';
 
-// tests for Project
+// tests for User
 void main() {
-  final instance = ProjectBuilder();
+  final instance = UserBuilder();
   // TODO add properties to the builder and call build()
 
-  group(Project, () {
+  group(User, () {
     // String id
     test('to test the property `id`', () async {
       // TODO
     });
 
-    // String name
-    test('to test the property `name`', () async {
+    // String username
+    test('to test the property `username`', () async {
+      // TODO
+    });
+
+    // String bcryptHash
+    test('to test the property `bcryptHash`', () async {
       // TODO
     });
 
@@ -22,8 +27,13 @@ void main() {
       // TODO
     });
 
-    // String userId
-    test('to test the property `userId`', () async {
+    // UserStatus status
+    test('to test the property `status`', () async {
+      // TODO
+    });
+
+    // bool isAdmin
+    test('to test the property `isAdmin`', () async {
       // TODO
     });
 

@@ -9,12 +9,13 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**verifyAppKey**](AuthApi.md#verifyappkey) | **GET** /auth/appkey | 
+[**generateKey**](AuthApi.md#generatekey) | **POST** /auth/generatekey | 
+[**revokeKeys**](AuthApi.md#revokekeys) | **POST** /auth/revokekeys | 
 [**verifyUserAuth**](AuthApi.md#verifyuserauth) | **GET** /auth/user | 
 
 
-# **verifyAppKey**
-> AppKeyVerifyResponse verifyAppKey()
+# **generateKey**
+> JsonObject generateKey()
 
 
 
@@ -25,10 +26,10 @@ import 'package:schemaless_openapi/api.dart';
 final api = SchemalessOpenapi().getAuthApi();
 
 try {
-    final response = api.verifyAppKey();
+    final response = api.generateKey();
     print(response);
 } catch on DioException (e) {
-    print('Exception when calling AuthApi->verifyAppKey: $e\n');
+    print('Exception when calling AuthApi->generateKey: $e\n');
 }
 ```
 
@@ -37,11 +38,48 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**AppKeyVerifyResponse**](AppKeyVerifyResponse.md)
+[**JsonObject**](JsonObject.md)
 
 ### Authorization
 
-[bearer_appkey](../README.md#bearer_appkey)
+[bearer_auth](../README.md#bearer_auth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **revokeKeys**
+> User revokeKeys()
+
+
+
+### Example
+```dart
+import 'package:schemaless_openapi/api.dart';
+
+final api = SchemalessOpenapi().getAuthApi();
+
+try {
+    final response = api.revokeKeys();
+    print(response);
+} catch on DioException (e) {
+    print('Exception when calling AuthApi->revokeKeys: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**User**](User.md)
+
+### Authorization
+
+[bearer_auth](../README.md#bearer_auth)
 
 ### HTTP request headers
 
