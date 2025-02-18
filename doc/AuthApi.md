@@ -52,7 +52,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **revokeKeys**
-> User revokeKeys()
+> UserVerifyResponse revokeKeys()
 
 
 
@@ -75,7 +75,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**User**](User.md)
+[**UserVerifyResponse**](UserVerifyResponse.md)
 
 ### Authorization
 

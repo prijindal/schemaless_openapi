@@ -12,43 +12,35 @@ part 'entity_history.g.dart';
 /// EntityHistory
 ///
 /// Properties:
-/// * [userId] 
-/// * [entityName] 
 /// * [id] 
-/// * [hostId] 
-/// * [entityId] 
+/// * [createdAt] 
 /// * [action] 
+/// * [entityId] 
+/// * [entityName] 
 /// * [payload] 
 /// * [timestamp] 
-/// * [createdAt] 
 @BuiltValue()
 abstract class EntityHistory implements Built<EntityHistory, EntityHistoryBuilder> {
-  @BuiltValueField(wireName: r'user_id')
-  String get userId;
-
-  @BuiltValueField(wireName: r'entity_name')
-  String get entityName;
-
   @BuiltValueField(wireName: r'id')
   String get id;
 
-  @BuiltValueField(wireName: r'host_id')
-  String get hostId;
+  @BuiltValueField(wireName: r'created_at')
+  DateTime get createdAt;
+
+  @BuiltValueField(wireName: r'action')
+  String get action;
 
   @BuiltValueField(wireName: r'entity_id')
   String get entityId;
 
-  @BuiltValueField(wireName: r'action')
-  String get action;
+  @BuiltValueField(wireName: r'entity_name')
+  String get entityName;
 
   @BuiltValueField(wireName: r'payload')
   JsonObject get payload;
 
   @BuiltValueField(wireName: r'timestamp')
   DateTime get timestamp;
-
-  @BuiltValueField(wireName: r'created_at')
-  DateTime get createdAt;
 
   EntityHistory._();
 
@@ -73,24 +65,19 @@ class _$EntityHistorySerializer implements PrimitiveSerializer<EntityHistory> {
     EntityHistory object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    yield r'user_id';
-    yield serializers.serialize(
-      object.userId,
-      specifiedType: const FullType(String),
-    );
-    yield r'entity_name';
-    yield serializers.serialize(
-      object.entityName,
-      specifiedType: const FullType(String),
-    );
     yield r'id';
     yield serializers.serialize(
       object.id,
       specifiedType: const FullType(String),
     );
-    yield r'host_id';
+    yield r'created_at';
     yield serializers.serialize(
-      object.hostId,
+      object.createdAt,
+      specifiedType: const FullType(DateTime),
+    );
+    yield r'action';
+    yield serializers.serialize(
+      object.action,
       specifiedType: const FullType(String),
     );
     yield r'entity_id';
@@ -98,9 +85,9 @@ class _$EntityHistorySerializer implements PrimitiveSerializer<EntityHistory> {
       object.entityId,
       specifiedType: const FullType(String),
     );
-    yield r'action';
+    yield r'entity_name';
     yield serializers.serialize(
-      object.action,
+      object.entityName,
       specifiedType: const FullType(String),
     );
     yield r'payload';
@@ -111,11 +98,6 @@ class _$EntityHistorySerializer implements PrimitiveSerializer<EntityHistory> {
     yield r'timestamp';
     yield serializers.serialize(
       object.timestamp,
-      specifiedType: const FullType(DateTime),
-    );
-    yield r'created_at';
-    yield serializers.serialize(
-      object.createdAt,
       specifiedType: const FullType(DateTime),
     );
   }
@@ -141,20 +123,6 @@ class _$EntityHistorySerializer implements PrimitiveSerializer<EntityHistory> {
       final key = serializedList[i] as String;
       final value = serializedList[i + 1];
       switch (key) {
-        case r'user_id':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.userId = valueDes;
-          break;
-        case r'entity_name':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.entityName = valueDes;
-          break;
         case r'id':
           final valueDes = serializers.deserialize(
             value,
@@ -162,12 +130,19 @@ class _$EntityHistorySerializer implements PrimitiveSerializer<EntityHistory> {
           ) as String;
           result.id = valueDes;
           break;
-        case r'host_id':
+        case r'created_at':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(DateTime),
+          ) as DateTime;
+          result.createdAt = valueDes;
+          break;
+        case r'action':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.hostId = valueDes;
+          result.action = valueDes;
           break;
         case r'entity_id':
           final valueDes = serializers.deserialize(
@@ -176,12 +151,12 @@ class _$EntityHistorySerializer implements PrimitiveSerializer<EntityHistory> {
           ) as String;
           result.entityId = valueDes;
           break;
-        case r'action':
+        case r'entity_name':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.action = valueDes;
+          result.entityName = valueDes;
           break;
         case r'payload':
           final valueDes = serializers.deserialize(
@@ -196,13 +171,6 @@ class _$EntityHistorySerializer implements PrimitiveSerializer<EntityHistory> {
             specifiedType: const FullType(DateTime),
           ) as DateTime;
           result.timestamp = valueDes;
-          break;
-        case r'created_at':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(DateTime),
-          ) as DateTime;
-          result.createdAt = valueDes;
           break;
         default:
           unhandled.add(key);

@@ -12,7 +12,7 @@ void main() {
       // TODO
     });
 
-    //Future<User> revokeKeys() async
+    //Future<UserVerifyResponse> revokeKeys() async
     test('test revokeKeys', () async {
       // TODO
     });

@@ -10,7 +10,6 @@ import 'package:dio/dio.dart';
 
 import 'package:built_value/json_object.dart';
 import 'package:schemaless_openapi/src/model/not_exists_error.dart';
-import 'package:schemaless_openapi/src/model/user.dart';
 import 'package:schemaless_openapi/src/model/user_verify_response.dart';
 
 class AuthApi {
@@ -111,9 +110,9 @@ class AuthApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [User] as data
+  /// Returns a [Future] containing a [Response] with a [UserVerifyResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<User>> revokeKeys({ 
+  Future<Response<UserVerifyResponse>> revokeKeys({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -148,14 +147,14 @@ class AuthApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    User? _responseData;
+    UserVerifyResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(User),
-      ) as User;
+        specifiedType: const FullType(UserVerifyResponse),
+      ) as UserVerifyResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -167,7 +166,7 @@ class AuthApi {
       );
     }
 
-    return Response<User>(
+    return Response<UserVerifyResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

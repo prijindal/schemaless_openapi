@@ -1,3 +1,4 @@
 {
-  "pubName": "schemaless_openapi"
+  "pubName": "schemaless_openapi",
+  "validateSpec": false
 }

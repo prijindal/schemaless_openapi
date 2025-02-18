@@ -33,7 +33,6 @@ import 'package:schemaless_openapi/src/model/get_health_response.dart';
 import 'package:schemaless_openapi/src/model/invalid_credentials_error.dart';
 import 'package:schemaless_openapi/src/model/list_users_response.dart';
 import 'package:schemaless_openapi/src/model/not_exists_error.dart';
-import 'package:schemaless_openapi/src/model/user.dart';
 import 'package:schemaless_openapi/src/model/user_approval_request_body.dart';
 import 'package:schemaless_openapi/src/model/user_login_request.dart';
 import 'package:schemaless_openapi/src/model/user_status.dart';
@@ -62,7 +61,6 @@ part 'serializers.g.dart';
   InvalidCredentialsError,
   ListUsersResponse,
   NotExistsError,
-  User,
   UserApprovalRequestBody,
   UserLoginRequest,
   UserStatus,

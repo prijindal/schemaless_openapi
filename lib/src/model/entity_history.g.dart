@@ -8,51 +8,43 @@ part of 'entity_history.dart';
 
 class _$EntityHistory extends EntityHistory {
   @override
-  final String userId;
-  @override
-  final String entityName;
-  @override
   final String id;
   @override
-  final String hostId;
+  final DateTime createdAt;
+  @override
+  final String action;
   @override
   final String entityId;
   @override
-  final String action;
+  final String entityName;
   @override
   final JsonObject payload;
   @override
   final DateTime timestamp;
-  @override
-  final DateTime createdAt;
 
   factory _$EntityHistory([void Function(EntityHistoryBuilder)? updates]) =>
       (new EntityHistoryBuilder()..update(updates))._build();
 
   _$EntityHistory._(
-      {required this.userId,
-      required this.entityName,
-      required this.id,
-      required this.hostId,
-      required this.entityId,
+      {required this.id,
+      required this.createdAt,
       required this.action,
+      required this.entityId,
+      required this.entityName,
       required this.payload,
-      required this.timestamp,
-      required this.createdAt})
+      required this.timestamp})
       : super._() {
-    BuiltValueNullFieldError.checkNotNull(userId, r'EntityHistory', 'userId');
-    BuiltValueNullFieldError.checkNotNull(
-        entityName, r'EntityHistory', 'entityName');
     BuiltValueNullFieldError.checkNotNull(id, r'EntityHistory', 'id');
-    BuiltValueNullFieldError.checkNotNull(hostId, r'EntityHistory', 'hostId');
+    BuiltValueNullFieldError.checkNotNull(
+        createdAt, r'EntityHistory', 'createdAt');
+    BuiltValueNullFieldError.checkNotNull(action, r'EntityHistory', 'action');
     BuiltValueNullFieldError.checkNotNull(
         entityId, r'EntityHistory', 'entityId');
-    BuiltValueNullFieldError.checkNotNull(action, r'EntityHistory', 'action');
+    BuiltValueNullFieldError.checkNotNull(
+        entityName, r'EntityHistory', 'entityName');
     BuiltValueNullFieldError.checkNotNull(payload, r'EntityHistory', 'payload');
     BuiltValueNullFieldError.checkNotNull(
         timestamp, r'EntityHistory', 'timestamp');
-    BuiltValueNullFieldError.checkNotNull(
-        createdAt, r'EntityHistory', 'createdAt');
   }
 
   @override
@@ -66,29 +58,25 @@ class _$EntityHistory extends EntityHistory {
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is EntityHistory &&
-        userId == other.userId &&
-        entityName == other.entityName &&
         id == other.id &&
-        hostId == other.hostId &&
-        entityId == other.entityId &&
+        createdAt == other.createdAt &&
         action == other.action &&
+        entityId == other.entityId &&
+        entityName == other.entityName &&
         payload == other.payload &&
-        timestamp == other.timestamp &&
-        createdAt == other.createdAt;
+        timestamp == other.timestamp;
   }
 
   @override
   int get hashCode {
     var _$hash = 0;
-    _$hash = $jc(_$hash, userId.hashCode);
-    _$hash = $jc(_$hash, entityName.hashCode);
     _$hash = $jc(_$hash, id.hashCode);
-    _$hash = $jc(_$hash, hostId.hashCode);
-    _$hash = $jc(_$hash, entityId.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
     _$hash = $jc(_$hash, action.hashCode);
+    _$hash = $jc(_$hash, entityId.hashCode);
+    _$hash = $jc(_$hash, entityName.hashCode);
     _$hash = $jc(_$hash, payload.hashCode);
     _$hash = $jc(_$hash, timestamp.hashCode);
-    _$hash = $jc(_$hash, createdAt.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -96,15 +84,13 @@ class _$EntityHistory extends EntityHistory {
   @override
   String toString() {
     return (newBuiltValueToStringHelper(r'EntityHistory')
-          ..add('userId', userId)
-          ..add('entityName', entityName)
           ..add('id', id)
-          ..add('hostId', hostId)
-          ..add('entityId', entityId)
+          ..add('createdAt', createdAt)
           ..add('action', action)
+          ..add('entityId', entityId)
+          ..add('entityName', entityName)
           ..add('payload', payload)
-          ..add('timestamp', timestamp)
-          ..add('createdAt', createdAt))
+          ..add('timestamp', timestamp))
         .toString();
   }
 }
@@ -113,29 +99,25 @@ class EntityHistoryBuilder
     implements Builder<EntityHistory, EntityHistoryBuilder> {
   _$EntityHistory? _$v;
 
-  String? _userId;
-  String? get userId => _$this._userId;
-  set userId(String? userId) => _$this._userId = userId;
-
-  String? _entityName;
-  String? get entityName => _$this._entityName;
-  set entityName(String? entityName) => _$this._entityName = entityName;
-
   String? _id;
   String? get id => _$this._id;
   set id(String? id) => _$this._id = id;
 
-  String? _hostId;
-  String? get hostId => _$this._hostId;
-  set hostId(String? hostId) => _$this._hostId = hostId;
+  DateTime? _createdAt;
+  DateTime? get createdAt => _$this._createdAt;
+  set createdAt(DateTime? createdAt) => _$this._createdAt = createdAt;
+
+  String? _action;
+  String? get action => _$this._action;
+  set action(String? action) => _$this._action = action;
 
   String? _entityId;
   String? get entityId => _$this._entityId;
   set entityId(String? entityId) => _$this._entityId = entityId;
 
-  String? _action;
-  String? get action => _$this._action;
-  set action(String? action) => _$this._action = action;
+  String? _entityName;
+  String? get entityName => _$this._entityName;
+  set entityName(String? entityName) => _$this._entityName = entityName;
 
   JsonObject? _payload;
   JsonObject? get payload => _$this._payload;
@@ -145,10 +127,6 @@ class EntityHistoryBuilder
   DateTime? get timestamp => _$this._timestamp;
   set timestamp(DateTime? timestamp) => _$this._timestamp = timestamp;
 
-  DateTime? _createdAt;
-  DateTime? get createdAt => _$this._createdAt;
-  set createdAt(DateTime? createdAt) => _$this._createdAt = createdAt;
-
   EntityHistoryBuilder() {
     EntityHistory._defaults(this);
   }
@@ -156,15 +134,13 @@ class EntityHistoryBuilder
   EntityHistoryBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
-      _userId = $v.userId;
-      _entityName = $v.entityName;
       _id = $v.id;
-      _hostId = $v.hostId;
-      _entityId = $v.entityId;
+      _createdAt = $v.createdAt;
       _action = $v.action;
+      _entityId = $v.entityId;
+      _entityName = $v.entityName;
       _payload = $v.payload;
       _timestamp = $v.timestamp;
-      _createdAt = $v.createdAt;
       _$v = null;
     }
     return this;
@@ -187,23 +163,19 @@ class EntityHistoryBuilder
   _$EntityHistory _build() {
     final _$result = _$v ??
         new _$EntityHistory._(
-          userId: BuiltValueNullFieldError.checkNotNull(
-              userId, r'EntityHistory', 'userId'),
-          entityName: BuiltValueNullFieldError.checkNotNull(
-              entityName, r'EntityHistory', 'entityName'),
           id: BuiltValueNullFieldError.checkNotNull(id, r'EntityHistory', 'id'),
-          hostId: BuiltValueNullFieldError.checkNotNull(
-              hostId, r'EntityHistory', 'hostId'),
-          entityId: BuiltValueNullFieldError.checkNotNull(
-              entityId, r'EntityHistory', 'entityId'),
+          createdAt: BuiltValueNullFieldError.checkNotNull(
+              createdAt, r'EntityHistory', 'createdAt'),
           action: BuiltValueNullFieldError.checkNotNull(
               action, r'EntityHistory', 'action'),
+          entityId: BuiltValueNullFieldError.checkNotNull(
+              entityId, r'EntityHistory', 'entityId'),
+          entityName: BuiltValueNullFieldError.checkNotNull(
+              entityName, r'EntityHistory', 'entityName'),
           payload: BuiltValueNullFieldError.checkNotNull(
               payload, r'EntityHistory', 'payload'),
           timestamp: BuiltValueNullFieldError.checkNotNull(
               timestamp, r'EntityHistory', 'timestamp'),
-          createdAt: BuiltValueNullFieldError.checkNotNull(
-              createdAt, r'EntityHistory', 'createdAt'),
         );
     replace(_$result);
     return _$result;

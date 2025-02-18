@@ -7,23 +7,18 @@ void main() {
   // TODO add properties to the builder and call build()
 
   group(EntityHistory, () {
-    // String userId
-    test('to test the property `userId`', () async {
-      // TODO
-    });
-
-    // String entityName
-    test('to test the property `entityName`', () async {
-      // TODO
-    });
-
     // String id
     test('to test the property `id`', () async {
       // TODO
     });
 
-    // String hostId
-    test('to test the property `hostId`', () async {
+    // DateTime createdAt
+    test('to test the property `createdAt`', () async {
+      // TODO
+    });
+
+    // String action
+    test('to test the property `action`', () async {
       // TODO
     });
 
@@ -32,8 +27,8 @@ void main() {
       // TODO
     });
 
-    // String action
-    test('to test the property `action`', () async {
+    // String entityName
+    test('to test the property `entityName`', () async {
       // TODO
     });
 
@@ -44,11 +39,6 @@ void main() {
 
     // DateTime timestamp
     test('to test the property `timestamp`', () async {
-      // TODO
-    });
-
-    // DateTime createdAt
-    test('to test the property `createdAt`', () async {
       // TODO
     });
 

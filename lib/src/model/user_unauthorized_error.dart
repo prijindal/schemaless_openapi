@@ -11,28 +11,20 @@ part 'user_unauthorized_error.g.dart';
 /// UserUnauthorizedError
 ///
 /// Properties:
-/// * [name] 
-/// * [message] 
-/// * [stack] 
 /// * [className] 
 /// * [statusCode] 
+/// * [message] 
 /// * [details] 
 @BuiltValue()
 abstract class UserUnauthorizedError implements Built<UserUnauthorizedError, UserUnauthorizedErrorBuilder> {
-  @BuiltValueField(wireName: r'name')
-  String get name;
-
-  @BuiltValueField(wireName: r'message')
-  String get message;
-
-  @BuiltValueField(wireName: r'stack')
-  String? get stack;
-
   @BuiltValueField(wireName: r'class_name')
   String get className;
 
   @BuiltValueField(wireName: r'status_code')
   double get statusCode;
+
+  @BuiltValueField(wireName: r'message')
+  String get message;
 
   @BuiltValueField(wireName: r'details')
   String? get details;
@@ -60,23 +52,6 @@ class _$UserUnauthorizedErrorSerializer implements PrimitiveSerializer<UserUnaut
     UserUnauthorizedError object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    yield r'name';
-    yield serializers.serialize(
-      object.name,
-      specifiedType: const FullType(String),
-    );
-    yield r'message';
-    yield serializers.serialize(
-      object.message,
-      specifiedType: const FullType(String),
-    );
-    if (object.stack != null) {
-      yield r'stack';
-      yield serializers.serialize(
-        object.stack,
-        specifiedType: const FullType(String),
-      );
-    }
     yield r'class_name';
     yield serializers.serialize(
       object.className,
@@ -86,6 +61,11 @@ class _$UserUnauthorizedErrorSerializer implements PrimitiveSerializer<UserUnaut
     yield serializers.serialize(
       object.statusCode,
       specifiedType: const FullType(double),
+    );
+    yield r'message';
+    yield serializers.serialize(
+      object.message,
+      specifiedType: const FullType(String),
     );
     if (object.details != null) {
       yield r'details';
@@ -117,27 +97,6 @@ class _$UserUnauthorizedErrorSerializer implements PrimitiveSerializer<UserUnaut
       final key = serializedList[i] as String;
       final value = serializedList[i + 1];
       switch (key) {
-        case r'name':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.name = valueDes;
-          break;
-        case r'message':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.message = valueDes;
-          break;
-        case r'stack':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.stack = valueDes;
-          break;
         case r'class_name':
           final valueDes = serializers.deserialize(
             value,
@@ -151,6 +110,13 @@ class _$UserUnauthorizedErrorSerializer implements PrimitiveSerializer<UserUnaut
             specifiedType: const FullType(double),
           ) as double;
           result.statusCode = valueDes;
+          break;
+        case r'message':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.message = valueDes;
           break;
         case r'details':
           final valueDes = serializers.deserialize(

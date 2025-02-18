@@ -102,7 +102,6 @@ Class | Method | HTTP request | Description
  - [InvalidCredentialsError](doc/InvalidCredentialsError.md)
  - [ListUsersResponse](doc/ListUsersResponse.md)
  - [NotExistsError](doc/NotExistsError.md)
- - [User](doc/User.md)
  - [UserApprovalRequestBody](doc/UserApprovalRequestBody.md)
  - [UserLoginRequest](doc/UserLoginRequest.md)
  - [UserStatus](doc/UserStatus.md)
