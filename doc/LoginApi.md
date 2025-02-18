@@ -5,7 +5,7 @@
 import 'package:schemaless_openapi/api.dart';
 ```
 
-All URIs are relative to *http://localhost*
+All URIs are relative to */api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------

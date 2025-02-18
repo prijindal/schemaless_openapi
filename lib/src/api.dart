@@ -16,7 +16,7 @@ import 'package:schemaless_openapi/src/api/health_api.dart';
 import 'package:schemaless_openapi/src/api/login_api.dart';
 
 class SchemalessOpenapi {
-  static const String basePath = r'http://localhost';
+  static const String basePath = r'/api';
 
   final Dio dio;
   final Serializers serializers;
