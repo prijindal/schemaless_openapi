@@ -9,10 +9,48 @@ All URIs are relative to */api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**getInitialized**](LoginApi.md#getinitialized) | **GET** /user/login/initialized | 
 [**initializeServer**](LoginApi.md#initializeserver) | **POST** /user/login/initialize | 
-[**loginUser**](LoginApi.md#loginuser) | **POST** /user/login/login | 
+[**loginUser**](LoginApi.md#loginuser) | **POST** /user/login | 
 [**registerUser**](LoginApi.md#registeruser) | **POST** /user/login/register | 
 
+
+# **getInitialized**
+> GetInitializedResponse getInitialized()
+
+
+
+### Example
+```dart
+import 'package:schemaless_openapi/api.dart';
+
+final api = SchemalessOpenapi().getLoginApi();
+
+try {
+    final response = api.getInitialized();
+    print(response);
+} catch on DioException (e) {
+    print('Exception when calling LoginApi->getInitialized: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**GetInitializedResponse**](GetInitializedResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **initializeServer**
 > bool initializeServer(userLoginRequest)

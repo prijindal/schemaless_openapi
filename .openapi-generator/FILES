@@ -20,6 +20,7 @@ doc/EntityHistoryResponse.md
 doc/GetCumulativeHealthResponse.md
 doc/GetCumulativeHealthResponseOs.md
 doc/GetHealthResponse.md
+doc/GetInitializedResponse.md
 doc/HealthApi.md
 doc/InvalidCredentialsError.md
 doc/ListUsersResponse.md
@@ -61,6 +62,7 @@ lib/src/model/entity_history_response.dart
 lib/src/model/get_cumulative_health_response.dart
 lib/src/model/get_cumulative_health_response_os.dart
 lib/src/model/get_health_response.dart
+lib/src/model/get_initialized_response.dart
 lib/src/model/invalid_credentials_error.dart
 lib/src/model/list_users_response.dart
 lib/src/model/not_exists_error.dart
@@ -90,6 +92,7 @@ test/entity_history_test.dart
 test/get_cumulative_health_response_os_test.dart
 test/get_cumulative_health_response_test.dart
 test/get_health_response_test.dart
+test/get_initialized_response_test.dart
 test/health_api_test.dart
 test/invalid_credentials_error_test.dart
 test/list_users_response_test.dart

@@ -7,6 +7,11 @@ void main() {
   final instance = SchemalessOpenapi().getLoginApi();
 
   group(LoginApi, () {
+    //Future<GetInitializedResponse> getInitialized() async
+    test('test getInitialized', () async {
+      // TODO
+    });
+
     // Check if any admin user is available  if admin user is present in db, throw error  If admin user is not present, take username, password from body  and create admin user
     //
     //Future<bool> initializeServer(UserLoginRequest userLoginRequest) async

@@ -76,8 +76,9 @@ Class | Method | HTTP request | Description
 [*EntityApi*](doc/EntityApi.md) | [**searchEntitiesHistory**](doc/EntityApi.md#searchentitieshistory) | **POST** /entity/history/search | 
 [*HealthApi*](doc/HealthApi.md) | [**getCumulativeHealth**](doc/HealthApi.md#getcumulativehealth) | **GET** /cumulative/health | 
 [*HealthApi*](doc/HealthApi.md) | [**getHealth**](doc/HealthApi.md#gethealth) | **GET** /health | 
+[*LoginApi*](doc/LoginApi.md) | [**getInitialized**](doc/LoginApi.md#getinitialized) | **GET** /user/login/initialized | 
 [*LoginApi*](doc/LoginApi.md) | [**initializeServer**](doc/LoginApi.md#initializeserver) | **POST** /user/login/initialize | 
-[*LoginApi*](doc/LoginApi.md) | [**loginUser**](doc/LoginApi.md#loginuser) | **POST** /user/login/login | 
+[*LoginApi*](doc/LoginApi.md) | [**loginUser**](doc/LoginApi.md#loginuser) | **POST** /user/login | 
 [*LoginApi*](doc/LoginApi.md) | [**registerUser**](doc/LoginApi.md#registeruser) | **POST** /user/login/register | 
 
 
@@ -99,6 +100,7 @@ Class | Method | HTTP request | Description
  - [GetCumulativeHealthResponse](doc/GetCumulativeHealthResponse.md)
  - [GetCumulativeHealthResponseOs](doc/GetCumulativeHealthResponseOs.md)
  - [GetHealthResponse](doc/GetHealthResponse.md)
+ - [GetInitializedResponse](doc/GetInitializedResponse.md)
  - [InvalidCredentialsError](doc/InvalidCredentialsError.md)
  - [ListUsersResponse](doc/ListUsersResponse.md)
  - [NotExistsError](doc/NotExistsError.md)

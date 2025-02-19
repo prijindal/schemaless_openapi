@@ -32,6 +32,7 @@ export 'package:schemaless_openapi/src/model/entity_history_response.dart';
 export 'package:schemaless_openapi/src/model/get_cumulative_health_response.dart';
 export 'package:schemaless_openapi/src/model/get_cumulative_health_response_os.dart';
 export 'package:schemaless_openapi/src/model/get_health_response.dart';
+export 'package:schemaless_openapi/src/model/get_initialized_response.dart';
 export 'package:schemaless_openapi/src/model/invalid_credentials_error.dart';
 export 'package:schemaless_openapi/src/model/list_users_response.dart';
 export 'package:schemaless_openapi/src/model/not_exists_error.dart';
