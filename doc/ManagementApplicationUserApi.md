@@ -11,8 +11,10 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**approveUser**](ManagementApplicationUserApi.md#approveuser) | **POST** /management/application_user/{application_id}/{app_user_id}/approve | 
 [**disableUser**](ManagementApplicationUserApi.md#disableuser) | **POST** /management/application_user/{application_id}/{app_user_id}/disable | 
+[**generateKey**](ManagementApplicationUserApi.md#generatekey) | **PUT** /management/application_user/{application_id}/{app_user_id}/generatekey | 
 [**listUsers**](ManagementApplicationUserApi.md#listusers) | **GET** /management/application_user/{application_id} | 
 [**registerUser**](ManagementApplicationUserApi.md#registeruser) | **DELETE** /management/application_user/{application_id}/{app_user_id} | 
+[**revokeKeys**](ManagementApplicationUserApi.md#revokekeys) | **PUT** /management/application_user/{application_id}/{app_user_id}/revokekeys | 
 
 
 # **approveUser**
@@ -101,6 +103,49 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **generateKey**
+> String generateKey(applicationId, appUserId)
+
+
+
+### Example
+```dart
+import 'package:schemaless_openapi/api.dart';
+
+final api = SchemalessOpenapi().getManagementApplicationUserApi();
+final String applicationId = applicationId_example; // String | 
+final String appUserId = appUserId_example; // String | 
+
+try {
+    final response = api.generateKey(applicationId, appUserId);
+    print(response);
+} catch on DioException (e) {
+    print('Exception when calling ManagementApplicationUserApi->generateKey: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **applicationId** | **String**|  | 
+ **appUserId** | **String**|  | 
+
+### Return type
+
+**String**
+
+### Authorization
+
+[bearer_auth](../README.md#bearer_auth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **listUsers**
 > BuiltList<ListUsersResponse1> listUsers(applicationId)
 
@@ -177,6 +222,49 @@ Name | Type | Description  | Notes
 ### Authorization
 
 [bearer_management](../README.md#bearer_management)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **revokeKeys**
+> bool revokeKeys(applicationId, appUserId)
+
+
+
+### Example
+```dart
+import 'package:schemaless_openapi/api.dart';
+
+final api = SchemalessOpenapi().getManagementApplicationUserApi();
+final String applicationId = applicationId_example; // String | 
+final String appUserId = appUserId_example; // String | 
+
+try {
+    final response = api.revokeKeys(applicationId, appUserId);
+    print(response);
+} catch on DioException (e) {
+    print('Exception when calling ManagementApplicationUserApi->revokeKeys: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **applicationId** | **String**|  | 
+ **appUserId** | **String**|  | 
+
+### Return type
+
+**bool**
+
+### Authorization
+
+[bearer_auth](../README.md#bearer_auth)
 
 ### HTTP request headers
 

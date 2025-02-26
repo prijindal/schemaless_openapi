@@ -81,8 +81,10 @@ Class | Method | HTTP request | Description
 [*ManagementApplicationApi*](doc/ManagementApplicationApi.md) | [**revokeKeys**](doc/ManagementApplicationApi.md#revokekeys) | **POST** /management/application/{application_id}/revoketokens | 
 [*ManagementApplicationUserApi*](doc/ManagementApplicationUserApi.md) | [**approveUser**](doc/ManagementApplicationUserApi.md#approveuser) | **POST** /management/application_user/{application_id}/{app_user_id}/approve | 
 [*ManagementApplicationUserApi*](doc/ManagementApplicationUserApi.md) | [**disableUser**](doc/ManagementApplicationUserApi.md#disableuser) | **POST** /management/application_user/{application_id}/{app_user_id}/disable | 
+[*ManagementApplicationUserApi*](doc/ManagementApplicationUserApi.md) | [**generateKey**](doc/ManagementApplicationUserApi.md#generatekey) | **PUT** /management/application_user/{application_id}/{app_user_id}/generatekey | 
 [*ManagementApplicationUserApi*](doc/ManagementApplicationUserApi.md) | [**listUsers**](doc/ManagementApplicationUserApi.md#listusers) | **GET** /management/application_user/{application_id} | 
 [*ManagementApplicationUserApi*](doc/ManagementApplicationUserApi.md) | [**registerUser**](doc/ManagementApplicationUserApi.md#registeruser) | **DELETE** /management/application_user/{application_id}/{app_user_id} | 
+[*ManagementApplicationUserApi*](doc/ManagementApplicationUserApi.md) | [**revokeKeys**](doc/ManagementApplicationUserApi.md#revokekeys) | **PUT** /management/application_user/{application_id}/{app_user_id}/revokekeys | 
 [*ManagementAuthApi*](doc/ManagementAuthApi.md) | [**initialize**](doc/ManagementAuthApi.md#initialize) | **POST** /management/auth/initialize | 
 [*ManagementAuthApi*](doc/ManagementAuthApi.md) | [**isInitialized**](doc/ManagementAuthApi.md#isinitialized) | **GET** /management/auth/initialized | 
 [*ManagementAuthApi*](doc/ManagementAuthApi.md) | [**loginUser**](doc/ManagementAuthApi.md#loginuser) | **POST** /management/auth/login | 

@@ -17,6 +17,11 @@ void main() {
       // TODO
     });
 
+    //Future<String> generateKey(String applicationId, String appUserId) async
+    test('test generateKey', () async {
+      // TODO
+    });
+
     //Future<BuiltList<ListUsersResponse1>> listUsers(String applicationId) async
     test('test listUsers', () async {
       // TODO
@@ -24,6 +29,11 @@ void main() {
 
     //Future<bool> registerUser(String applicationId, String appUserId) async
     test('test registerUser', () async {
+      // TODO
+    });
+
+    //Future<bool> revokeKeys(String applicationId, String appUserId) async
+    test('test revokeKeys', () async {
       // TODO
     });
 
