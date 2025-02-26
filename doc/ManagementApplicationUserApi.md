@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearer_auth](../README.md#bearer_auth)
+[bearer_management](../README.md#bearer_management)
 
 ### HTTP request headers
 
@@ -264,7 +264,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearer_auth](../README.md#bearer_auth)
+[bearer_management](../README.md#bearer_management)
 
 ### HTTP request headers
 

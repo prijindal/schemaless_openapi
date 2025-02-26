@@ -218,7 +218,7 @@ class ManagementApplicationUserApi {
           {
             'type': 'http',
             'scheme': 'bearer',
-            'name': 'bearer_auth',
+            'name': 'bearer_management',
           },
         ],
         ...?extra,
@@ -459,7 +459,7 @@ class ManagementApplicationUserApi {
           {
             'type': 'http',
             'scheme': 'bearer',
-            'name': 'bearer_auth',
+            'name': 'bearer_management',
           },
         ],
         ...?extra,
