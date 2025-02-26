@@ -18,6 +18,11 @@ void main() {
       // TODO
     });
 
+    // String redis
+    test('to test the property `redis`', () async {
+      // TODO
+    });
+
     // bool db
     test('to test the property `db`', () async {
       // TODO

@@ -47,14 +47,13 @@ Please follow the [installation procedure](#installation--usage) and then run th
 import 'package:schemaless_openapi/schemaless_openapi.dart';
 
 
-final api = SchemalessOpenapi().getAdminApi();
-final String userid = userid_example; // String | 
+final api = SchemalessOpenapi().getApplicationAuthApi();
 
 try {
-    final response = await api.deleteUser(userid);
+    final response = await api.generateKey();
     print(response);
 } catch on DioException (e) {
-    print("Exception when calling AdminApi->deleteUser: $e\n");
+    print("Exception when calling ApplicationAuthApi->generateKey: $e\n");
 }
 
 ```
@@ -65,26 +64,49 @@ All URIs are relative to */api*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-[*AdminApi*](doc/AdminApi.md) | [**deleteUser**](doc/AdminApi.md#deleteuser) | **DELETE** /user/admin/{userid} | 
-[*AdminApi*](doc/AdminApi.md) | [**listUsers**](doc/AdminApi.md#listusers) | **GET** /user/admin | 
-[*AdminApi*](doc/AdminApi.md) | [**userApproval**](doc/AdminApi.md#userapproval) | **POST** /user/admin/{userid}/approval | 
-[*AuthApi*](doc/AuthApi.md) | [**generateKey**](doc/AuthApi.md#generatekey) | **POST** /auth/generatekey | 
-[*AuthApi*](doc/AuthApi.md) | [**revokeKeys**](doc/AuthApi.md#revokekeys) | **POST** /auth/revokekeys | 
-[*AuthApi*](doc/AuthApi.md) | [**verifyUserAuth**](doc/AuthApi.md#verifyuserauth) | **GET** /auth/user | 
-[*EntityApi*](doc/EntityApi.md) | [**entityAction**](doc/EntityApi.md#entityaction) | **POST** /entity/action | 
-[*EntityApi*](doc/EntityApi.md) | [**getEntities**](doc/EntityApi.md#getentities) | **GET** /entity/history/entities | 
-[*EntityApi*](doc/EntityApi.md) | [**searchEntitiesHistory**](doc/EntityApi.md#searchentitieshistory) | **POST** /entity/history/search | 
+[*ApplicationAuthApi*](doc/ApplicationAuthApi.md) | [**generateKey**](doc/ApplicationAuthApi.md#generatekey) | **POST** /application/auth/generatekey | 
+[*ApplicationAuthApi*](doc/ApplicationAuthApi.md) | [**loginUser**](doc/ApplicationAuthApi.md#loginuser) | **POST** /application/auth/login | 
+[*ApplicationAuthApi*](doc/ApplicationAuthApi.md) | [**registerUser**](doc/ApplicationAuthApi.md#registeruser) | **POST** /application/auth/register | 
+[*ApplicationAuthApi*](doc/ApplicationAuthApi.md) | [**revokeKeys**](doc/ApplicationAuthApi.md#revokekeys) | **POST** /application/auth/revokekeys | 
+[*ApplicationAuthApi*](doc/ApplicationAuthApi.md) | [**verifyUserAuth**](doc/ApplicationAuthApi.md#verifyuserauth) | **GET** /application/auth/verify | 
+[*ApplicationEntityApi*](doc/ApplicationEntityApi.md) | [**entityAction**](doc/ApplicationEntityApi.md#entityaction) | **POST** /application/entity/action | 
+[*ApplicationEntityApi*](doc/ApplicationEntityApi.md) | [**getEntities**](doc/ApplicationEntityApi.md#getentities) | **GET** /application/entity/history/entities | 
+[*ApplicationEntityApi*](doc/ApplicationEntityApi.md) | [**searchEntitiesHistory**](doc/ApplicationEntityApi.md#searchentitieshistory) | **POST** /application/entity/history/search | 
 [*HealthApi*](doc/HealthApi.md) | [**getCumulativeHealth**](doc/HealthApi.md#getcumulativehealth) | **GET** /cumulative/health | 
 [*HealthApi*](doc/HealthApi.md) | [**getHealth**](doc/HealthApi.md#gethealth) | **GET** /health | 
-[*LoginApi*](doc/LoginApi.md) | [**getInitialized**](doc/LoginApi.md#getinitialized) | **GET** /user/login/initialized | 
-[*LoginApi*](doc/LoginApi.md) | [**initializeServer**](doc/LoginApi.md#initializeserver) | **POST** /user/login/initialize | 
-[*LoginApi*](doc/LoginApi.md) | [**loginUser**](doc/LoginApi.md#loginuser) | **POST** /user/login | 
-[*LoginApi*](doc/LoginApi.md) | [**registerUser**](doc/LoginApi.md#registeruser) | **POST** /user/login/register | 
+[*ManagementApplicationApi*](doc/ManagementApplicationApi.md) | [**createApplication**](doc/ManagementApplicationApi.md#createapplication) | **POST** /management/application | 
+[*ManagementApplicationApi*](doc/ManagementApplicationApi.md) | [**deleteApplication**](doc/ManagementApplicationApi.md#deleteapplication) | **DELETE** /management/application/{application_id} | 
+[*ManagementApplicationApi*](doc/ManagementApplicationApi.md) | [**generateKey**](doc/ManagementApplicationApi.md#generatekey) | **POST** /management/application/{application_id}/generatekey | 
+[*ManagementApplicationApi*](doc/ManagementApplicationApi.md) | [**listApplications**](doc/ManagementApplicationApi.md#listapplications) | **GET** /management/application | 
+[*ManagementApplicationApi*](doc/ManagementApplicationApi.md) | [**revokeKeys**](doc/ManagementApplicationApi.md#revokekeys) | **POST** /management/application/{application_id}/revoketokens | 
+[*ManagementApplicationUserApi*](doc/ManagementApplicationUserApi.md) | [**approveUser**](doc/ManagementApplicationUserApi.md#approveuser) | **POST** /management/application_user/{application_id}/{app_user_id}/approve | 
+[*ManagementApplicationUserApi*](doc/ManagementApplicationUserApi.md) | [**disableUser**](doc/ManagementApplicationUserApi.md#disableuser) | **POST** /management/application_user/{application_id}/{app_user_id}/disable | 
+[*ManagementApplicationUserApi*](doc/ManagementApplicationUserApi.md) | [**listUsers**](doc/ManagementApplicationUserApi.md#listusers) | **GET** /management/application_user/{application_id} | 
+[*ManagementApplicationUserApi*](doc/ManagementApplicationUserApi.md) | [**registerUser**](doc/ManagementApplicationUserApi.md#registeruser) | **DELETE** /management/application_user/{application_id}/{app_user_id} | 
+[*ManagementAuthApi*](doc/ManagementAuthApi.md) | [**initialize**](doc/ManagementAuthApi.md#initialize) | **POST** /management/auth/initialize | 
+[*ManagementAuthApi*](doc/ManagementAuthApi.md) | [**isInitialized**](doc/ManagementAuthApi.md#isinitialized) | **GET** /management/auth/initialized | 
+[*ManagementAuthApi*](doc/ManagementAuthApi.md) | [**loginUser**](doc/ManagementAuthApi.md#loginuser) | **POST** /management/auth/login | 
+[*ManagementAuthApi*](doc/ManagementAuthApi.md) | [**registerUser**](doc/ManagementAuthApi.md#registeruser) | **POST** /management/auth/register | 
+[*ManagementAuthApi*](doc/ManagementAuthApi.md) | [**revokeKeys**](doc/ManagementAuthApi.md#revokekeys) | **POST** /management/auth/revokekeys | 
+[*ManagementAuthApi*](doc/ManagementAuthApi.md) | [**verifyUserAuth**](doc/ManagementAuthApi.md#verifyuserauth) | **GET** /management/auth/verify | 
+[*ManagementEntityApi*](doc/ManagementEntityApi.md) | [**entityAction**](doc/ManagementEntityApi.md#entityaction) | **POST** /management/entity/{application_id}/{app_user_id}/action | 
+[*ManagementEntityApi*](doc/ManagementEntityApi.md) | [**getEntities**](doc/ManagementEntityApi.md#getentities) | **GET** /management/entity/{application_id}/{app_user_id}/history/entities | 
+[*ManagementEntityApi*](doc/ManagementEntityApi.md) | [**searchEntitiesHistory**](doc/ManagementEntityApi.md#searchentitieshistory) | **POST** /management/entity/{application_id}/{app_user_id}/history/search | 
+[*ManagementUserApi*](doc/ManagementUserApi.md) | [**approvUser**](doc/ManagementUserApi.md#approvuser) | **POST** /management/management_user/{user_id}/approve | 
+[*ManagementUserApi*](doc/ManagementUserApi.md) | [**disableUser**](doc/ManagementUserApi.md#disableuser) | **POST** /management/management_user/{user_id}/disable | 
+[*ManagementUserApi*](doc/ManagementUserApi.md) | [**listUsers**](doc/ManagementUserApi.md#listusers) | **GET** /management/management_user | 
+[*ManagementUserApi*](doc/ManagementUserApi.md) | [**registerUser**](doc/ManagementUserApi.md#registeruser) | **DELETE** /management/management_user/{user_id} | 
 
 
 ## Documentation For Models
 
+ - [AlreadyExistsError](doc/AlreadyExistsError.md)
+ - [Application](doc/Application.md)
+ - [ApplicationUserLoginRequest](doc/ApplicationUserLoginRequest.md)
+ - [ApplicationUserVerifyResponse](doc/ApplicationUserVerifyResponse.md)
+ - [CreateApplicationBody](doc/CreateApplicationBody.md)
  - [DateParams](doc/DateParams.md)
+ - [DeleteResult](doc/DeleteResult.md)
  - [EntityAction](doc/EntityAction.md)
  - [EntityActionBase](doc/EntityActionBase.md)
  - [EntityActionCreate](doc/EntityActionCreate.md)
@@ -100,21 +122,34 @@ Class | Method | HTTP request | Description
  - [GetCumulativeHealthResponse](doc/GetCumulativeHealthResponse.md)
  - [GetCumulativeHealthResponseOs](doc/GetCumulativeHealthResponseOs.md)
  - [GetHealthResponse](doc/GetHealthResponse.md)
- - [GetInitializedResponse](doc/GetInitializedResponse.md)
+ - [InitializeResponse](doc/InitializeResponse.md)
  - [InvalidCredentialsError](doc/InvalidCredentialsError.md)
  - [ListUsersResponse](doc/ListUsersResponse.md)
+ - [ListUsersResponse1](doc/ListUsersResponse1.md)
+ - [ManagementUserLoginRequest](doc/ManagementUserLoginRequest.md)
+ - [ManagementUserVerifyResponse](doc/ManagementUserVerifyResponse.md)
  - [NotExistsError](doc/NotExistsError.md)
- - [UserApprovalRequestBody](doc/UserApprovalRequestBody.md)
- - [UserLoginRequest](doc/UserLoginRequest.md)
+ - [RegisterUserResponse](doc/RegisterUserResponse.md)
+ - [RegisterUserResponse1](doc/RegisterUserResponse1.md)
+ - [ServerError](doc/ServerError.md)
  - [UserStatus](doc/UserStatus.md)
  - [UserUnauthorizedError](doc/UserUnauthorizedError.md)
- - [UserVerifyResponse](doc/UserVerifyResponse.md)
 
 
 ## Documentation For Authorization
 
 
 Authentication schemes defined for the API:
+### bearer_management
+
+- **Type**: HTTP Bearer Token authentication (JWT)
+
+### application_api_key
+
+- **Type**: API key
+- **API key parameter name**: X-API-KEY
+- **Location**: HTTP header
+
 ### bearer_auth
 
 - **Type**: HTTP Bearer Token authentication (JWT)

@@ -9,11 +9,14 @@ import 'package:schemaless_openapi/src/auth/api_key_auth.dart';
 import 'package:schemaless_openapi/src/auth/basic_auth.dart';
 import 'package:schemaless_openapi/src/auth/bearer_auth.dart';
 import 'package:schemaless_openapi/src/auth/oauth.dart';
-import 'package:schemaless_openapi/src/api/admin_api.dart';
-import 'package:schemaless_openapi/src/api/auth_api.dart';
-import 'package:schemaless_openapi/src/api/entity_api.dart';
+import 'package:schemaless_openapi/src/api/application_auth_api.dart';
+import 'package:schemaless_openapi/src/api/application_entity_api.dart';
 import 'package:schemaless_openapi/src/api/health_api.dart';
-import 'package:schemaless_openapi/src/api/login_api.dart';
+import 'package:schemaless_openapi/src/api/management_application_api.dart';
+import 'package:schemaless_openapi/src/api/management_application_user_api.dart';
+import 'package:schemaless_openapi/src/api/management_auth_api.dart';
+import 'package:schemaless_openapi/src/api/management_entity_api.dart';
+import 'package:schemaless_openapi/src/api/management_user_api.dart';
 
 class SchemalessOpenapi {
   static const String basePath = r'/api';
@@ -69,22 +72,16 @@ class SchemalessOpenapi {
     }
   }
 
-  /// Get AdminApi instance, base route and serializer can be overridden by a given but be careful,
+  /// Get ApplicationAuthApi instance, base route and serializer can be overridden by a given but be careful,
   /// by doing that all interceptors will not be executed
-  AdminApi getAdminApi() {
-    return AdminApi(dio, serializers);
+  ApplicationAuthApi getApplicationAuthApi() {
+    return ApplicationAuthApi(dio, serializers);
   }
 
-  /// Get AuthApi instance, base route and serializer can be overridden by a given but be careful,
+  /// Get ApplicationEntityApi instance, base route and serializer can be overridden by a given but be careful,
   /// by doing that all interceptors will not be executed
-  AuthApi getAuthApi() {
-    return AuthApi(dio, serializers);
-  }
-
-  /// Get EntityApi instance, base route and serializer can be overridden by a given but be careful,
-  /// by doing that all interceptors will not be executed
-  EntityApi getEntityApi() {
-    return EntityApi(dio, serializers);
+  ApplicationEntityApi getApplicationEntityApi() {
+    return ApplicationEntityApi(dio, serializers);
   }
 
   /// Get HealthApi instance, base route and serializer can be overridden by a given but be careful,
@@ -93,9 +90,33 @@ class SchemalessOpenapi {
     return HealthApi(dio, serializers);
   }
 
-  /// Get LoginApi instance, base route and serializer can be overridden by a given but be careful,
+  /// Get ManagementApplicationApi instance, base route and serializer can be overridden by a given but be careful,
   /// by doing that all interceptors will not be executed
-  LoginApi getLoginApi() {
-    return LoginApi(dio, serializers);
+  ManagementApplicationApi getManagementApplicationApi() {
+    return ManagementApplicationApi(dio, serializers);
+  }
+
+  /// Get ManagementApplicationUserApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  ManagementApplicationUserApi getManagementApplicationUserApi() {
+    return ManagementApplicationUserApi(dio, serializers);
+  }
+
+  /// Get ManagementAuthApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  ManagementAuthApi getManagementAuthApi() {
+    return ManagementAuthApi(dio, serializers);
+  }
+
+  /// Get ManagementEntityApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  ManagementEntityApi getManagementEntityApi() {
+    return ManagementEntityApi(dio, serializers);
+  }
+
+  /// Get ManagementUserApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  ManagementUserApi getManagementUserApi() {
+    return ManagementUserApi(dio, serializers);
   }
 }

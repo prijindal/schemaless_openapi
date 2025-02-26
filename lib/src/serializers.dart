@@ -14,7 +14,13 @@ import 'package:built_value/iso_8601_date_time_serializer.dart';
 import 'package:schemaless_openapi/src/date_serializer.dart';
 import 'package:schemaless_openapi/src/model/date.dart';
 
+import 'package:schemaless_openapi/src/model/already_exists_error.dart';
+import 'package:schemaless_openapi/src/model/application.dart';
+import 'package:schemaless_openapi/src/model/application_user_login_request.dart';
+import 'package:schemaless_openapi/src/model/application_user_verify_response.dart';
+import 'package:schemaless_openapi/src/model/create_application_body.dart';
 import 'package:schemaless_openapi/src/model/date_params.dart';
+import 'package:schemaless_openapi/src/model/delete_result.dart';
 import 'package:schemaless_openapi/src/model/entity_action.dart';
 import 'package:schemaless_openapi/src/model/entity_action_base.dart';
 import 'package:schemaless_openapi/src/model/entity_action_create.dart';
@@ -30,20 +36,29 @@ import 'package:schemaless_openapi/src/model/entity_history_response.dart';
 import 'package:schemaless_openapi/src/model/get_cumulative_health_response.dart';
 import 'package:schemaless_openapi/src/model/get_cumulative_health_response_os.dart';
 import 'package:schemaless_openapi/src/model/get_health_response.dart';
-import 'package:schemaless_openapi/src/model/get_initialized_response.dart';
+import 'package:schemaless_openapi/src/model/initialize_response.dart';
 import 'package:schemaless_openapi/src/model/invalid_credentials_error.dart';
 import 'package:schemaless_openapi/src/model/list_users_response.dart';
+import 'package:schemaless_openapi/src/model/list_users_response1.dart';
+import 'package:schemaless_openapi/src/model/management_user_login_request.dart';
+import 'package:schemaless_openapi/src/model/management_user_verify_response.dart';
 import 'package:schemaless_openapi/src/model/not_exists_error.dart';
-import 'package:schemaless_openapi/src/model/user_approval_request_body.dart';
-import 'package:schemaless_openapi/src/model/user_login_request.dart';
+import 'package:schemaless_openapi/src/model/register_user_response.dart';
+import 'package:schemaless_openapi/src/model/register_user_response1.dart';
+import 'package:schemaless_openapi/src/model/server_error.dart';
 import 'package:schemaless_openapi/src/model/user_status.dart';
 import 'package:schemaless_openapi/src/model/user_unauthorized_error.dart';
-import 'package:schemaless_openapi/src/model/user_verify_response.dart';
 
 part 'serializers.g.dart';
 
 @SerializersFor([
+  AlreadyExistsError,
+  Application,
+  ApplicationUserLoginRequest,
+  ApplicationUserVerifyResponse,
+  CreateApplicationBody,
   DateParams,
+  DeleteResult,
   EntityAction,
   EntityActionBase,$EntityActionBase,
   EntityActionCreate,
@@ -59,20 +74,31 @@ part 'serializers.g.dart';
   GetCumulativeHealthResponse,
   GetCumulativeHealthResponseOs,
   GetHealthResponse,
-  GetInitializedResponse,
+  InitializeResponse,
   InvalidCredentialsError,
   ListUsersResponse,
+  ListUsersResponse1,
+  ManagementUserLoginRequest,
+  ManagementUserVerifyResponse,
   NotExistsError,
-  UserApprovalRequestBody,
-  UserLoginRequest,
+  RegisterUserResponse,
+  RegisterUserResponse1,
+  ServerError,
   UserStatus,
   UserUnauthorizedError,
-  UserVerifyResponse,
 ])
 Serializers serializers = (_$serializers.toBuilder()
       ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(Application)]),
+        () => ListBuilder<Application>(),
+      )
+      ..addBuilderFactory(
         const FullType(BuiltList, [FullType(EntityAction)]),
         () => ListBuilder<EntityAction>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(ListUsersResponse1)]),
+        () => ListBuilder<ListUsersResponse1>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(EntityActionResponse)]),

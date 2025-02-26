@@ -3,6 +3,7 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:built_collection/built_collection.dart';
 import 'package:schemaless_openapi/src/model/get_cumulative_health_response_os.dart';
 import 'package:built_value/json_object.dart';
 import 'package:built_value/built_value.dart';
@@ -15,6 +16,7 @@ part 'get_cumulative_health_response.g.dart';
 /// Properties:
 /// * [env] - Construct a type with a set of properties K of type T
 /// * [os] 
+/// * [redis] 
 /// * [db] 
 /// * [healthy] 
 @BuiltValue()
@@ -25,6 +27,10 @@ abstract class GetCumulativeHealthResponse implements Built<GetCumulativeHealthR
 
   @BuiltValueField(wireName: r'os')
   GetCumulativeHealthResponseOs get os;
+
+  @BuiltValueField(wireName: r'redis')
+  GetCumulativeHealthResponseRedisEnum get redis;
+  // enum redisEnum {  PONG,  };
 
   @BuiltValueField(wireName: r'db')
   bool get db;
@@ -64,6 +70,11 @@ class _$GetCumulativeHealthResponseSerializer implements PrimitiveSerializer<Get
     yield serializers.serialize(
       object.os,
       specifiedType: const FullType(GetCumulativeHealthResponseOs),
+    );
+    yield r'redis';
+    yield serializers.serialize(
+      object.redis,
+      specifiedType: const FullType(GetCumulativeHealthResponseRedisEnum),
     );
     yield r'db';
     yield serializers.serialize(
@@ -112,6 +123,13 @@ class _$GetCumulativeHealthResponseSerializer implements PrimitiveSerializer<Get
           ) as GetCumulativeHealthResponseOs;
           result.os.replace(valueDes);
           break;
+        case r'redis':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(GetCumulativeHealthResponseRedisEnum),
+          ) as GetCumulativeHealthResponseRedisEnum;
+          result.redis = valueDes;
+          break;
         case r'db':
           final valueDes = serializers.deserialize(
             value,
@@ -153,5 +171,18 @@ class _$GetCumulativeHealthResponseSerializer implements PrimitiveSerializer<Get
     );
     return result.build();
   }
+}
+
+class GetCumulativeHealthResponseRedisEnum extends EnumClass {
+
+  @BuiltValueEnumConst(wireName: r'PONG')
+  static const GetCumulativeHealthResponseRedisEnum PONG = _$getCumulativeHealthResponseRedisEnum_PONG;
+
+  static Serializer<GetCumulativeHealthResponseRedisEnum> get serializer => _$getCumulativeHealthResponseRedisEnumSerializer;
+
+  const GetCumulativeHealthResponseRedisEnum._(String name): super(name);
+
+  static BuiltSet<GetCumulativeHealthResponseRedisEnum> get values => _$getCumulativeHealthResponseRedisEnumValues;
+  static GetCumulativeHealthResponseRedisEnum valueOf(String name) => _$getCumulativeHealthResponseRedisEnumValueOf(name);
 }
 

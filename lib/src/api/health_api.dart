@@ -10,6 +10,7 @@ import 'package:dio/dio.dart';
 
 import 'package:schemaless_openapi/src/model/get_cumulative_health_response.dart';
 import 'package:schemaless_openapi/src/model/get_health_response.dart';
+import 'package:schemaless_openapi/src/model/server_error.dart';
 
 class HealthApi {
 
