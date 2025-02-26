@@ -8,6 +8,7 @@ import 'package:built_value/json_object.dart';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
+import 'package:schemaless_openapi/src/api_util.dart';
 import 'package:schemaless_openapi/src/model/application_user_login_request.dart';
 import 'package:schemaless_openapi/src/model/application_user_verify_response.dart';
 import 'package:schemaless_openapi/src/model/invalid_credentials_error.dart';
@@ -103,6 +104,7 @@ class ApplicationAuthApi {
   /// 
   ///
   /// Parameters:
+  /// * [applicationId] 
   /// * [applicationUserLoginRequest] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
@@ -114,6 +116,7 @@ class ApplicationAuthApi {
   /// Returns a [Future] containing a [Response] with a [String] as data
   /// Throws [DioException] if API call or serialization fails
   Future<Response<String>> loginUser({ 
+    required String applicationId,
     required ApplicationUserLoginRequest applicationUserLoginRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -122,21 +125,14 @@ class ApplicationAuthApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/application/auth/login';
+    final _path = r'/application/auth/{application_id}/login'.replaceAll('{' r'application_id' '}', encodeQueryParameter(_serializers, applicationId, const FullType(String)).toString());
     final _options = Options(
       method: r'POST',
       headers: <String, dynamic>{
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'apiKey',
-            'name': 'application_api_key',
-            'keyName': 'X-API-KEY',
-            'where': 'header',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',
@@ -202,6 +198,7 @@ class ApplicationAuthApi {
   /// 
   ///
   /// Parameters:
+  /// * [applicationId] 
   /// * [applicationUserLoginRequest] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
@@ -213,6 +210,7 @@ class ApplicationAuthApi {
   /// Returns a [Future] containing a [Response] with a [RegisterUserResponse1] as data
   /// Throws [DioException] if API call or serialization fails
   Future<Response<RegisterUserResponse1>> registerUser({ 
+    required String applicationId,
     required ApplicationUserLoginRequest applicationUserLoginRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -221,21 +219,14 @@ class ApplicationAuthApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/application/auth/register';
+    final _path = r'/application/auth/{application_id}/register'.replaceAll('{' r'application_id' '}', encodeQueryParameter(_serializers, applicationId, const FullType(String)).toString());
     final _options = Options(
       method: r'POST',
       headers: <String, dynamic>{
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'apiKey',
-            'name': 'application_api_key',
-            'keyName': 'X-API-KEY',
-            'where': 'header',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',

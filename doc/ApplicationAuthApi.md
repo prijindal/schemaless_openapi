@@ -10,8 +10,8 @@ All URIs are relative to */api*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**generateKey**](ApplicationAuthApi.md#generatekey) | **POST** /application/auth/generatekey | 
-[**loginUser**](ApplicationAuthApi.md#loginuser) | **POST** /application/auth/login | 
-[**registerUser**](ApplicationAuthApi.md#registeruser) | **POST** /application/auth/register | 
+[**loginUser**](ApplicationAuthApi.md#loginuser) | **POST** /application/auth/{application_id}/login | 
+[**registerUser**](ApplicationAuthApi.md#registeruser) | **POST** /application/auth/{application_id}/register | 
 [**revokeKeys**](ApplicationAuthApi.md#revokekeys) | **POST** /application/auth/revokekeys | 
 [**verifyUserAuth**](ApplicationAuthApi.md#verifyuserauth) | **GET** /application/auth/verify | 
 
@@ -54,23 +54,20 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **loginUser**
-> String loginUser(applicationUserLoginRequest)
+> String loginUser(applicationId, applicationUserLoginRequest)
 
 
 
 ### Example
 ```dart
 import 'package:schemaless_openapi/api.dart';
-// TODO Configure API key authorization: application_api_key
-//defaultApiClient.getAuthentication<ApiKeyAuth>('application_api_key').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('application_api_key').apiKeyPrefix = 'Bearer';
 
 final api = SchemalessOpenapi().getApplicationAuthApi();
+final String applicationId = applicationId_example; // String | 
 final ApplicationUserLoginRequest applicationUserLoginRequest = ; // ApplicationUserLoginRequest | 
 
 try {
-    final response = api.loginUser(applicationUserLoginRequest);
+    final response = api.loginUser(applicationId, applicationUserLoginRequest);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling ApplicationAuthApi->loginUser: $e\n');
@@ -81,6 +78,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **applicationId** | **String**|  | 
  **applicationUserLoginRequest** | [**ApplicationUserLoginRequest**](ApplicationUserLoginRequest.md)|  | 
 
 ### Return type
@@ -89,7 +87,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[application_api_key](../README.md#application_api_key)
+No authorization required
 
 ### HTTP request headers
 
@@ -99,23 +97,20 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **registerUser**
-> RegisterUserResponse1 registerUser(applicationUserLoginRequest)
+> RegisterUserResponse1 registerUser(applicationId, applicationUserLoginRequest)
 
 
 
 ### Example
 ```dart
 import 'package:schemaless_openapi/api.dart';
-// TODO Configure API key authorization: application_api_key
-//defaultApiClient.getAuthentication<ApiKeyAuth>('application_api_key').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('application_api_key').apiKeyPrefix = 'Bearer';
 
 final api = SchemalessOpenapi().getApplicationAuthApi();
+final String applicationId = applicationId_example; // String | 
 final ApplicationUserLoginRequest applicationUserLoginRequest = ; // ApplicationUserLoginRequest | 
 
 try {
-    final response = api.registerUser(applicationUserLoginRequest);
+    final response = api.registerUser(applicationId, applicationUserLoginRequest);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling ApplicationAuthApi->registerUser: $e\n');
@@ -126,6 +121,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **applicationId** | **String**|  | 
  **applicationUserLoginRequest** | [**ApplicationUserLoginRequest**](ApplicationUserLoginRequest.md)|  | 
 
 ### Return type
@@ -134,7 +130,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[application_api_key](../README.md#application_api_key)
+No authorization required
 
 ### HTTP request headers
 

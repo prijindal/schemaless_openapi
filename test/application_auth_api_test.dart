@@ -12,12 +12,12 @@ void main() {
       // TODO
     });
 
-    //Future<String> loginUser(ApplicationUserLoginRequest applicationUserLoginRequest) async
+    //Future<String> loginUser(String applicationId, ApplicationUserLoginRequest applicationUserLoginRequest) async
     test('test loginUser', () async {
       // TODO
     });
 
-    //Future<RegisterUserResponse1> registerUser(ApplicationUserLoginRequest applicationUserLoginRequest) async
+    //Future<RegisterUserResponse1> registerUser(String applicationId, ApplicationUserLoginRequest applicationUserLoginRequest) async
     test('test registerUser', () async {
       // TODO
     });

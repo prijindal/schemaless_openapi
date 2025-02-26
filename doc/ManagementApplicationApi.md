@@ -11,9 +11,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createApplication**](ManagementApplicationApi.md#createapplication) | **POST** /management/application | 
 [**deleteApplication**](ManagementApplicationApi.md#deleteapplication) | **DELETE** /management/application/{application_id} | 
-[**generateKey**](ManagementApplicationApi.md#generatekey) | **POST** /management/application/{application_id}/generatekey | 
 [**listApplications**](ManagementApplicationApi.md#listapplications) | **GET** /management/application | 
-[**revokeKeys**](ManagementApplicationApi.md#revokekeys) | **POST** /management/application/{application_id}/revoketokens | 
 
 
 # **createApplication**
@@ -98,47 +96,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **generateKey**
-> JsonObject generateKey(applicationId)
-
-
-
-### Example
-```dart
-import 'package:schemaless_openapi/api.dart';
-
-final api = SchemalessOpenapi().getManagementApplicationApi();
-final String applicationId = applicationId_example; // String | 
-
-try {
-    final response = api.generateKey(applicationId);
-    print(response);
-} catch on DioException (e) {
-    print('Exception when calling ManagementApplicationApi->generateKey: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **applicationId** | **String**|  | 
-
-### Return type
-
-[**JsonObject**](JsonObject.md)
-
-### Authorization
-
-[bearer_management](../README.md#bearer_management)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **listApplications**
 > BuiltList<Application> listApplications()
 
@@ -164,47 +121,6 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**BuiltList&lt;Application&gt;**](Application.md)
-
-### Authorization
-
-[bearer_management](../README.md#bearer_management)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **revokeKeys**
-> bool revokeKeys(applicationId)
-
-
-
-### Example
-```dart
-import 'package:schemaless_openapi/api.dart';
-
-final api = SchemalessOpenapi().getManagementApplicationApi();
-final String applicationId = applicationId_example; // String | 
-
-try {
-    final response = api.revokeKeys(applicationId);
-    print(response);
-} catch on DioException (e) {
-    print('Exception when calling ManagementApplicationApi->revokeKeys: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **applicationId** | **String**|  | 
-
-### Return type
-
-**bool**
 
 ### Authorization
 

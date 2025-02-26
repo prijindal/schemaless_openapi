@@ -17,18 +17,8 @@ void main() {
       // TODO
     });
 
-    //Future<JsonObject> generateKey(String applicationId) async
-    test('test generateKey', () async {
-      // TODO
-    });
-
     //Future<BuiltList<Application>> listApplications() async
     test('test listApplications', () async {
-      // TODO
-    });
-
-    //Future<bool> revokeKeys(String applicationId) async
-    test('test revokeKeys', () async {
       // TODO
     });
 

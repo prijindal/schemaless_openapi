@@ -11,7 +11,6 @@ Name | Type | Description | Notes
 **id** | **String** |  | 
 **name** | **String** |  | 
 **ownerId** | **String** |  | 
-**token** | **String** |  | 
 **updatedAt** | [**DateTime**](DateTime.md) |  | 
 **createdAt** | [**DateTime**](DateTime.md) |  | 
 

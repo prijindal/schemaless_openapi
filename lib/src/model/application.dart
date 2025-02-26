@@ -14,7 +14,6 @@ part 'application.g.dart';
 /// * [id] 
 /// * [name] 
 /// * [ownerId] 
-/// * [token] 
 /// * [updatedAt] 
 /// * [createdAt] 
 @BuiltValue()
@@ -27,9 +26,6 @@ abstract class Application implements Built<Application, ApplicationBuilder> {
 
   @BuiltValueField(wireName: r'owner_id')
   String get ownerId;
-
-  @BuiltValueField(wireName: r'token')
-  String get token;
 
   @BuiltValueField(wireName: r'updated_at')
   DateTime get updatedAt;
@@ -73,11 +69,6 @@ class _$ApplicationSerializer implements PrimitiveSerializer<Application> {
     yield r'owner_id';
     yield serializers.serialize(
       object.ownerId,
-      specifiedType: const FullType(String),
-    );
-    yield r'token';
-    yield serializers.serialize(
-      object.token,
       specifiedType: const FullType(String),
     );
     yield r'updated_at';
@@ -133,13 +124,6 @@ class _$ApplicationSerializer implements PrimitiveSerializer<Application> {
             specifiedType: const FullType(String),
           ) as String;
           result.ownerId = valueDes;
-          break;
-        case r'token':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.token = valueDes;
           break;
         case r'updated_at':
           final valueDes = serializers.deserialize(

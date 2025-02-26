@@ -14,8 +14,6 @@ class _$Application extends Application {
   @override
   final String ownerId;
   @override
-  final String token;
-  @override
   final DateTime updatedAt;
   @override
   final DateTime createdAt;
@@ -27,14 +25,12 @@ class _$Application extends Application {
       {required this.id,
       required this.name,
       required this.ownerId,
-      required this.token,
       required this.updatedAt,
       required this.createdAt})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(id, r'Application', 'id');
     BuiltValueNullFieldError.checkNotNull(name, r'Application', 'name');
     BuiltValueNullFieldError.checkNotNull(ownerId, r'Application', 'ownerId');
-    BuiltValueNullFieldError.checkNotNull(token, r'Application', 'token');
     BuiltValueNullFieldError.checkNotNull(
         updatedAt, r'Application', 'updatedAt');
     BuiltValueNullFieldError.checkNotNull(
@@ -55,7 +51,6 @@ class _$Application extends Application {
         id == other.id &&
         name == other.name &&
         ownerId == other.ownerId &&
-        token == other.token &&
         updatedAt == other.updatedAt &&
         createdAt == other.createdAt;
   }
@@ -66,7 +61,6 @@ class _$Application extends Application {
     _$hash = $jc(_$hash, id.hashCode);
     _$hash = $jc(_$hash, name.hashCode);
     _$hash = $jc(_$hash, ownerId.hashCode);
-    _$hash = $jc(_$hash, token.hashCode);
     _$hash = $jc(_$hash, updatedAt.hashCode);
     _$hash = $jc(_$hash, createdAt.hashCode);
     _$hash = $jf(_$hash);
@@ -79,7 +73,6 @@ class _$Application extends Application {
           ..add('id', id)
           ..add('name', name)
           ..add('ownerId', ownerId)
-          ..add('token', token)
           ..add('updatedAt', updatedAt)
           ..add('createdAt', createdAt))
         .toString();
@@ -101,10 +94,6 @@ class ApplicationBuilder implements Builder<Application, ApplicationBuilder> {
   String? get ownerId => _$this._ownerId;
   set ownerId(String? ownerId) => _$this._ownerId = ownerId;
 
-  String? _token;
-  String? get token => _$this._token;
-  set token(String? token) => _$this._token = token;
-
   DateTime? _updatedAt;
   DateTime? get updatedAt => _$this._updatedAt;
   set updatedAt(DateTime? updatedAt) => _$this._updatedAt = updatedAt;
@@ -123,7 +112,6 @@ class ApplicationBuilder implements Builder<Application, ApplicationBuilder> {
       _id = $v.id;
       _name = $v.name;
       _ownerId = $v.ownerId;
-      _token = $v.token;
       _updatedAt = $v.updatedAt;
       _createdAt = $v.createdAt;
       _$v = null;
@@ -153,8 +141,6 @@ class ApplicationBuilder implements Builder<Application, ApplicationBuilder> {
               name, r'Application', 'name'),
           ownerId: BuiltValueNullFieldError.checkNotNull(
               ownerId, r'Application', 'ownerId'),
-          token: BuiltValueNullFieldError.checkNotNull(
-              token, r'Application', 'token'),
           updatedAt: BuiltValueNullFieldError.checkNotNull(
               updatedAt, r'Application', 'updatedAt'),
           createdAt: BuiltValueNullFieldError.checkNotNull(

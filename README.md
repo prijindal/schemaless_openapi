@@ -65,8 +65,8 @@ All URIs are relative to */api*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 [*ApplicationAuthApi*](doc/ApplicationAuthApi.md) | [**generateKey**](doc/ApplicationAuthApi.md#generatekey) | **POST** /application/auth/generatekey | 
-[*ApplicationAuthApi*](doc/ApplicationAuthApi.md) | [**loginUser**](doc/ApplicationAuthApi.md#loginuser) | **POST** /application/auth/login | 
-[*ApplicationAuthApi*](doc/ApplicationAuthApi.md) | [**registerUser**](doc/ApplicationAuthApi.md#registeruser) | **POST** /application/auth/register | 
+[*ApplicationAuthApi*](doc/ApplicationAuthApi.md) | [**loginUser**](doc/ApplicationAuthApi.md#loginuser) | **POST** /application/auth/{application_id}/login | 
+[*ApplicationAuthApi*](doc/ApplicationAuthApi.md) | [**registerUser**](doc/ApplicationAuthApi.md#registeruser) | **POST** /application/auth/{application_id}/register | 
 [*ApplicationAuthApi*](doc/ApplicationAuthApi.md) | [**revokeKeys**](doc/ApplicationAuthApi.md#revokekeys) | **POST** /application/auth/revokekeys | 
 [*ApplicationAuthApi*](doc/ApplicationAuthApi.md) | [**verifyUserAuth**](doc/ApplicationAuthApi.md#verifyuserauth) | **GET** /application/auth/verify | 
 [*ApplicationEntityApi*](doc/ApplicationEntityApi.md) | [**entityAction**](doc/ApplicationEntityApi.md#entityaction) | **POST** /application/entity/action | 
@@ -76,9 +76,7 @@ Class | Method | HTTP request | Description
 [*HealthApi*](doc/HealthApi.md) | [**getHealth**](doc/HealthApi.md#gethealth) | **GET** /health | 
 [*ManagementApplicationApi*](doc/ManagementApplicationApi.md) | [**createApplication**](doc/ManagementApplicationApi.md#createapplication) | **POST** /management/application | 
 [*ManagementApplicationApi*](doc/ManagementApplicationApi.md) | [**deleteApplication**](doc/ManagementApplicationApi.md#deleteapplication) | **DELETE** /management/application/{application_id} | 
-[*ManagementApplicationApi*](doc/ManagementApplicationApi.md) | [**generateKey**](doc/ManagementApplicationApi.md#generatekey) | **POST** /management/application/{application_id}/generatekey | 
 [*ManagementApplicationApi*](doc/ManagementApplicationApi.md) | [**listApplications**](doc/ManagementApplicationApi.md#listapplications) | **GET** /management/application | 
-[*ManagementApplicationApi*](doc/ManagementApplicationApi.md) | [**revokeKeys**](doc/ManagementApplicationApi.md#revokekeys) | **POST** /management/application/{application_id}/revoketokens | 
 [*ManagementApplicationUserApi*](doc/ManagementApplicationUserApi.md) | [**approveUser**](doc/ManagementApplicationUserApi.md#approveuser) | **POST** /management/application_user/{application_id}/{app_user_id}/approve | 
 [*ManagementApplicationUserApi*](doc/ManagementApplicationUserApi.md) | [**disableUser**](doc/ManagementApplicationUserApi.md#disableuser) | **POST** /management/application_user/{application_id}/{app_user_id}/disable | 
 [*ManagementApplicationUserApi*](doc/ManagementApplicationUserApi.md) | [**generateKey**](doc/ManagementApplicationUserApi.md#generatekey) | **PUT** /management/application_user/{application_id}/{app_user_id}/generatekey | 
@@ -145,12 +143,6 @@ Authentication schemes defined for the API:
 ### bearer_management
 
 - **Type**: HTTP Bearer Token authentication (JWT)
-
-### application_api_key
-
-- **Type**: API key
-- **API key parameter name**: X-API-KEY
-- **Location**: HTTP header
 
 ### bearer_auth
 
