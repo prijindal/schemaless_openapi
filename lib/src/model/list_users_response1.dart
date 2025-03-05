@@ -15,7 +15,7 @@ part 'list_users_response1.g.dart';
 /// * [applicationId] 
 /// * [status] 
 /// * [createdAt] 
-/// * [username] 
+/// * [email] 
 /// * [id] 
 @BuiltValue()
 abstract class ListUsersResponse1 implements Built<ListUsersResponse1, ListUsersResponse1Builder> {
@@ -29,8 +29,8 @@ abstract class ListUsersResponse1 implements Built<ListUsersResponse1, ListUsers
   @BuiltValueField(wireName: r'created_at')
   DateTime get createdAt;
 
-  @BuiltValueField(wireName: r'username')
-  String get username;
+  @BuiltValueField(wireName: r'email')
+  String get email;
 
   @BuiltValueField(wireName: r'id')
   String get id;
@@ -73,9 +73,9 @@ class _$ListUsersResponse1Serializer implements PrimitiveSerializer<ListUsersRes
       object.createdAt,
       specifiedType: const FullType(DateTime),
     );
-    yield r'username';
+    yield r'email';
     yield serializers.serialize(
-      object.username,
+      object.email,
       specifiedType: const FullType(String),
     );
     yield r'id';
@@ -127,12 +127,12 @@ class _$ListUsersResponse1Serializer implements PrimitiveSerializer<ListUsersRes
           ) as DateTime;
           result.createdAt = valueDes;
           break;
-        case r'username':
+        case r'email':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.username = valueDes;
+          result.email = valueDes;
           break;
         case r'id':
           final valueDes = serializers.deserialize(

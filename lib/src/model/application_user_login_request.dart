@@ -11,12 +11,12 @@ part 'application_user_login_request.g.dart';
 /// ApplicationUserLoginRequest
 ///
 /// Properties:
-/// * [username] 
+/// * [email] 
 /// * [password] 
 @BuiltValue()
 abstract class ApplicationUserLoginRequest implements Built<ApplicationUserLoginRequest, ApplicationUserLoginRequestBuilder> {
-  @BuiltValueField(wireName: r'username')
-  String get username;
+  @BuiltValueField(wireName: r'email')
+  String get email;
 
   @BuiltValueField(wireName: r'password')
   String get password;
@@ -44,9 +44,9 @@ class _$ApplicationUserLoginRequestSerializer implements PrimitiveSerializer<App
     ApplicationUserLoginRequest object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    yield r'username';
+    yield r'email';
     yield serializers.serialize(
-      object.username,
+      object.email,
       specifiedType: const FullType(String),
     );
     yield r'password';
@@ -77,12 +77,12 @@ class _$ApplicationUserLoginRequestSerializer implements PrimitiveSerializer<App
       final key = serializedList[i] as String;
       final value = serializedList[i + 1];
       switch (key) {
-        case r'username':
+        case r'email':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.username = valueDes;
+          result.email = valueDes;
           break;
         case r'password':
           final valueDes = serializers.deserialize(

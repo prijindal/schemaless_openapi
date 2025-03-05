@@ -8,7 +8,7 @@ import 'package:schemaless_openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**username** | **String** |  | 
+**email** | **String** |  | 
 **createdAt** | [**DateTime**](DateTime.md) |  | 
 **status** | [**UserStatus**](UserStatus.md) |  | 
 **isAdmin** | **bool** |  | 

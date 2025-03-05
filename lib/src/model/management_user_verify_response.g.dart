@@ -8,7 +8,7 @@ part of 'management_user_verify_response.dart';
 
 class _$ManagementUserVerifyResponse extends ManagementUserVerifyResponse {
   @override
-  final String username;
+  final String email;
   @override
   final DateTime createdAt;
   @override
@@ -21,13 +21,13 @@ class _$ManagementUserVerifyResponse extends ManagementUserVerifyResponse {
       (new ManagementUserVerifyResponseBuilder()..update(updates))._build();
 
   _$ManagementUserVerifyResponse._(
-      {required this.username,
+      {required this.email,
       required this.createdAt,
       required this.status,
       required this.isAdmin})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        username, r'ManagementUserVerifyResponse', 'username');
+        email, r'ManagementUserVerifyResponse', 'email');
     BuiltValueNullFieldError.checkNotNull(
         createdAt, r'ManagementUserVerifyResponse', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(
@@ -49,7 +49,7 @@ class _$ManagementUserVerifyResponse extends ManagementUserVerifyResponse {
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is ManagementUserVerifyResponse &&
-        username == other.username &&
+        email == other.email &&
         createdAt == other.createdAt &&
         status == other.status &&
         isAdmin == other.isAdmin;
@@ -58,7 +58,7 @@ class _$ManagementUserVerifyResponse extends ManagementUserVerifyResponse {
   @override
   int get hashCode {
     var _$hash = 0;
-    _$hash = $jc(_$hash, username.hashCode);
+    _$hash = $jc(_$hash, email.hashCode);
     _$hash = $jc(_$hash, createdAt.hashCode);
     _$hash = $jc(_$hash, status.hashCode);
     _$hash = $jc(_$hash, isAdmin.hashCode);
@@ -69,7 +69,7 @@ class _$ManagementUserVerifyResponse extends ManagementUserVerifyResponse {
   @override
   String toString() {
     return (newBuiltValueToStringHelper(r'ManagementUserVerifyResponse')
-          ..add('username', username)
+          ..add('email', email)
           ..add('createdAt', createdAt)
           ..add('status', status)
           ..add('isAdmin', isAdmin))
@@ -83,9 +83,9 @@ class ManagementUserVerifyResponseBuilder
             ManagementUserVerifyResponseBuilder> {
   _$ManagementUserVerifyResponse? _$v;
 
-  String? _username;
-  String? get username => _$this._username;
-  set username(String? username) => _$this._username = username;
+  String? _email;
+  String? get email => _$this._email;
+  set email(String? email) => _$this._email = email;
 
   DateTime? _createdAt;
   DateTime? get createdAt => _$this._createdAt;
@@ -106,7 +106,7 @@ class ManagementUserVerifyResponseBuilder
   ManagementUserVerifyResponseBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
-      _username = $v.username;
+      _email = $v.email;
       _createdAt = $v.createdAt;
       _status = $v.status;
       _isAdmin = $v.isAdmin;
@@ -132,8 +132,8 @@ class ManagementUserVerifyResponseBuilder
   _$ManagementUserVerifyResponse _build() {
     final _$result = _$v ??
         new _$ManagementUserVerifyResponse._(
-          username: BuiltValueNullFieldError.checkNotNull(
-              username, r'ManagementUserVerifyResponse', 'username'),
+          email: BuiltValueNullFieldError.checkNotNull(
+              email, r'ManagementUserVerifyResponse', 'email'),
           createdAt: BuiltValueNullFieldError.checkNotNull(
               createdAt, r'ManagementUserVerifyResponse', 'createdAt'),
           status: BuiltValueNullFieldError.checkNotNull(

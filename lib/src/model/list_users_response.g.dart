@@ -14,7 +14,7 @@ class _$ListUsersResponse extends ListUsersResponse {
   @override
   final DateTime createdAt;
   @override
-  final String username;
+  final String email;
   @override
   final String id;
 
@@ -26,7 +26,7 @@ class _$ListUsersResponse extends ListUsersResponse {
       {required this.isAdmin,
       required this.status,
       required this.createdAt,
-      required this.username,
+      required this.email,
       required this.id})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
@@ -35,8 +35,7 @@ class _$ListUsersResponse extends ListUsersResponse {
         status, r'ListUsersResponse', 'status');
     BuiltValueNullFieldError.checkNotNull(
         createdAt, r'ListUsersResponse', 'createdAt');
-    BuiltValueNullFieldError.checkNotNull(
-        username, r'ListUsersResponse', 'username');
+    BuiltValueNullFieldError.checkNotNull(email, r'ListUsersResponse', 'email');
     BuiltValueNullFieldError.checkNotNull(id, r'ListUsersResponse', 'id');
   }
 
@@ -55,7 +54,7 @@ class _$ListUsersResponse extends ListUsersResponse {
         isAdmin == other.isAdmin &&
         status == other.status &&
         createdAt == other.createdAt &&
-        username == other.username &&
+        email == other.email &&
         id == other.id;
   }
 
@@ -65,7 +64,7 @@ class _$ListUsersResponse extends ListUsersResponse {
     _$hash = $jc(_$hash, isAdmin.hashCode);
     _$hash = $jc(_$hash, status.hashCode);
     _$hash = $jc(_$hash, createdAt.hashCode);
-    _$hash = $jc(_$hash, username.hashCode);
+    _$hash = $jc(_$hash, email.hashCode);
     _$hash = $jc(_$hash, id.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
@@ -77,7 +76,7 @@ class _$ListUsersResponse extends ListUsersResponse {
           ..add('isAdmin', isAdmin)
           ..add('status', status)
           ..add('createdAt', createdAt)
-          ..add('username', username)
+          ..add('email', email)
           ..add('id', id))
         .toString();
   }
@@ -99,9 +98,9 @@ class ListUsersResponseBuilder
   DateTime? get createdAt => _$this._createdAt;
   set createdAt(DateTime? createdAt) => _$this._createdAt = createdAt;
 
-  String? _username;
-  String? get username => _$this._username;
-  set username(String? username) => _$this._username = username;
+  String? _email;
+  String? get email => _$this._email;
+  set email(String? email) => _$this._email = email;
 
   String? _id;
   String? get id => _$this._id;
@@ -117,7 +116,7 @@ class ListUsersResponseBuilder
       _isAdmin = $v.isAdmin;
       _status = $v.status;
       _createdAt = $v.createdAt;
-      _username = $v.username;
+      _email = $v.email;
       _id = $v.id;
       _$v = null;
     }
@@ -147,8 +146,8 @@ class ListUsersResponseBuilder
               status, r'ListUsersResponse', 'status'),
           createdAt: BuiltValueNullFieldError.checkNotNull(
               createdAt, r'ListUsersResponse', 'createdAt'),
-          username: BuiltValueNullFieldError.checkNotNull(
-              username, r'ListUsersResponse', 'username'),
+          email: BuiltValueNullFieldError.checkNotNull(
+              email, r'ListUsersResponse', 'email'),
           id: BuiltValueNullFieldError.checkNotNull(
               id, r'ListUsersResponse', 'id'),
         );

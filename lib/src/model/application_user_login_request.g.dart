@@ -8,7 +8,7 @@ part of 'application_user_login_request.dart';
 
 class _$ApplicationUserLoginRequest extends ApplicationUserLoginRequest {
   @override
-  final String username;
+  final String email;
   @override
   final String password;
 
@@ -16,11 +16,10 @@ class _$ApplicationUserLoginRequest extends ApplicationUserLoginRequest {
           [void Function(ApplicationUserLoginRequestBuilder)? updates]) =>
       (new ApplicationUserLoginRequestBuilder()..update(updates))._build();
 
-  _$ApplicationUserLoginRequest._(
-      {required this.username, required this.password})
+  _$ApplicationUserLoginRequest._({required this.email, required this.password})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        username, r'ApplicationUserLoginRequest', 'username');
+        email, r'ApplicationUserLoginRequest', 'email');
     BuiltValueNullFieldError.checkNotNull(
         password, r'ApplicationUserLoginRequest', 'password');
   }
@@ -38,14 +37,14 @@ class _$ApplicationUserLoginRequest extends ApplicationUserLoginRequest {
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is ApplicationUserLoginRequest &&
-        username == other.username &&
+        email == other.email &&
         password == other.password;
   }
 
   @override
   int get hashCode {
     var _$hash = 0;
-    _$hash = $jc(_$hash, username.hashCode);
+    _$hash = $jc(_$hash, email.hashCode);
     _$hash = $jc(_$hash, password.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
@@ -54,7 +53,7 @@ class _$ApplicationUserLoginRequest extends ApplicationUserLoginRequest {
   @override
   String toString() {
     return (newBuiltValueToStringHelper(r'ApplicationUserLoginRequest')
-          ..add('username', username)
+          ..add('email', email)
           ..add('password', password))
         .toString();
   }
@@ -66,9 +65,9 @@ class ApplicationUserLoginRequestBuilder
             ApplicationUserLoginRequestBuilder> {
   _$ApplicationUserLoginRequest? _$v;
 
-  String? _username;
-  String? get username => _$this._username;
-  set username(String? username) => _$this._username = username;
+  String? _email;
+  String? get email => _$this._email;
+  set email(String? email) => _$this._email = email;
 
   String? _password;
   String? get password => _$this._password;
@@ -81,7 +80,7 @@ class ApplicationUserLoginRequestBuilder
   ApplicationUserLoginRequestBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
-      _username = $v.username;
+      _email = $v.email;
       _password = $v.password;
       _$v = null;
     }
@@ -105,8 +104,8 @@ class ApplicationUserLoginRequestBuilder
   _$ApplicationUserLoginRequest _build() {
     final _$result = _$v ??
         new _$ApplicationUserLoginRequest._(
-          username: BuiltValueNullFieldError.checkNotNull(
-              username, r'ApplicationUserLoginRequest', 'username'),
+          email: BuiltValueNullFieldError.checkNotNull(
+              email, r'ApplicationUserLoginRequest', 'email'),
           password: BuiltValueNullFieldError.checkNotNull(
               password, r'ApplicationUserLoginRequest', 'password'),
         );

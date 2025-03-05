@@ -12,14 +12,14 @@ part 'management_user_verify_response.g.dart';
 /// ManagementUserVerifyResponse
 ///
 /// Properties:
-/// * [username] 
+/// * [email] 
 /// * [createdAt] 
 /// * [status] 
 /// * [isAdmin] 
 @BuiltValue()
 abstract class ManagementUserVerifyResponse implements Built<ManagementUserVerifyResponse, ManagementUserVerifyResponseBuilder> {
-  @BuiltValueField(wireName: r'username')
-  String get username;
+  @BuiltValueField(wireName: r'email')
+  String get email;
 
   @BuiltValueField(wireName: r'created_at')
   DateTime get createdAt;
@@ -54,9 +54,9 @@ class _$ManagementUserVerifyResponseSerializer implements PrimitiveSerializer<Ma
     ManagementUserVerifyResponse object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    yield r'username';
+    yield r'email';
     yield serializers.serialize(
-      object.username,
+      object.email,
       specifiedType: const FullType(String),
     );
     yield r'created_at';
@@ -97,12 +97,12 @@ class _$ManagementUserVerifyResponseSerializer implements PrimitiveSerializer<Ma
       final key = serializedList[i] as String;
       final value = serializedList[i + 1];
       switch (key) {
-        case r'username':
+        case r'email':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.username = valueDes;
+          result.email = valueDes;
           break;
         case r'created_at':
           final valueDes = serializers.deserialize(

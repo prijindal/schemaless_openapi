@@ -8,7 +8,7 @@ part of 'application_user_verify_response.dart';
 
 class _$ApplicationUserVerifyResponse extends ApplicationUserVerifyResponse {
   @override
-  final String username;
+  final String email;
   @override
   final DateTime createdAt;
   @override
@@ -19,10 +19,10 @@ class _$ApplicationUserVerifyResponse extends ApplicationUserVerifyResponse {
       (new ApplicationUserVerifyResponseBuilder()..update(updates))._build();
 
   _$ApplicationUserVerifyResponse._(
-      {required this.username, required this.createdAt, required this.status})
+      {required this.email, required this.createdAt, required this.status})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        username, r'ApplicationUserVerifyResponse', 'username');
+        email, r'ApplicationUserVerifyResponse', 'email');
     BuiltValueNullFieldError.checkNotNull(
         createdAt, r'ApplicationUserVerifyResponse', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(
@@ -42,7 +42,7 @@ class _$ApplicationUserVerifyResponse extends ApplicationUserVerifyResponse {
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is ApplicationUserVerifyResponse &&
-        username == other.username &&
+        email == other.email &&
         createdAt == other.createdAt &&
         status == other.status;
   }
@@ -50,7 +50,7 @@ class _$ApplicationUserVerifyResponse extends ApplicationUserVerifyResponse {
   @override
   int get hashCode {
     var _$hash = 0;
-    _$hash = $jc(_$hash, username.hashCode);
+    _$hash = $jc(_$hash, email.hashCode);
     _$hash = $jc(_$hash, createdAt.hashCode);
     _$hash = $jc(_$hash, status.hashCode);
     _$hash = $jf(_$hash);
@@ -60,7 +60,7 @@ class _$ApplicationUserVerifyResponse extends ApplicationUserVerifyResponse {
   @override
   String toString() {
     return (newBuiltValueToStringHelper(r'ApplicationUserVerifyResponse')
-          ..add('username', username)
+          ..add('email', email)
           ..add('createdAt', createdAt)
           ..add('status', status))
         .toString();
@@ -73,9 +73,9 @@ class ApplicationUserVerifyResponseBuilder
             ApplicationUserVerifyResponseBuilder> {
   _$ApplicationUserVerifyResponse? _$v;
 
-  String? _username;
-  String? get username => _$this._username;
-  set username(String? username) => _$this._username = username;
+  String? _email;
+  String? get email => _$this._email;
+  set email(String? email) => _$this._email = email;
 
   DateTime? _createdAt;
   DateTime? get createdAt => _$this._createdAt;
@@ -92,7 +92,7 @@ class ApplicationUserVerifyResponseBuilder
   ApplicationUserVerifyResponseBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
-      _username = $v.username;
+      _email = $v.email;
       _createdAt = $v.createdAt;
       _status = $v.status;
       _$v = null;
@@ -117,8 +117,8 @@ class ApplicationUserVerifyResponseBuilder
   _$ApplicationUserVerifyResponse _build() {
     final _$result = _$v ??
         new _$ApplicationUserVerifyResponse._(
-          username: BuiltValueNullFieldError.checkNotNull(
-              username, r'ApplicationUserVerifyResponse', 'username'),
+          email: BuiltValueNullFieldError.checkNotNull(
+              email, r'ApplicationUserVerifyResponse', 'email'),
           createdAt: BuiltValueNullFieldError.checkNotNull(
               createdAt, r'ApplicationUserVerifyResponse', 'createdAt'),
           status: BuiltValueNullFieldError.checkNotNull(

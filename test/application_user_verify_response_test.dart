@@ -7,8 +7,8 @@ void main() {
   // TODO add properties to the builder and call build()
 
   group(ApplicationUserVerifyResponse, () {
-    // String username
-    test('to test the property `username`', () async {
+    // String email
+    test('to test the property `email`', () async {
       // TODO
     });
 

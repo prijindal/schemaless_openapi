@@ -12,13 +12,13 @@ part 'application_user_verify_response.g.dart';
 /// ApplicationUserVerifyResponse
 ///
 /// Properties:
-/// * [username] 
+/// * [email] 
 /// * [createdAt] 
 /// * [status] 
 @BuiltValue()
 abstract class ApplicationUserVerifyResponse implements Built<ApplicationUserVerifyResponse, ApplicationUserVerifyResponseBuilder> {
-  @BuiltValueField(wireName: r'username')
-  String get username;
+  @BuiltValueField(wireName: r'email')
+  String get email;
 
   @BuiltValueField(wireName: r'created_at')
   DateTime get createdAt;
@@ -50,9 +50,9 @@ class _$ApplicationUserVerifyResponseSerializer implements PrimitiveSerializer<A
     ApplicationUserVerifyResponse object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    yield r'username';
+    yield r'email';
     yield serializers.serialize(
-      object.username,
+      object.email,
       specifiedType: const FullType(String),
     );
     yield r'created_at';
@@ -88,12 +88,12 @@ class _$ApplicationUserVerifyResponseSerializer implements PrimitiveSerializer<A
       final key = serializedList[i] as String;
       final value = serializedList[i + 1];
       switch (key) {
-        case r'username':
+        case r'email':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.username = valueDes;
+          result.email = valueDes;
           break;
         case r'created_at':
           final valueDes = serializers.deserialize(
