@@ -47,13 +47,13 @@ Please follow the [installation procedure](#installation--usage) and then run th
 import 'package:schemaless_openapi/schemaless_openapi.dart';
 
 
-final api = SchemalessOpenapi().getApplicationAuthApi();
+final api = SchemalessOpenapi().getHealthApi();
 
 try {
-    final response = await api.generateKey();
+    final response = await api.getCumulativeHealth();
     print(response);
 } catch on DioException (e) {
-    print("Exception when calling ApplicationAuthApi->generateKey: $e\n");
+    print("Exception when calling HealthApi->getCumulativeHealth: $e\n");
 }
 
 ```
@@ -64,14 +64,6 @@ All URIs are relative to */api*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-[*ApplicationAuthApi*](doc/ApplicationAuthApi.md) | [**generateKey**](doc/ApplicationAuthApi.md#generatekey) | **POST** /application/auth/generatekey | 
-[*ApplicationAuthApi*](doc/ApplicationAuthApi.md) | [**loginUser**](doc/ApplicationAuthApi.md#loginuser) | **POST** /application/auth/{application_id}/login | 
-[*ApplicationAuthApi*](doc/ApplicationAuthApi.md) | [**registerUser**](doc/ApplicationAuthApi.md#registeruser) | **POST** /application/auth/{application_id}/register | 
-[*ApplicationAuthApi*](doc/ApplicationAuthApi.md) | [**revokeKeys**](doc/ApplicationAuthApi.md#revokekeys) | **POST** /application/auth/revokekeys | 
-[*ApplicationAuthApi*](doc/ApplicationAuthApi.md) | [**verifyUserAuth**](doc/ApplicationAuthApi.md#verifyuserauth) | **GET** /application/auth/verify | 
-[*ApplicationEntityApi*](doc/ApplicationEntityApi.md) | [**entityAction**](doc/ApplicationEntityApi.md#entityaction) | **POST** /application/entity/action | 
-[*ApplicationEntityApi*](doc/ApplicationEntityApi.md) | [**getEntities**](doc/ApplicationEntityApi.md#getentities) | **GET** /application/entity/history/entities | 
-[*ApplicationEntityApi*](doc/ApplicationEntityApi.md) | [**searchEntitiesHistory**](doc/ApplicationEntityApi.md#searchentitieshistory) | **POST** /application/entity/history/search | 
 [*HealthApi*](doc/HealthApi.md) | [**getCumulativeHealth**](doc/HealthApi.md#getcumulativehealth) | **GET** /cumulative/health | 
 [*HealthApi*](doc/HealthApi.md) | [**getHealth**](doc/HealthApi.md#gethealth) | **GET** /health | 
 [*ManagementApplicationApi*](doc/ManagementApplicationApi.md) | [**createApplication**](doc/ManagementApplicationApi.md#createapplication) | **POST** /management/application | 
@@ -102,8 +94,6 @@ Class | Method | HTTP request | Description
 
  - [AlreadyExistsError](doc/AlreadyExistsError.md)
  - [Application](doc/Application.md)
- - [ApplicationUserLoginRequest](doc/ApplicationUserLoginRequest.md)
- - [ApplicationUserVerifyResponse](doc/ApplicationUserVerifyResponse.md)
  - [CreateApplicationBody](doc/CreateApplicationBody.md)
  - [DateParams](doc/DateParams.md)
  - [DeleteResult](doc/DeleteResult.md)
@@ -130,7 +120,6 @@ Class | Method | HTTP request | Description
  - [ManagementUserVerifyResponse](doc/ManagementUserVerifyResponse.md)
  - [NotExistsError](doc/NotExistsError.md)
  - [RegisterUserResponse](doc/RegisterUserResponse.md)
- - [RegisterUserResponse1](doc/RegisterUserResponse1.md)
  - [ServerError](doc/ServerError.md)
  - [UserStatus](doc/UserStatus.md)
  - [UserUnauthorizedError](doc/UserUnauthorizedError.md)
@@ -141,10 +130,6 @@ Class | Method | HTTP request | Description
 
 Authentication schemes defined for the API:
 ### bearer_management
-
-- **Type**: HTTP Bearer Token authentication (JWT)
-
-### bearer_auth
 
 - **Type**: HTTP Bearer Token authentication (JWT)
 

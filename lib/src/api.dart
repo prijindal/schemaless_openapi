@@ -9,8 +9,6 @@ import 'package:schemaless_openapi/src/auth/api_key_auth.dart';
 import 'package:schemaless_openapi/src/auth/basic_auth.dart';
 import 'package:schemaless_openapi/src/auth/bearer_auth.dart';
 import 'package:schemaless_openapi/src/auth/oauth.dart';
-import 'package:schemaless_openapi/src/api/application_auth_api.dart';
-import 'package:schemaless_openapi/src/api/application_entity_api.dart';
 import 'package:schemaless_openapi/src/api/health_api.dart';
 import 'package:schemaless_openapi/src/api/management_application_api.dart';
 import 'package:schemaless_openapi/src/api/management_application_user_api.dart';
@@ -70,18 +68,6 @@ class SchemalessOpenapi {
     if (this.dio.interceptors.any((i) => i is ApiKeyAuthInterceptor)) {
       (this.dio.interceptors.firstWhere((element) => element is ApiKeyAuthInterceptor) as ApiKeyAuthInterceptor).apiKeys[name] = apiKey;
     }
-  }
-
-  /// Get ApplicationAuthApi instance, base route and serializer can be overridden by a given but be careful,
-  /// by doing that all interceptors will not be executed
-  ApplicationAuthApi getApplicationAuthApi() {
-    return ApplicationAuthApi(dio, serializers);
-  }
-
-  /// Get ApplicationEntityApi instance, base route and serializer can be overridden by a given but be careful,
-  /// by doing that all interceptors will not be executed
-  ApplicationEntityApi getApplicationEntityApi() {
-    return ApplicationEntityApi(dio, serializers);
   }
 
   /// Get HealthApi instance, base route and serializer can be overridden by a given but be careful,

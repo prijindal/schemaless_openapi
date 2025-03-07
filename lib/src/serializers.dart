@@ -16,8 +16,6 @@ import 'package:schemaless_openapi/src/model/date.dart';
 
 import 'package:schemaless_openapi/src/model/already_exists_error.dart';
 import 'package:schemaless_openapi/src/model/application.dart';
-import 'package:schemaless_openapi/src/model/application_user_login_request.dart';
-import 'package:schemaless_openapi/src/model/application_user_verify_response.dart';
 import 'package:schemaless_openapi/src/model/create_application_body.dart';
 import 'package:schemaless_openapi/src/model/date_params.dart';
 import 'package:schemaless_openapi/src/model/delete_result.dart';
@@ -44,7 +42,6 @@ import 'package:schemaless_openapi/src/model/management_user_login_request.dart'
 import 'package:schemaless_openapi/src/model/management_user_verify_response.dart';
 import 'package:schemaless_openapi/src/model/not_exists_error.dart';
 import 'package:schemaless_openapi/src/model/register_user_response.dart';
-import 'package:schemaless_openapi/src/model/register_user_response1.dart';
 import 'package:schemaless_openapi/src/model/server_error.dart';
 import 'package:schemaless_openapi/src/model/user_status.dart';
 import 'package:schemaless_openapi/src/model/user_unauthorized_error.dart';
@@ -54,8 +51,6 @@ part 'serializers.g.dart';
 @SerializersFor([
   AlreadyExistsError,
   Application,
-  ApplicationUserLoginRequest,
-  ApplicationUserVerifyResponse,
   CreateApplicationBody,
   DateParams,
   DeleteResult,
@@ -82,7 +77,6 @@ part 'serializers.g.dart';
   ManagementUserVerifyResponse,
   NotExistsError,
   RegisterUserResponse,
-  RegisterUserResponse1,
   ServerError,
   UserStatus,
   UserUnauthorizedError,
