@@ -97,7 +97,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listApplications**
-> BuiltList<Application> listApplications()
+> BuiltList<Application> listApplications(limit, offset)
 
 
 
@@ -106,9 +106,11 @@ Name | Type | Description  | Notes
 import 'package:schemaless_openapi/api.dart';
 
 final api = SchemalessOpenapi().getManagementApplicationApi();
+final double limit = 1.2; // double | 
+final double offset = 1.2; // double | 
 
 try {
-    final response = api.listApplications();
+    final response = api.listApplications(limit, offset);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling ManagementApplicationApi->listApplications: $e\n');
@@ -116,7 +118,11 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **limit** | **double**|  | 
+ **offset** | **double**|  | 
 
 ### Return type
 

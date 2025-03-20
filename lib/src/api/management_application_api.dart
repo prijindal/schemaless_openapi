@@ -210,6 +210,8 @@ class ManagementApplicationApi {
   /// 
   ///
   /// Parameters:
+  /// * [limit] 
+  /// * [offset] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -220,6 +222,8 @@ class ManagementApplicationApi {
   /// Returns a [Future] containing a [Response] with a [BuiltList<Application>] as data
   /// Throws [DioException] if API call or serialization fails
   Future<Response<BuiltList<Application>>> listApplications({ 
+    required double limit,
+    required double offset,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -246,9 +250,15 @@ class ManagementApplicationApi {
       validateStatus: validateStatus,
     );
 
+    final _queryParameters = <String, dynamic>{
+      r'limit': encodeQueryParameter(_serializers, limit, const FullType(double)),
+      r'offset': encodeQueryParameter(_serializers, offset, const FullType(double)),
+    };
+
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
+      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
