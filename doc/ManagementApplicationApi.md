@@ -121,8 +121,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **limit** | **double**|  | 
- **offset** | **double**|  | 
+ **limit** | **double**|  | [optional] 
+ **offset** | **double**|  | [optional] 
 
 ### Return type
 

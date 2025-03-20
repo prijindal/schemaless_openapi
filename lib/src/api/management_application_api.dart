@@ -222,8 +222,8 @@ class ManagementApplicationApi {
   /// Returns a [Future] containing a [Response] with a [BuiltList<Application>] as data
   /// Throws [DioException] if API call or serialization fails
   Future<Response<BuiltList<Application>>> listApplications({ 
-    required double limit,
-    required double offset,
+    double? limit,
+    double? offset,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -251,8 +251,8 @@ class ManagementApplicationApi {
     );
 
     final _queryParameters = <String, dynamic>{
-      r'limit': encodeQueryParameter(_serializers, limit, const FullType(double)),
-      r'offset': encodeQueryParameter(_serializers, offset, const FullType(double)),
+      if (limit != null) r'limit': encodeQueryParameter(_serializers, limit, const FullType(double)),
+      if (offset != null) r'offset': encodeQueryParameter(_serializers, offset, const FullType(double)),
     };
 
     final _response = await _dio.request<Object>(
