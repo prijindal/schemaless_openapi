@@ -3,9 +3,12 @@ README.md
 analysis_options.yaml
 doc/AlreadyExistsError.md
 doc/Application.md
+doc/ApplicationDomain.md
 doc/CreateApplicationBody.md
+doc/CreateApplicationDomainBody.md
 doc/DateParams.md
 doc/DeleteResult.md
+doc/DomainStatus.md
 doc/EntityAction.md
 doc/EntityActionBase.md
 doc/EntityActionCreate.md
@@ -27,6 +30,7 @@ doc/InvalidCredentialsError.md
 doc/ListUsersResponse.md
 doc/ListUsersResponse1.md
 doc/ManagementApplicationApi.md
+doc/ManagementApplicationDomainApi.md
 doc/ManagementApplicationUserApi.md
 doc/ManagementAuthApi.md
 doc/ManagementEntityApi.md
@@ -42,6 +46,7 @@ lib/schemaless_openapi.dart
 lib/src/api.dart
 lib/src/api/health_api.dart
 lib/src/api/management_application_api.dart
+lib/src/api/management_application_domain_api.dart
 lib/src/api/management_application_user_api.dart
 lib/src/api/management_auth_api.dart
 lib/src/api/management_entity_api.dart
@@ -55,10 +60,13 @@ lib/src/auth/oauth.dart
 lib/src/date_serializer.dart
 lib/src/model/already_exists_error.dart
 lib/src/model/application.dart
+lib/src/model/application_domain.dart
 lib/src/model/create_application_body.dart
+lib/src/model/create_application_domain_body.dart
 lib/src/model/date.dart
 lib/src/model/date_params.dart
 lib/src/model/delete_result.dart
+lib/src/model/domain_status.dart
 lib/src/model/entity_action.dart
 lib/src/model/entity_action_base.dart
 lib/src/model/entity_action_create.dart
@@ -88,10 +96,13 @@ lib/src/model/user_unauthorized_error.dart
 lib/src/serializers.dart
 pubspec.yaml
 test/already_exists_error_test.dart
+test/application_domain_test.dart
 test/application_test.dart
 test/create_application_body_test.dart
+test/create_application_domain_body_test.dart
 test/date_params_test.dart
 test/delete_result_test.dart
+test/domain_status_test.dart
 test/entity_action_base_test.dart
 test/entity_action_create_test.dart
 test/entity_action_delete_test.dart
@@ -113,6 +124,7 @@ test/invalid_credentials_error_test.dart
 test/list_users_response1_test.dart
 test/list_users_response_test.dart
 test/management_application_api_test.dart
+test/management_application_domain_api_test.dart
 test/management_application_user_api_test.dart
 test/management_auth_api_test.dart
 test/management_entity_api_test.dart

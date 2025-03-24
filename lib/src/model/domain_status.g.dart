@@ -1,16 +1,16 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'user_status.dart';
+part of 'domain_status.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
 
-const UserStatus _$ACTIVATED = const UserStatus._('ACTIVATED');
-const UserStatus _$DEACTIVATED = const UserStatus._('DEACTIVATED');
-const UserStatus _$UNVERIFIED = const UserStatus._('UNVERIFIED');
+const DomainStatus _$ACTIVATED = const DomainStatus._('ACTIVATED');
+const DomainStatus _$DEACTIVATED = const DomainStatus._('DEACTIVATED');
+const DomainStatus _$UNVERIFIED = const DomainStatus._('UNVERIFIED');
 
-UserStatus _$valueOf(String name) {
+DomainStatus _$valueOf(String name) {
   switch (name) {
     case 'ACTIVATED':
       return _$ACTIVATED;
@@ -23,30 +23,31 @@ UserStatus _$valueOf(String name) {
   }
 }
 
-final BuiltSet<UserStatus> _$values =
-    new BuiltSet<UserStatus>(const <UserStatus>[
+final BuiltSet<DomainStatus> _$values =
+    new BuiltSet<DomainStatus>(const <DomainStatus>[
   _$ACTIVATED,
   _$DEACTIVATED,
   _$UNVERIFIED,
 ]);
 
-class _$UserStatusMeta {
-  const _$UserStatusMeta();
-  UserStatus get ACTIVATED => _$ACTIVATED;
-  UserStatus get DEACTIVATED => _$DEACTIVATED;
-  UserStatus get UNVERIFIED => _$UNVERIFIED;
-  UserStatus valueOf(String name) => _$valueOf(name);
-  BuiltSet<UserStatus> get values => _$values;
+class _$DomainStatusMeta {
+  const _$DomainStatusMeta();
+  DomainStatus get ACTIVATED => _$ACTIVATED;
+  DomainStatus get DEACTIVATED => _$DEACTIVATED;
+  DomainStatus get UNVERIFIED => _$UNVERIFIED;
+  DomainStatus valueOf(String name) => _$valueOf(name);
+  BuiltSet<DomainStatus> get values => _$values;
 }
 
-abstract class _$UserStatusMixin {
+abstract class _$DomainStatusMixin {
   // ignore: non_constant_identifier_names
-  _$UserStatusMeta get UserStatus => const _$UserStatusMeta();
+  _$DomainStatusMeta get DomainStatus => const _$DomainStatusMeta();
 }
 
-Serializer<UserStatus> _$userStatusSerializer = new _$UserStatusSerializer();
+Serializer<DomainStatus> _$domainStatusSerializer =
+    new _$DomainStatusSerializer();
 
-class _$UserStatusSerializer implements PrimitiveSerializer<UserStatus> {
+class _$DomainStatusSerializer implements PrimitiveSerializer<DomainStatus> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'ACTIVATED': 'ACTIVATED',
     'DEACTIVATED': 'DEACTIVATED',
@@ -59,19 +60,19 @@ class _$UserStatusSerializer implements PrimitiveSerializer<UserStatus> {
   };
 
   @override
-  final Iterable<Type> types = const <Type>[UserStatus];
+  final Iterable<Type> types = const <Type>[DomainStatus];
   @override
-  final String wireName = 'UserStatus';
+  final String wireName = 'DomainStatus';
 
   @override
-  Object serialize(Serializers serializers, UserStatus object,
+  Object serialize(Serializers serializers, DomainStatus object,
           {FullType specifiedType = FullType.unspecified}) =>
       _toWire[object.name] ?? object.name;
 
   @override
-  UserStatus deserialize(Serializers serializers, Object serialized,
+  DomainStatus deserialize(Serializers serializers, Object serialized,
           {FullType specifiedType = FullType.unspecified}) =>
-      UserStatus.valueOf(
+      DomainStatus.valueOf(
           _fromWire[serialized] ?? (serialized is String ? serialized : ''));
 }
 

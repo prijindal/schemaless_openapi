@@ -11,6 +11,7 @@ import 'package:schemaless_openapi/src/auth/bearer_auth.dart';
 import 'package:schemaless_openapi/src/auth/oauth.dart';
 import 'package:schemaless_openapi/src/api/health_api.dart';
 import 'package:schemaless_openapi/src/api/management_application_api.dart';
+import 'package:schemaless_openapi/src/api/management_application_domain_api.dart';
 import 'package:schemaless_openapi/src/api/management_application_user_api.dart';
 import 'package:schemaless_openapi/src/api/management_auth_api.dart';
 import 'package:schemaless_openapi/src/api/management_entity_api.dart';
@@ -80,6 +81,12 @@ class SchemalessOpenapi {
   /// by doing that all interceptors will not be executed
   ManagementApplicationApi getManagementApplicationApi() {
     return ManagementApplicationApi(dio, serializers);
+  }
+
+  /// Get ManagementApplicationDomainApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  ManagementApplicationDomainApi getManagementApplicationDomainApi() {
+    return ManagementApplicationDomainApi(dio, serializers);
   }
 
   /// Get ManagementApplicationUserApi instance, base route and serializer can be overridden by a given but be careful,

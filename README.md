@@ -69,6 +69,11 @@ Class | Method | HTTP request | Description
 [*ManagementApplicationApi*](doc/ManagementApplicationApi.md) | [**createApplication**](doc/ManagementApplicationApi.md#createapplication) | **POST** /management/application | 
 [*ManagementApplicationApi*](doc/ManagementApplicationApi.md) | [**deleteApplication**](doc/ManagementApplicationApi.md#deleteapplication) | **DELETE** /management/application/{application_id} | 
 [*ManagementApplicationApi*](doc/ManagementApplicationApi.md) | [**listApplications**](doc/ManagementApplicationApi.md#listapplications) | **GET** /management/application | 
+[*ManagementApplicationDomainApi*](doc/ManagementApplicationDomainApi.md) | [**createDomain**](doc/ManagementApplicationDomainApi.md#createdomain) | **POST** /management/application_domain/{application_id} | 
+[*ManagementApplicationDomainApi*](doc/ManagementApplicationDomainApi.md) | [**deleteDomain**](doc/ManagementApplicationDomainApi.md#deletedomain) | **DELETE** /management/application_domain/{application_id}/{domain_id} | 
+[*ManagementApplicationDomainApi*](doc/ManagementApplicationDomainApi.md) | [**getDomain**](doc/ManagementApplicationDomainApi.md#getdomain) | **GET** /management/application_domain/{application_id}/{domain_id} | 
+[*ManagementApplicationDomainApi*](doc/ManagementApplicationDomainApi.md) | [**listDomains**](doc/ManagementApplicationDomainApi.md#listdomains) | **GET** /management/application_domain/{application_id} | 
+[*ManagementApplicationDomainApi*](doc/ManagementApplicationDomainApi.md) | [**verifyDomain**](doc/ManagementApplicationDomainApi.md#verifydomain) | **PUT** /management/application_domain/{application_id}/{domain_id}/verify | 
 [*ManagementApplicationUserApi*](doc/ManagementApplicationUserApi.md) | [**approveUser**](doc/ManagementApplicationUserApi.md#approveuser) | **POST** /management/application_user/{application_id}/{app_user_id}/approve | 
 [*ManagementApplicationUserApi*](doc/ManagementApplicationUserApi.md) | [**disableUser**](doc/ManagementApplicationUserApi.md#disableuser) | **POST** /management/application_user/{application_id}/{app_user_id}/disable | 
 [*ManagementApplicationUserApi*](doc/ManagementApplicationUserApi.md) | [**generateKey**](doc/ManagementApplicationUserApi.md#generatekey) | **PUT** /management/application_user/{application_id}/{app_user_id}/generatekey | 
@@ -94,9 +99,12 @@ Class | Method | HTTP request | Description
 
  - [AlreadyExistsError](doc/AlreadyExistsError.md)
  - [Application](doc/Application.md)
+ - [ApplicationDomain](doc/ApplicationDomain.md)
  - [CreateApplicationBody](doc/CreateApplicationBody.md)
+ - [CreateApplicationDomainBody](doc/CreateApplicationDomainBody.md)
  - [DateParams](doc/DateParams.md)
  - [DeleteResult](doc/DeleteResult.md)
+ - [DomainStatus](doc/DomainStatus.md)
  - [EntityAction](doc/EntityAction.md)
  - [EntityActionBase](doc/EntityActionBase.md)
  - [EntityActionCreate](doc/EntityActionCreate.md)

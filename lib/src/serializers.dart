@@ -16,9 +16,12 @@ import 'package:schemaless_openapi/src/model/date.dart';
 
 import 'package:schemaless_openapi/src/model/already_exists_error.dart';
 import 'package:schemaless_openapi/src/model/application.dart';
+import 'package:schemaless_openapi/src/model/application_domain.dart';
 import 'package:schemaless_openapi/src/model/create_application_body.dart';
+import 'package:schemaless_openapi/src/model/create_application_domain_body.dart';
 import 'package:schemaless_openapi/src/model/date_params.dart';
 import 'package:schemaless_openapi/src/model/delete_result.dart';
+import 'package:schemaless_openapi/src/model/domain_status.dart';
 import 'package:schemaless_openapi/src/model/entity_action.dart';
 import 'package:schemaless_openapi/src/model/entity_action_base.dart';
 import 'package:schemaless_openapi/src/model/entity_action_create.dart';
@@ -51,9 +54,12 @@ part 'serializers.g.dart';
 @SerializersFor([
   AlreadyExistsError,
   Application,
+  ApplicationDomain,
   CreateApplicationBody,
+  CreateApplicationDomainBody,
   DateParams,
   DeleteResult,
+  DomainStatus,
   EntityAction,
   EntityActionBase,$EntityActionBase,
   EntityActionCreate,
@@ -85,6 +91,10 @@ Serializers serializers = (_$serializers.toBuilder()
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(Application)]),
         () => ListBuilder<Application>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(ApplicationDomain)]),
+        () => ListBuilder<ApplicationDomain>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(EntityAction)]),

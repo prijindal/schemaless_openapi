@@ -12,6 +12,7 @@ export 'package:schemaless_openapi/src/model/date.dart';
 
 export 'package:schemaless_openapi/src/api/health_api.dart';
 export 'package:schemaless_openapi/src/api/management_application_api.dart';
+export 'package:schemaless_openapi/src/api/management_application_domain_api.dart';
 export 'package:schemaless_openapi/src/api/management_application_user_api.dart';
 export 'package:schemaless_openapi/src/api/management_auth_api.dart';
 export 'package:schemaless_openapi/src/api/management_entity_api.dart';
@@ -19,9 +20,12 @@ export 'package:schemaless_openapi/src/api/management_user_api.dart';
 
 export 'package:schemaless_openapi/src/model/already_exists_error.dart';
 export 'package:schemaless_openapi/src/model/application.dart';
+export 'package:schemaless_openapi/src/model/application_domain.dart';
 export 'package:schemaless_openapi/src/model/create_application_body.dart';
+export 'package:schemaless_openapi/src/model/create_application_domain_body.dart';
 export 'package:schemaless_openapi/src/model/date_params.dart';
 export 'package:schemaless_openapi/src/model/delete_result.dart';
+export 'package:schemaless_openapi/src/model/domain_status.dart';
 export 'package:schemaless_openapi/src/model/entity_action.dart';
 export 'package:schemaless_openapi/src/model/entity_action_base.dart';
 export 'package:schemaless_openapi/src/model/entity_action_create.dart';

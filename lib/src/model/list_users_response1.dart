@@ -24,7 +24,7 @@ abstract class ListUsersResponse1 implements Built<ListUsersResponse1, ListUsers
 
   @BuiltValueField(wireName: r'status')
   UserStatus get status;
-  // enum statusEnum {  ACTIVATED,  DEACTIVATED,  PENDING_VERIFICATION,  };
+  // enum statusEnum {  ACTIVATED,  DEACTIVATED,  UNVERIFIED,  };
 
   @BuiltValueField(wireName: r'created_at')
   DateTime get createdAt;

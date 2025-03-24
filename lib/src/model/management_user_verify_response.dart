@@ -26,7 +26,7 @@ abstract class ManagementUserVerifyResponse implements Built<ManagementUserVerif
 
   @BuiltValueField(wireName: r'status')
   UserStatus get status;
-  // enum statusEnum {  ACTIVATED,  DEACTIVATED,  PENDING_VERIFICATION,  };
+  // enum statusEnum {  ACTIVATED,  DEACTIVATED,  UNVERIFIED,  };
 
   @BuiltValueField(wireName: r'is_admin')
   bool get isAdmin;

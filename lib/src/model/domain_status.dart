@@ -7,23 +7,23 @@ import 'package:built_collection/built_collection.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
-part 'user_status.g.dart';
+part 'domain_status.g.dart';
 
-class UserStatus extends EnumClass {
+class DomainStatus extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'ACTIVATED')
-  static const UserStatus ACTIVATED = _$ACTIVATED;
+  static const DomainStatus ACTIVATED = _$ACTIVATED;
   @BuiltValueEnumConst(wireName: r'DEACTIVATED')
-  static const UserStatus DEACTIVATED = _$DEACTIVATED;
+  static const DomainStatus DEACTIVATED = _$DEACTIVATED;
   @BuiltValueEnumConst(wireName: r'UNVERIFIED')
-  static const UserStatus UNVERIFIED = _$UNVERIFIED;
+  static const DomainStatus UNVERIFIED = _$UNVERIFIED;
 
-  static Serializer<UserStatus> get serializer => _$userStatusSerializer;
+  static Serializer<DomainStatus> get serializer => _$domainStatusSerializer;
 
-  const UserStatus._(String name): super(name);
+  const DomainStatus._(String name): super(name);
 
-  static BuiltSet<UserStatus> get values => _$values;
-  static UserStatus valueOf(String name) => _$valueOf(name);
+  static BuiltSet<DomainStatus> get values => _$values;
+  static DomainStatus valueOf(String name) => _$valueOf(name);
 }
 
 /// Optionally, enum_class can generate a mixin to go with your enum for use
@@ -32,5 +32,5 @@ class UserStatus extends EnumClass {
 /// corresponding Angular template.
 ///
 /// Trigger mixin generation by writing a line like this one next to your enum.
-abstract class UserStatusMixin = Object with _$UserStatusMixin;
+abstract class DomainStatusMixin = Object with _$DomainStatusMixin;
 
